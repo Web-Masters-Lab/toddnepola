@@ -7,6 +7,16 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Home - Todd Nepola',
   description: 'Todd Nepola is a leading figure in commercial real estate, is featured in podcasts, news articles, and creates Instagram Reels.',
+  openGraph: {
+    type: "website",
+    url: "/",
+    title: "Todd Nepola",
+    description: "Todd Nepola is a leading figure in commercial real estate, is featured in podcasts, news articles, and creates Instagram Reels.",
+    siteName: "Todd Nepola",
+    images: [{
+      url: "/images/banner.png",
+    }],
+  },
 }
 
 export default function RootLayout({
