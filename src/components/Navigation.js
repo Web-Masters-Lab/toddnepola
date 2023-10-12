@@ -20,7 +20,7 @@ export const Navigation = () => {
         <div className="flex lg:flex-1 mr-auto">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Todd Nepola</span>
-            <Image src="/images/banner.png" priority height={40} width={130} alt="Banner image" />
+            <Image src="/images/banner.svg" priority height={60} width={280} alt="Banner image" />
           </a>
         </div>
         <div className="flex lg:hidden">
