@@ -5,17 +5,19 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ornate-genie-61c836.netlify.app/'),
   title: 'Home - Todd Nepola',
   description: 'Todd Nepola is a leading figure in commercial real estate, is featured in podcasts, news articles, and creates Instagram Reels.',
   openGraph: {
-    type: "website",
     url: "/",
     title: "Todd Nepola",
     description: "Todd Nepola is a leading figure in commercial real estate, is featured in podcasts, news articles, and creates Instagram Reels.",
     siteName: "Todd Nepola",
     images: [{
-      url: "/images/banner.png",
+      url: "images/banner.png",
     }],
+    locale: 'en_US',
+    type: 'website',
   },
 }
 
