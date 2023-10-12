@@ -7,7 +7,7 @@ export const PageHero = () => {
         muted
         loop
         playsInline
-        disablepictureinpicture="true"
+        disablePictureInPicture
         className="absolute top-0 left-0 object-cover w-full h-full"
       >
         <source src="/videos/pagehero.mp4" type="video/mp4" />
@@ -15,7 +15,7 @@ export const PageHero = () => {
       </video>
 
       {/* Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+      <div className="absolute top-0 left-0 w-full h-screen bg-black opacity-50"></div>
 
       {/* Text */}
       <div className="relative z-10 flex flex-col items-center justify-center p-[5vw] h-full text-center text-white">

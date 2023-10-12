@@ -30,7 +30,7 @@ export const Navigation = () => {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <FontAwesomeIcon class="h-6 w-6" icon={faBars} />
+            <FontAwesomeIcon className="h-6 w-6" icon={faBars} />
           </button>
         </div>
 
@@ -68,7 +68,7 @@ export const Navigation = () => {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <FontAwesomeIcon class="h-6 w-6" icon={faXmark} />
+              <FontAwesomeIcon className="h-6 w-6" icon={faXmark} />
             </button>
           </div>
           <div className="mt-6 flow-root">
