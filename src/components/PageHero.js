@@ -7,7 +7,7 @@ export const PageHero = () => {
         muted
         loop
         playsInline
-        disablePictureInPicture
+        disablepictureinpicture="true"
         className="absolute top-0 left-0 object-cover w-full h-full"
       >
         <source src="/videos/pagehero.mp4" type="video/mp4" />
