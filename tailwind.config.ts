@@ -12,6 +12,7 @@ const config: Config = {
         robotoRegular: ['var(--font-roboto)'],
         roboto_condensedBold: ['var(--font-roboto-condensed)'],
         poppinsMedium: ['var(--font-poppins)'],
+        copperPlate:['var(--font-copperplate)']
       },
       transitionDuration: {
         '400': '0.4s',

@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import { BookSection } from '@/components/BookSection'
+import { Articles } from '@/components/Articles'
 
 export default function Home() {
   return (
     <>
             {/* Hero */}
-      <section className="relative h-screen">
+      <section className="relative h-[44rem]">
         {/* Video */}
         <video
           autoPlay
@@ -20,27 +21,28 @@ export default function Home() {
         </video>
 
         {/* Overlay */}
-        <div className="absolute top-0 left-0 w-full h-screen bg-gradient-to-r from-white/60 via-white/20 to-white/60 "></div>
+        <div className="absolute top-0 left-0 w-full h-[44rem] bg-gradient-to-r from-black/60 via-black/20 to-black/60 "/>
 
 
         {/* Text */}
-        <div className="relative z-10 flex flex-col justify-end h-full py-[10vh] px-[5vw] max-w-screen-lg text-neutral-950">
+        {/* <div className="relative z-10 flex flex-col justify-end h-full py-[10vh] px-[5vw] max-w-screen-lg text-neutral-950">
           <h1 className="text-6xl md:text-9xl font-roboto_condensedBold">Todd T. Nepola</h1>
           <span className="ml-4 my-6 text-xl">
-          25+ Years of Experience in Commercial Real Estate
-        </span>
-        </div>
+            25+ Years of Experience in Commercial Real Estate
+          </span>
+        </div> */}
       </section>
 
 
         {/* About */}
         <div className="flex flex-col items-center justify-center my-16">
-        <h1 className="text-center bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent font-bold font-roboto_condensedBold text-5xl md:text-9xl">
-          ABOUT
+        <h2 className="text-center font-roboto_condensedBold my-2 text-3xl bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent uppercase">
+          About
+        </h2>
+        <h1 className="text-center uppercase bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent font-bold font-roboto_condensedBold text-5xl md:text-9xl">
+          Todd Nepola
         </h1>
-        <span className="text-center my-2 text-xl">
-          Todd T. Nepola
-        </span>
+       
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-4 mb-16 gap-8 px-14">
@@ -48,8 +50,8 @@ export default function Home() {
 <div className="col-span-1 md:col-span-2">
           <div className="flex justify-center">
             <Image
-              className="object-contain"
-              src="/images/profile.jpg"
+              className="object-contain rounded-full"
+              src="/images/square.png"
               alt="Headquarters Image"
               width="350"
               height="670"
@@ -59,28 +61,30 @@ export default function Home() {
 
         <div className="col-span-1 md:col-span-2 mr-8">
           <div className="flex flex-col justify-center max-w-[75%] h-full">
-          <ul className="list-disc mt-8 ml-8">
-            <li className="text-2xl mb-4 font-robotoRegular list-item">
-            President and founder of Current Capital Real Estate Group.
-            </li>
-            <li className="text-2xl mb-4 font-robotoRegular list-item">
-            Author of the highly anticipated book, &quot;Keeping it Real on Commercial Real Estate&quot;
-            </li>
-            <li className="text-2xl mb-4 font-robotoRegular list-item">
-            Award Winning Real Estate Investor
-            </li>
-            <li className="text-2xl mb-4 font-robotoRegular list-item">
-            Award Winning Real Estate Investor
-            </li>
-          </ul>
-
+          <p>
+              Todd Nepola is the President and founder of Current Capital Real Estate Group. He is responsible for the over seeing the company's vision and long-term strategic plans.
+          </p>
+          <br/> 
+          <p>
+            Mr. Nepola follows three generations of real estate investors and developers of commercial real estate. He decided to follow his family's footsteps, and after a decade of buying, building, leasing, and managing his own properties, Mr.Nepola decided to open up his own firm. 
+          </p>
+          <br/> 
+          <p>
+            Mr Nepola has been recognized as a winner of CoStars "Power Broker" award, in addition to being a member of the international coucil of shopping centers (ICSC).
+          </p>
+          <br/> 
+          <p>
+            Mr. Nepola resides in Miami, FL with his wife Alexia Nepola and is the proud father of two beautiful girls and two stepsons.
+          </p>
+          <br/>
           <div className="flex items-center mt-auto">
-          <a
-  href="/about"
-  className="primaryCTA border-2 relative ml-2 text-lg font-poppinsMedium hover:bg-black/80 hover:text-white duration-400 py-2 w-full text-center rounded"
->
-  Read More
-</a>
+             
+            <a
+              href="/about"
+              className="primaryCTA border-2 relative ml-2 text-lg font-poppinsMedium hover:bg-black/80 hover:text-white duration-400 py-2 w-full text-center rounded"
+            >
+              Read More
+            </a>
 
 
           </div>
@@ -89,12 +93,12 @@ export default function Home() {
 
         {/* Business */}
       <div className="flex flex-col items-center justify-center my-16 mt-48">
-        <h1 className="text-center bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent font-bold font-roboto_condensedBold text-5xl md:text-9xl">
+        <span className="text-center font-roboto_condensedBold my-2 text-5xl bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent">
           BUSINESS
-        </h1>
-        <span className="text-center my-2 text-xl">
-          Current Capital Real Estate Group
         </span>
+        {/* <h1 className="text-center bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent font-bold font-roboto_condensedBold text-LG md:text-9xl">
+          CURRENT CAPITAL REAL ESTATE GROUP
+        </h1> */}
       </div>
 
 <div className="grid grid-cols-1 md:grid-cols-2 mb-32 gap-8 px-4">
@@ -108,41 +112,30 @@ export default function Home() {
               width="256"
               height="256"
             />
-            <div className="h-64 flex justify-center flex-col">
-              <p className="text-primary font-poppinsMedium text-2xl">CURRENT CAPITAL</p>
-              <p className="text-black font-poppinsMedium text-2xl">REAL ESTATE GROUP</p>
+            <div className="h-64 flex justify-center flex-col bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent">
+              <p className="font-['Copperplate'] text-blue-900 text-2xl">CURRENT CAPITAL</p>
+              <p className="font-['Copperplate'] text-gray-500 text-2xl">REAL ESTATE GROUP</p>
             </div>
           </div>
         </div>
 
         <div className="col-span-1 mr-8">
           <div className="flex flex-col justify-start">
-          <h2 className="text-4xl font-bold mb-4 font-poppinsMedium">
-            We are specialized in commercial and residential real estate
-          </h2>
-          <ul className="list-disc ml-8 flex flex-wrap">
-            <li className="text-lg mb-4 font-robotoRegular w-1/2 list-item">
-            INVESTMENT
-            </li>
-            <li className="text-lg mb-4 font-robotoRegular w-1/2 list-item">
-            MANAGEMENT
-            </li>
-            <li className="text-lg mb-4 font-robotoRegular w-1/2 list-item">
-            DEVELOPMENT
-            </li>
-            <li className="text-lg mb-4 font-robotoRegular w-1/2 list-item">
-            BROKERAGE
-            </li>
-            <li className="text-lg mb-4 font-robotoRegular w-1/2 list-item">And a lot more...</li>
-          </ul>
-
+          <p>
+           <span className='text-xl text-black font-roboto_condensedBold'>Current Capital Real Estate Group</span> is a boutique real estate investment firm committed to delivering the highest level of service in the <em className='text-primary'>development</em>, <em className='text-primary'>management</em>, and <em className='text-primary'>leasing</em> of income producing commercial and residential real estate. 
+          </p>
+          <br/>
+          <p>
+          Our focus ranges from new <em className='text-primary'>construction</em>, <em className='text-primary'>existing properties</em>, <em className='text-primary'>rental</em> and <em className='text-primary'>commercial properties</em>. We recognize each property and owner has their individual needs, so we make sure to deliver a unique experience to meet and exceed their standards. 
+          </p>
+          <br/>
           <div className="flex items-center mt-auto">
           <a
-  href="http://www.currentcapitalgroup.com/"
-  className="primaryCTA border-2 relative ml-2 text-lg font-poppinsMedium hover:bg-black/80 hover:text-white duration-400 py-2 w-full text-center rounded"
->
-  Visit The Website
-</a>
+            href="http://www.currentcapitalgroup.com/"
+            className="primaryCTA border-2 relative ml-2 text-lg font-poppinsMedium hover:bg-black/80 hover:text-white duration-400 py-2 w-full text-center rounded"
+          >
+            Visit The Website
+          </a>
 
 
           </div>
@@ -151,20 +144,27 @@ export default function Home() {
         </div>
 
 </div>
+<section>
+  <article>
+
+  </article>
+</section>
 
         {/* Book */}
         <div className="flex flex-col items-center justify-center my-16 mt-32">
-        <h1 className="text-center bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent font-bold font-roboto_condensedBold text-5xl md:text-9xl">
-          BOOK
-        </h1>
-        <span className="text-center my-2 text-xl">
-          Keeping It Real on Commercial Real Estate
-        </span>
+        <h2 className="text-center uppercase font-roboto_condensedBold bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent my-2 text-5xl ">
+          Book
+        </h2>
+        
       </div>
 
 <div className="px-4 my-16">
 <BookSection />
 </div>
+<h2 className="text-center uppercase font-roboto_condensedBold bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent my-10 text-5xl ">
+  Latest Articles
+</h2>
+<Articles/>
     </>
   )
 }

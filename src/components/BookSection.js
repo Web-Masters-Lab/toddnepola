@@ -5,27 +5,36 @@ export const BookSection = () => {
     <>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
         <div className="order-2 md:order-1 flex flex-col justify-center col-span-1 md:col-span-3">
-          <h2 className="text-4xl font-bold mb-4 font-poppinsMedium">
-            Get started with Commercial Real Estate Investment
-          </h2>
+          <h3 className="text-4xl bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent font-roboto_condensedBold mb-4">
+            Keeping It Real on Commercial Real Estate
+          </h3>
           <p className="mb-6">
-            Mr Todd shares authentic expert advice, insights, and strategies aimed at helping you
-            get started with your own journey in the commercial real estate industry.
+            Mr. Nepola shares over 25 years of real estate knowledge in this book. He answers the questions you should be asking and explains the different avenues
+            of real estate investing. 
           </p>
-          <h2 className="text-4xl font-bold mb-4 font-poppinsMedium">
-            All Net Proceeds will be donated
-          </h2>
-          <p className="mb-6">
-            The main aim of the book is to empower as many individuals as possible to achieve
-            success in CRE. It&apos;s, driven by the desire to create an impact rather than profit.
-            That&apos;s why every cent of the net proceeds will be donated to charity.
-          </p>
-          <h2 className="text-4xl font-bold mb-4 font-poppinsMedium">
-            Something about the QnA nature of the book
-          </h2>
-          <p className="mb-6">
-            Book includes stories, scenarios and has a 5 star rating everywhere{' '}
-          </p>
+          <h4 className="text-2xl uppercase font-bold mb-4 font-poppinsMedium">
+            This book is for you if ...
+          </h4>
+          <ul className='ml-16 list-disc'>
+            <li>You are a long term investor </li>
+            <li>You are looking to begin a career in real estate</li>
+            <li>You want to learn more about real estate</li>
+          </ul>
+          <br/>
+          <h4 className="text-2xl uppercase font-bold mb-4 font-poppinsMedium">
+            This book is <span className='text-red-500'>NOT</span> for you if ...
+          </h4>
+          <ul className='ml-16 list-disc'>
+            <li>You are trying to get rich quick </li>
+            <li>You dont have the tolerance for risk</li>
+            <li>You dont have the patience to let your investments flourish</li>
+          </ul>
+          <a
+            href="http://www.currentcapitalgroup.com/"
+            className="primaryCTA border-2 relative my-10 text-lg font-poppinsMedium hover:bg-black/80 hover:text-white duration-400 py-2 w-full text-center rounded"
+          >
+            Learn More
+          </a>
         </div>
         <div className="order-1 md:order-2 col-span-1 md:col-span-2 flex justify-center md:justify-end">
           <Image

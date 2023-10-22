@@ -8,7 +8,7 @@ function RootLayoutInner({ children }) {
   return (
     <>
       <Header />
-      <div layout className="flex w-full flex-col overflow-hidden">
+      <div layout="true" className="flex w-full flex-col overflow-hidden">
         <main className="w-full flex-auto bg-background text-black font-robotoRegular">
           {children}
         </main>
