@@ -1,10 +1,13 @@
+'use client'
 import Image from 'next/image'
 import { BookSection } from '@/components/BookSection'
 import { Articles } from '@/components/Articles'
+import { Header } from '@/components/Header'
 
 export default function Home() {
   return (
     <>
+      <Header />
             {/* Hero */}
       <section className="relative h-[44rem]">
         {/* Video */}
@@ -59,24 +62,23 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="col-span-1 md:col-span-2 mr-8">
-          <div className="flex flex-col justify-center max-w-[75%] h-full">
-          <p>
-              Todd Nepola is the President and founder of Current Capital Real Estate Group. He is responsible for the over seeing the company's vision and long-term strategic plans.
-          </p>
-          <br/> 
-          <p>
-            Mr. Nepola follows three generations of real estate investors and developers of commercial real estate. He decided to follow his family's footsteps, and after a decade of buying, building, leasing, and managing his own properties, Mr.Nepola decided to open up his own firm. 
-          </p>
-          <br/> 
-          <p>
-            Mr Nepola has been recognized as a winner of CoStars "Power Broker" award, in addition to being a member of the international coucil of shopping centers (ICSC).
-          </p>
-          <br/> 
-          <p>
-            Mr. Nepola resides in Miami, FL with his wife Alexia Nepola and is the proud father of two beautiful girls and two stepsons.
-          </p>
-          <br/>
+        <div className="col-span-1 flex md:col-span-2 md:mr-8">
+          <div className="flex flex-col text-center md:text-left justify-center max-w-[75%] h-full">
+            <p className=' py-2'>
+                Todd Nepola is the President and founder of Current Capital Real Estate Group. He is responsible for the over seeing the company's vision and long-term strategic plans.
+            </p>
+            <br/> 
+            <p className='py-2'>
+              Mr. Nepola follows three generations of real estate investors and developers of commercial real estate. He decided to follow his family's footsteps, and after a decade of buying, building, leasing, and managing his own properties, Mr.Nepola decided to open up his own firm. 
+            </p>
+            <br/> 
+            <p className='pb-2' >
+              Mr Nepola has been recognized as a winner of CoStars "Power Broker" award, in addition to being a member of the international coucil of shopping centers (ICSC).
+            </p>
+            <br/> 
+            <p className='pt-2 pb-8'>
+              Mr. Nepola resides in Miami, FL with his wife Alexia Nepola and is the proud father of two beautiful girls and two stepsons.
+            </p>
           <div className="flex items-center mt-auto">
              
             <a
@@ -125,7 +127,7 @@ export default function Home() {
            <span className='text-xl text-black font-roboto_condensedBold'>Current Capital Real Estate Group</span> is a boutique real estate investment firm committed to delivering the highest level of service in the <em className='text-primary'>development</em>, <em className='text-primary'>management</em>, and <em className='text-primary'>leasing</em> of income producing commercial and residential real estate. 
           </p>
           <br/>
-          <p>
+          <p className='pb-8 pt-2'>
           Our focus ranges from new <em className='text-primary'>construction</em>, <em className='text-primary'>existing properties</em>, <em className='text-primary'>rental</em> and <em className='text-primary'>commercial properties</em>. We recognize each property and owner has their individual needs, so we make sure to deliver a unique experience to meet and exceed their standards. 
           </p>
           <br/>
@@ -144,11 +146,6 @@ export default function Home() {
         </div>
 
 </div>
-<section>
-  <article>
-
-  </article>
-</section>
 
         {/* Book */}
         <div className="flex flex-col items-center justify-center my-16 mt-32">

@@ -28,9 +28,9 @@ export const Header = () => {
           <Link className="flex" href="/">
             <span className="sr-only">Todd Nepola</span>
             <Image src="/images/logo.svg" className="h-24 w-24 md:h-36 md:w-36 lg:h-48 lg:w-48" priority width={120} height={120} alt="Logo" />
-            <div className='hidden md:grid font-roboto_condensedBold text-white pl-8 my-0'>
-              <span className='md:text-6xl lg:text-7xl'>TODD</span>
-              <span className='md:text-7xl lg:text-8xl'>NEPOLA</span>
+            <div className='grid font-roboto_condensedBold text-white pl-2 my-0'>
+              <span className='text-4xl md:text-6xl lg:text-7xl'>TODD</span>
+              <span className='text-5xl md:text-7xl lg:text-8xl'>NEPOLA</span>
             </div>
           </Link>
         </div>
