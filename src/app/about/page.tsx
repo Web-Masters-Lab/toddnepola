@@ -2,29 +2,14 @@
 import React from "react";
 import Image from "next/image";
 import {Navigation} from "@/components/Navigation"
+import { Hero } from "@/components/Hero"
 
 const About = () => {
     return (
         <>
             <Navigation/>
+            <Hero/>
             <div className=" bg-white 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
-            
-            <div className="relative">
-                <div className="absolute top-0 left-0 w-full h-full">
-                    <div className="w-full h-full flex flex-col justify-center items-center bg-indigo-700 bg-opacity-20 text-white sm:px-12 px-6 rounded-md">
-                        <h2 className="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7">Discover about us</h2>
-                        <svg className="mt-8 cursor-pointer hover:bg-gray-200 hover:bg-opacity-20 rounded-md" width="72" height="48" viewBox="0 0 72 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.5" y="0.5" width="71" height="47" rx="5.5" stroke="white" />
-                            <path d="M31 16V32L44 24L31 16Z" fill="white" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                    </div>
-                </div>
-                <div>
-                    <Image height={200} width={200} className="rounded-md lg:block hidden w-full" src="https://i.ibb.co/17q26WL/qw.png" alt="A person Coding" />
-                    <Image height={200} width={200} className="rounded-md lg:hidden sm:block hidden w-full" src="https://i.ibb.co/pZX8cKM/Rectangle-122-1.png" alt="A person Coding" />
-                    <Image height={200} width={200} className="rounded-md sm:hidden block w-full" src="https://i.ibb.co/b3YLqxC/Rectangle-122.png" alt="A person Coding" />
-                </div>
-            </div>
 
             <div className="lg:mt-14 sm:mt-7 mt-14">
                 <div className="flex lg:flex-row flex-col items-center">

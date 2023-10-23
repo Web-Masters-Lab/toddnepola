@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export const BookSection = () => {
   return (
-    <>
+    <section className='container'>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
         <div className="order-2 md:order-1 flex flex-col justify-center col-span-1 md:col-span-3">
           <h3 className="text-4xl bg-gradient-to-tl text-center from-primary via-blue-950 to-black bg-clip-text text-transparent font-roboto_condensedBold mb-4">
@@ -38,14 +38,14 @@ export const BookSection = () => {
         </div>
         <div className="order-1 md:order-2 col-span-1 md:col-span-2 flex justify-center md:justify-end">
           <Image
-            className="object-contain shadow-2xl"
-            src="/images/ToddBook.png"
+            className="object-contain"
+            src="/images/book.png"
             alt="Todd Nepola Image"
             width="393"
             height="400"
           />
         </div>
       </div>
-    </>
+    </section>
   )
 }

@@ -17,11 +17,15 @@ const config: Config = {
       transitionDuration: {
         '400': '0.4s',
       },
-        colors: {
-          background: "#f7f7f7",
-          primary: "#0037FF",
-          secondary: "#D5D5D5"
-        },
+      colors: {
+        background: "#f7f7f7",
+        primary: "#0037FF",
+        secondary: "#D5D5D5"
+      },
+      backgroundImage:{
+        hero: 'linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/desktop-background.png")',
+        desktop:'linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/desktop-background.png")'
+      }
     },
   },
   plugins: [],

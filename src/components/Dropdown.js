@@ -3,12 +3,15 @@ import { Fragment } from 'react'
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Dropdown = () => {
+
+const Dropdown = (props) => {
+  const { nav } = props;
+
   return (
       <Menu as="div" className="text-left">
-        <Menu.Button className="w-full font-roboto_condensedBold group justify-center rounded-md px-4 py-2 text-sm font-medium text-white hover:bg-black hover:bg-opacity-30 hover:transition hover:duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+        <Menu.Button className="w-full font-roboto_condensedBold flex group justify-center rounded-md px-4 py-2 text-sm font-medium text-black hover:bg-black hover:bg-opacity-30 hover:transition hover:duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             <span className='font-roboto_condensedBold text-lg  group-hover:text-primary '>MEDIA </span>
-            <FontAwesomeIcon className="h-4 w-4 ml-1 group-hover:text-primary " icon={faCaretDown} />
+            <FontAwesomeIcon className="h-4 w-4 ml-1 mb-1 self-center group-hover:text-primary " icon={faCaretDown} />
         </Menu.Button>
         <Transition
           as={Fragment}
@@ -19,7 +22,7 @@ const Dropdown = () => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 mt-2 w-40 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="absolute z-10 right-0 mt-2 w-40 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="px-1 py-1 ">
               <Menu.Item>
                 {({ active }) => (

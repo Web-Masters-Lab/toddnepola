@@ -7,7 +7,7 @@ const navigation = {
     { name: 'Current Capital Group', href: 'https://www.currentcapitalgroup.com/' },
   ],
   media: [
-    { name: 'Reels', href: '/media/reels' },
+    // { name: 'Reels', href: '/media/reels' },
     { name: 'News', href: '/media/news' },
     { name: 'Podcasts', href: '/media/podcasts' },
   ],
@@ -19,14 +19,18 @@ const navigation = {
 
 export const Footer = () => {
   return (
-    <footer className="bg-blue-800" aria-labelledby="footer-heading">
+    <footer className="bg-black" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
         <div className="md:grid md:grid-cols-5 md:gap-8 flex flex-col items-center">
-          <a href="/" className="col-span-2">
-            <Image width={150} height={150} src="/images/logo.svg" alt="Todd Nepola Logo" />
+          <a href="/" className="col-span-2 flex">
+            <Image width={80} height={150} src="/images/logo.svg" alt="Todd Nepola Logo" />
+            <div className='grid font-roboto_condensedBold text-white pl-2 my-0'>
+              <span className='text-4xl'>TODD</span>
+              <span className='text-6xl '>NEPOLA</span>
+            </div>
           </a>
           <div className="grid w-full mt-10 md:mt-0 col-span-3 grid-cols-2 md:grid-cols-3 gap-8">
             <div>

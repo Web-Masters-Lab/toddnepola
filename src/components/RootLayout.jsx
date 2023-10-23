@@ -7,7 +7,7 @@ function RootLayoutInner({ children }) {
   return (
     <>
       <div layout="true" className="flex w-full flex-col overflow-hidden">
-        <main className="w-full flex-auto bg-background text-black font-robotoRegular">
+        <main className="w-full flex-auto bg-white text-black font-robotoRegular">
           {children}
         </main>
         <Footer />

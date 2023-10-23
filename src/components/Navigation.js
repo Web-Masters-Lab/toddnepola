@@ -7,8 +7,9 @@ import { Dropdown } from './Dropdown'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Podcasts', href: '/practices' },
-  { name: 'Articles', href: '/testimonials' },
+  // { name: 'Podcasts', href: '/practices' },
+  // { name: 'Articles', href: '/testimonials' },
+  { name: 'Menu', children:[{name:'Podcasts'}]},
   { name: 'Contact', href: '/contact' },
 ]
 
@@ -17,9 +18,9 @@ export const Navigation = () => {
 
   return (
     <header className="bg-white ">
-      <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <nav className="flex items-center justify-between p-4 mx-2 md:mx-8 md:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <a href="/" className="p-1.5">
             <span className="sr-only">Todd Nepola</span>
             <div className='flex'>
                 <Image
@@ -29,9 +30,9 @@ export const Navigation = () => {
                 width={60}
                 alt="Delgado Legal Practicing Attorney"
                 />
-                <div className='hidden md:grid font-roboto_condensedBold bg-gradient-to-tl from-primary to-black bg-clip-text text-transparent pl-8 my-0'>
-                <span className='text-3xl'>TODD</span>
-                <span className='text-5xl'>NEPOLA</span>
+                <div className='grid font-roboto_condensedBold bg-gradient-to-tl from-primary to-black bg-clip-text text-transparent pl-2 my-0'>
+                <span className='text-2xl md:text-3xl'>TODD</span>
+                <span className='text-4xl md:text-5xl'>NEPOLA</span>
                 </div>
             </div>
           </a>
@@ -48,10 +49,11 @@ export const Navigation = () => {
         </div>
         <div className="hidden pl-28 lg:flex lg:gap-x-10">
           {navigation.map((item) => (
+            item.children ? <div key={item.name} className='relative' ><Dropdown/></div> :
             <a
               key={item.name}
               href={item.href}
-              className="text-lg font-semibold leading-6 font-roboto_condensedBold text-black uppercase hover:text-hover link link-underline link-underline-black"
+              className="px-4 text-center uppercase text-lg font-roboto_condensedBold group justify-center rounded-md py-2 hover:text-primary font-medium text-black hover:bg-black hover:bg-opacity-30 hover:transition hover:duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
             >
               {item.name}
             </a>
@@ -60,7 +62,7 @@ export const Navigation = () => {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
             href="/contact"
-            className="text-sm bg-primary font-roboto_condensedBold uppercase text-gray-100 rounded  px-4 py-2 font-semibold leading-6 shadow-sm hover:bg-hover  hover:text-gray-800 focus-visible:outline focus-visible:outline-offset-0 focus-visible:outline-4 focus-visible:outline-slate-500 focus-visible:bg-hover focus-visible:text-black"
+            className="text-lg bg-primary font-roboto_condensedBold uppercase whitespace-nowrap text-gray-100 rounded  px-4 py-2 font-semibold leading-6 shadow-sm hover:bg-hover  hover:text-gray-800 focus-visible:outline focus-visible:outline-offset-0 focus-visible:outline-4 focus-visible:outline-slate-500 focus-visible:bg-hover focus-visible:text-black"
           >
             Order The Book
           </a>
