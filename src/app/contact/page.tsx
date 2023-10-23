@@ -14,7 +14,6 @@
 */
 "use client"
 import { Navigation } from '@/components/Navigation'
-import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
 import { ContactSection } from '@/components/ContactSection';
 
 const Contact = () => {

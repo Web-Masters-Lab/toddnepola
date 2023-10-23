@@ -36,7 +36,7 @@ export const ContactSection = () => {
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
           <div className="px-6 lg:px-8">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-              <h2 className="text-6xl uppercasesm:text-8xl font-bold tracking-tight font-roboto_condensedBold text-white">Get in Touch</h2>
+              <h2 className="text-6xl uppercasesm:text-8xl font-bold tracking-tight uppercase font-roboto_condensedBold text-white">Get in Touch</h2>
               <p className="mt-2 text-lg leading-8 text-white">
                 Proin volutpat consequat porttitor cras nullam gravida at orci molestie a eu arcu sed ut tincidunt magna.
               </p>
@@ -71,7 +71,7 @@ export const ContactSection = () => {
                     </div>
                   </div>
                   <div className="sm:col-span-2">
-                    <label htmlFor="email" className="block text-sm font-semibold leading-6 text-white">
+                    <label htmlFor="email" className="block font-roboto_condensedBold uppercase text-sm font-semibold leading-6 text-white">
                       Email
                     </label>
                     <div className="mt-2.5">
@@ -86,10 +86,10 @@ export const ContactSection = () => {
                   </div>
                   <div className="sm:col-span-2">
                     <div className="flex justify-between text-sm leading-6">
-                      <label htmlFor="phone" className="block font-semibold text-white">
+                      <label htmlFor="phone" className="block font-roboto_condensedBold uppercase font-semibold text-white">
                         Phone
                       </label>
-                      <p id="phone-description" className="text-white">
+                      <p id="phone-description" className="text-white font-roboto_condensedBold">
                         Optional
                       </p>
                     </div>
@@ -106,10 +106,10 @@ export const ContactSection = () => {
                   </div>
                   <div className="sm:col-span-2">
                     <div className="flex justify-between text-sm leading-6">
-                      <label htmlFor="message" className="block text-sm font-semibold leading-6 text-white">
+                      <label htmlFor="message" className="block font-roboto_condensedBold uppercase text-sm font-semibold leading-6 text-white">
                         How can we help you?
                       </label>
-                      <p id="message-description" className="text-white">
+                      <p id="message-description" className="text-white font-roboto_condensedBold">
                         Max 500 characters
                       </p>
                     </div>
@@ -128,7 +128,7 @@ export const ContactSection = () => {
                 <div className="mt-10 flex justify-end border-t border-gray-900/10 pt-8">
                   <button
                     type="submit"
-                    className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className="rounded-md font-roboto_condensedBold uppercase bg-white px-3.5 py-2.5 text-center text-sm font-semibold text-primary hover:text-white shadow-sm hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     Send message
                   </button>

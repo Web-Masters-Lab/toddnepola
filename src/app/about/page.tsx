@@ -1,6 +1,5 @@
 'use client'
 import React from "react";
-import Image from "next/image";
 import {Navigation} from "@/components/Navigation"
 import { Hero } from "@/components/Hero"
 
@@ -13,11 +12,11 @@ const About = () => {
 
             <div className="lg:mt-14 sm:mt-7 mt-14">
                 <div className="flex lg:flex-row flex-col items-center">
-                    <div className="w-full px-20 lg:w-7/12">
-                        <h2 className="lg:text-4xl text-3xl lg:leading-9 leading-7 bg-gradient-to-tl from-primary via-blue-700 to-black bg-clip-text text-transparent font-bold font-roboto_condensedBold">Todd's Story</h2>
-                        <p className="pr-6 font-normal text-base leading-6 text-gray-600 mt-6 w-full xl:w-9/12">As President and founder of Current Capital Group, Mr. Nepola is responsible for the company's vision and long-term strategic plans. Mr. Nepola follows three generations of real estate investors and developers of commercial real estate. His paternal great-grandfather came to Manhattan from Italy in 1899. He was a superintendent for over 40 years responsible for building the Holland tunnel and several of Manhattan's subway lines. Mr. Nepola's grandfather and father also were real estate investors and developers. </p>
-                        <p className="pr-6 font-normal text-base leading-6 text-gray-600 w-full xl:w-9/12 mt-6">Mr. Nepola graduated from the University of South Florida in 1994. While pursuing a career in Investment Banking, Mr. Nepola followed in his family's footsteps and started acquiring investment properties and developing properties for himself. After a decade of buying, building, leasing and managing his own properties, Todd made a decision to open up his own firm. With properties throughout Florida, Mr. Nepola has opened a second office in Port St Lucie, FL in order to be even more accessible.</p>
-                        <p className="pr-6 font-normal text-base leading-6 text-gray-600 w-full xl:w-9/12 mt-6">He has been recognized as a winner of CoStars "Power Broker" award, in addition to being a member of the international council of shopping centers (ICSC). With over two decades of "hands-on" experience in acquisitions, development, leasing and management of commercial real estate, Mr. Nepola is proud to lead Current Capital Group. Mr. Nepola resides in Miami Fl with his wife Alexia Nepola and is the proud father of two beautiful daughters. He is active in social and philanthropic organizations within the area. In addition, he is an active triathlete and a finisher of the Ironman triathlon.</p>
+                    <div className="w-full md:px-20 pb-14 lg:w-7/12">
+                        <h2 className="lg:text-4xl text-3xl lg:leading-9 leading-7 bg-gradient-to-tl from-primary via-blue-700 to-black bg-clip-text text-transparent font-bold font-roboto_condensedBold">Todd&apos;s Story</h2>
+                        <p className="pr-6 font-normal text-base leading-6 text-gray-600 mt-6 w-full xl:w-9/12">As President and founder of Current Capital Group, Mr. Nepola is responsible for the company&apos;s vision and long-term strategic plans. Mr. Nepola follows three generations of real estate investors and developers of commercial real estate. His paternal great-grandfather came to Manhattan from Italy in 1899. He was a superintendent for over 40 years responsible for building the Holland tunnel and several of Manhattan&apos;s subway lines. Mr. Nepola&apos;s grandfather and father also were real estate investors and developers. </p>
+                        <p className="pr-6 font-normal text-base leading-6 text-gray-600 w-full xl:w-9/12 mt-6">Mr. Nepola graduated from the University of South Florida in 1994. While pursuing a career in Investment Banking, Mr. Nepola followed in his family&apos;s footsteps and started acquiring investment properties and developing properties for himself. After a decade of buying, building, leasing and managing his own properties, Todd made a decision to open up his own firm. With properties throughout Florida, Mr. Nepola has opened a second office in Port St Lucie, FL in order to be even more accessible.</p>
+                        <p className="pr-6 font-normal text-base leading-6 text-gray-600 w-full xl:w-9/12 mt-6">He has been recognized as a winner of CoStars &quot;Power Broker&quot; award, in addition to being a member of the international council of shopping centers (ICSC). With over two decades of &quot;hands-on&quot; experience in acquisitions, development, leasing and management of commercial real estate, Mr. Nepola is proud to lead Current Capital Group. Mr. Nepola resides in Miami Fl with his wife Alexia Nepola and is the proud father of two beautiful daughters. He is active in social and philanthropic organizations within the area. In addition, he is an active triathlete and a finisher of the Ironman triathlon.</p>
                     </div>
                     <div className="lg:pt-16 xl:pt-0 cursor-pointer w-full lg:w-5/12 lg:mt-0 sm:mt-10 mt-8">
                         <div className="w-full grid sm:grid-cols-2 grid-cols-1">
@@ -217,13 +216,13 @@ const About = () => {
                             
 
 
-                            <div className="sm:hidden block pb-5 border-r-2 border-gray-200">
+                            <div className="sm:hidden block pb-5  border-gray-200">
                                 <div className="flex justify-between">
                                     <div className="w-auto">
                                         <h2 className="font-semibold text-xl leading-5 text-gray-800">2022</h2>
                                         <p className="font-normal text-base leading-6 text-gray-600 mt-2"> Current Capital Real Estate becomes top leasing firm in Broward County </p>
                                     </div>
-                                    <div className="mt-1 -mr-2">
+                                    <div className=" -mr-1.5">
                                         <svg width="60" height="12" viewBox="0 0 60 12" fill="white" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="54" cy="6" r="5.5" stroke="#4338CA" />
                                             <circle cx="42" cy="6" r="1.5" stroke="#4338CA" />

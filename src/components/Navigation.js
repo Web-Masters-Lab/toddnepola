@@ -5,7 +5,6 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Dropdown } from './Dropdown'
 
 const navigation = [
-  { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   // { name: 'Podcasts', href: '/practices' },
   // { name: 'Articles', href: '/testimonials' },
@@ -49,7 +48,7 @@ export const Navigation = () => {
         </div>
         <div className="hidden pl-28 lg:flex lg:gap-x-10">
           {navigation.map((item) => (
-            item.children ? <div key={item.name} className='relative' ><Dropdown/></div> :
+            item.children ? <div key={item.name} className='relative' ><Dropdown dark/></div> :
             <a
               key={item.name}
               href={item.href}
@@ -62,7 +61,7 @@ export const Navigation = () => {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
             href="/contact"
-            className="text-lg bg-primary font-roboto_condensedBold uppercase whitespace-nowrap text-gray-100 rounded  px-4 py-2 font-semibold leading-6 shadow-sm hover:bg-hover  hover:text-gray-800 focus-visible:outline focus-visible:outline-offset-0 focus-visible:outline-4 focus-visible:outline-slate-500 focus-visible:bg-hover focus-visible:text-black"
+            className="text-lg bg-primary font-roboto_condensedBold uppercase whitespace-nowrap text-gray-100 rounded  px-4 py-2 font-semibold leading-6 shadow-sm hover:bg-hover  hover:text-white hover:bg-black focus-visible:outline focus-visible:outline-offset-0 focus-visible:outline-4 focus-visible:outline-slate-500 focus-visible:bg-hover focus-visible:text-black"
           >
             Order The Book
           </a>

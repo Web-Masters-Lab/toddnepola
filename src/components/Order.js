@@ -9,7 +9,7 @@ export const Order = () => {
             Keeping It Real on Commercial Real Estate
           </h3>
           <p className="my-6 md:mx-24 text-center indent-8">
-          Todd Nepola's highly anticipated book, "Keeping it Real on Commercial Real Estate" will answer all the questions investors need answered. 
+          Todd Nepola&apos;s highly anticipated book, &quot;Keeping it Real on Commercial Real Estate&quot; will answer all the questions investors need answered. 
           </p>
           <p className="mb-6 md:mx-24 text-center">
             Nepola is a seasoned veteran with over 25 year of experience as an investor, manager and developer. 
@@ -18,7 +18,7 @@ export const Order = () => {
           Over the years people have asked Todd questions about getting started in investing, and he realized that, many times, would-be investors ask the wrong questions, and do not focus in on what should be asked. 
           </p>
           <p className="mb-6 md:mx-24 text-center">
-            You will find that Nepola's book contains all the questions that should be asked, and then answered! 
+            You will find that Nepola&lsquo;s book contains all the questions that should be asked, and then answered! 
           </p>
           
           <div className="flex flex-wrap items-center justify-center gap-4 mt-auto">

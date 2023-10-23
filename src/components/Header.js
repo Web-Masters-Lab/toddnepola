@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { Dropdown } from './Dropdown';
 import { Dialog } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faXmark, faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 const navigation = [
   { name: 'ABOUT', href: '/about' },

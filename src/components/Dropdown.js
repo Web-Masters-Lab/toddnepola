@@ -2,14 +2,21 @@ import { Menu, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import classNames from 'classnames';
 
 const Dropdown = (props) => {
-  const { nav } = props;
-
+  const { dark = false } = props;
+  const dropdownClass = classNames(`w-full font-roboto_condensedBold flex 
+  group justify-center rounded-md px-4 py-2 text-sm font-medium 
+  hover:bg-black hover:bg-opacity-30 hover:transition 
+  hover:duration-150 focus:outline-none focus-visible:ring-2 
+  focus-visible:ring-white focus-visible:ring-opacity-75`, {
+    'text-black': dark,
+    'text-white': !dark
+  })
   return (
       <Menu as="div" className="text-left">
-        <Menu.Button className="w-full font-roboto_condensedBold flex group justify-center rounded-md px-4 py-2 text-sm font-medium text-black hover:bg-black hover:bg-opacity-30 hover:transition hover:duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+        <Menu.Button className={dropdownClass}>
             <span className='font-roboto_condensedBold text-lg  group-hover:text-primary '>MEDIA </span>
             <FontAwesomeIcon className="h-4 w-4 ml-1 mb-1 self-center group-hover:text-primary " icon={faCaretDown} />
         </Menu.Button>
@@ -66,15 +73,6 @@ function EditInactiveIcon() {
     <svg className="h-3 w-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
       <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
     </svg>
-  )
-}
-
-function DuplicateInactiveIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-    </svg>
-
   )
 }
 
