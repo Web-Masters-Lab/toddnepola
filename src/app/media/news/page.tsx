@@ -1,9 +1,17 @@
+'use client'
 import React from 'react'
+import { Navigation } from '@/components/Navigation';
+import { SectionHeader } from '@/components/SectionHeader';
+import { Articles } from '@/components/Articles';
 
-const Contact = () => {
+const News = () => {
   return (
-    <div className=" bg-white 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4"></div>
+    <>
+      <Navigation/>
+      <SectionHeader title="News Articles"/>
+      <Articles/>
+    </>
   )
 }
 
-export default Contact
+export default News;

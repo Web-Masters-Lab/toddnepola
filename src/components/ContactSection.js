@@ -28,7 +28,7 @@ export const ContactSection = () => {
           <Image
             height={600}
             width={600}
-            className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full"
+            className="h-64 w-full bg-gray-50 object-cover sm:h-80 md:h-[28rem] lg:absolute lg:h-full"
             src="/images/contact-mobile.png"
             alt=""
           />

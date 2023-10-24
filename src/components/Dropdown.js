@@ -33,7 +33,8 @@ const Dropdown = (props) => {
             <div className="px-1 py-1 ">
               <Menu.Item>
                 {({ active }) => (
-                  <button
+                  <a
+                    href='/media/news'
                     className={`${
                       active ? 'bg-primary text-white' : 'text-gray-900'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
@@ -43,12 +44,13 @@ const Dropdown = (props) => {
                         aria-hidden="true"
                       />
                     <span className='font-roboto_condensedBold uppercase'>News Articles</span>
-                  </button>
+                  </a>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                  <button
+                  <a
+                    href='/media/podcasts'
                     className={`${
                       active ? 'bg-primary text-white' : 'text-gray-900'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
@@ -58,7 +60,7 @@ const Dropdown = (props) => {
                         aria-hidden="true"
                       />
                     <span className='font-roboto_condensedBold uppercase'>Podcasts</span>
-                  </button>
+                  </a>
                 )}
               </Menu.Item>
             </div>

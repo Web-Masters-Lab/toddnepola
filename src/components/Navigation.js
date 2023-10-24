@@ -6,9 +6,8 @@ import { Dropdown } from './Dropdown'
 
 const navigation = [
   { name: 'About', href: '/about' },
-  // { name: 'Podcasts', href: '/practices' },
-  // { name: 'Articles', href: '/testimonials' },
-  { name: 'Menu', children:[{name:'Podcasts'}]},
+  { name: 'Podcasts', href:'/media/podcasts'},
+  { name: 'News Articles', href:'/media/articles'},
   { name: 'Contact', href: '/contact' },
 ]
 
@@ -60,7 +59,7 @@ export const Navigation = () => {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-            href="/contact"
+            href="/book"
             className="text-lg bg-primary font-roboto_condensedBold uppercase whitespace-nowrap text-gray-100 rounded  px-4 py-2 font-semibold leading-6 shadow-sm hover:bg-hover  hover:text-white hover:bg-black focus-visible:outline focus-visible:outline-offset-0 focus-visible:outline-4 focus-visible:outline-slate-500 focus-visible:bg-hover focus-visible:text-black"
           >
             Order The Book
@@ -73,13 +72,20 @@ export const Navigation = () => {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Delgado Legal Practicing Attorney</span>
-              <Image
-                src="/images/logo.svg"
-                height={150}
-                width={60}
-                priority
-                alt="Delgado Legal Practicing Attorney"
-              />
+              <div className='flex'>
+                <Image
+                  src="/images/logo.svg"
+                  height={150}
+                  width={60}
+                  priority
+                  alt="Delgado Legal Practicing Attorney"
+                />
+                <div className='grid font-roboto_condensedBold bg-gradient-to-tl from-primary to-black bg-clip-text text-transparent pl-2 my-0'>
+                  <span className='text-2xl md:text-3xl'>TODD</span>
+                  <span className='text-4xl md:text-5xl'>NEPOLA</span>
+                </div>
+              </div>
+              
             </a>
             <button
               type="button"
@@ -91,7 +97,7 @@ export const Navigation = () => {
             </button>
           </div>
           <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y-2 divide-[#033A5B]">
+            <div className="-my-6 divide-y-2 divide-[#001eff]">
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
                   <a key={item.name} href={item.href} className="-mx-3 block">
@@ -99,7 +105,7 @@ export const Navigation = () => {
                       className="flex justify-start rounded-lg px-3 py-2 h-full w-full hover:bg-gray-200 active:bg-gray-200"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      <span className="text-base left-0 font-semibold leading-7 text-black">
+                      <span className="text-base font-roboto_condensedBold uppercase left-0 font-semibold leading-7 text-black">
                         {item.name}
                       </span>
                     </button>
@@ -107,14 +113,13 @@ export const Navigation = () => {
                 ))}
               </div>
               <div className="py-6">
-                <a href="/contact" title="Contact Us" className="-mx-3 block ">
+              <a href="/book" title="Order the Book" className="block ">
                   <button
-                    className="flex justify-start rounded-lg px-3 py-2 h-full w-full hover:bg-gray-200 active:bg-gray-200"
+                    className="flex bg-primary rounded duration-400 px-4 py-2 border-[1px] text-white hover:text-black border-black group leading-6 justify-start hover:bg-gray-200 active:bg-gray-200 hover:ring-2 hover:ring-offset-2"
                     onClick={() => setMobileMenuOpen(false)}
+                    // bg-primary hover:bg-blue-200 hover:ring-2 hover:ring-offset-2 font-roboto_condensedBold text-lg text-white rounded duration-400 px-4 py-2 leading-6 shadow-sm hover:text-black border-[1px] border-black focus-visible:outline focus-visible:outline-offset-0 focus-visible:outline-4 focus-visible:outline-slate-500 focus-visible:bg-hover focus-visible:text-white
                   >
-                    <span className="text-base left-0 font-semibold leading-7 text-black">
-                      Contact Us
-                    </span>
+                    <span className="text-lg left-0 uppercase leading-7 font-roboto_condensedBold ">Order the Book</span>
                   </button>
                 </a>
               </div>

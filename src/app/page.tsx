@@ -63,7 +63,7 @@ export default function Home() {
         </div>
 
         <div className="col-span-1 flex md:col-span-2 md:mr-8">
-          <div className="flex flex-col text-center md:text-left justify-center max-w-[75%] h-full">
+          <div className="flex flex-col text-center md:text-left justify-center h-full">
             <p className=' py-2'>
                 Todd Nepola is the President and founder of Current Capital Real Estate Group. He is responsible for the over seeing the company&lsquo;s vision and long-term strategic plans.
             </p>
@@ -101,7 +101,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 mb-20 gap-8 px-4">
 
 <div className="col-span-1">
-          <div className="flex justify-start">
+          <div className="flex h-[12rem] md:h-auto justify-start">
             <Image
               className="object-contain"
               src="/images/CCREG.png"
@@ -109,7 +109,7 @@ export default function Home() {
               width="256"
               height="256"
             />
-            <div className="h-64 flex justify-center flex-col bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent">
+            <div className="h-[12rem] flex justify-center flex-col bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent">
               <p className="font-['Copperplate'] text-blue-900 text-2xl">CURRENT CAPITAL</p>
               <p className="font-['Copperplate'] text-gray-500 text-2xl">REAL ESTATE GROUP</p>
             </div>
@@ -150,14 +150,14 @@ export default function Home() {
           <h2 className="text-center uppercase font-roboto_condensedBold text-white my-2 text-5xl ">
             Book
           </h2>
-          <div className="px-4 my-16">
+          <div className="px-4">
             <BookSection />
           </div>
         </div>
 
 
 <h2 className="text-center uppercase font-roboto_condensedBold bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent my-10 text-5xl ">
-  Latest Articles
+  Popular Articles
 </h2>
 <Articles/>
     </>

@@ -3,14 +3,12 @@ import Image from 'next/image';
 const posts = [
     {
       id: 1,
-      title: 'Todd Nepola buys a pair of Palm Beach County shopping centers for $13M',
-      href: 'https://therealdeal.com/miami/2022/04/13/todd-nepola-buys-a-pair-of-palm-beach-county-shopping-centers-for-13m/',
+      title: 'Investing in the Niches with Todd Nepola',
+      href: 'https://www.leftfieldinvestors.com/industrial-and-retail-real-estate-investing-in-the-niches-with-todd-nepola/',
       imageUrl:
-        'https://static.therealdeal.com/wp-content/uploads/2022/04/FT-Thumbnail_palm-beach-shopping-center.jpg',
-      date: 'Apr 13, 2023',
-      datetime: '2023-04-13',
+        'https://www.leftfieldinvestors.com/wp-content/uploads/2023/02/Graphics-Episode-Art-PILF-102-Todd-Nepola-Square.jpg',
       author: {
-        name: 'Francisco Alvarado',
+        name: 'Jim Pfeifer',
       },
     },
     {
@@ -28,9 +26,9 @@ const posts = [
 
   ]
   
-  export const Articles = () => {
+  export const PodcastSection = () => {
     return (
-      <div className="bg-white pb-20 pt-1 sm:py-32">
+      <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto mt-8 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {posts.map((post) => (
