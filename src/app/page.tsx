@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { BookSection } from '@/components/BookSection'
-import { Articles } from '@/components/Articles'
+import { ArticleSection } from '@/components/ArticleSection'
 import { Header } from '@/components/Header'
 
 export default function Home() {
@@ -159,7 +159,7 @@ export default function Home() {
 <h2 className="text-center uppercase font-roboto_condensedBold bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent my-10 text-5xl ">
   Popular Articles
 </h2>
-<Articles/>
+<ArticleSection/>
     </>
   )
 }
