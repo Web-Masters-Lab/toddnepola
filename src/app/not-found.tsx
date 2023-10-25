@@ -1,13 +1,15 @@
 'use client'
 import { Footer } from '@/components/Footer'
 import { Navigation } from '@/components/Navigation'
+import { SectionHeader } from '@/components/SectionHeader'
 import Link from 'next/link'
 
 export default function NotFound() {
   return (
     <>
       <Navigation/>
-      <div className="flex w-screen h-screen items-center justify-center py-24 sm:py-32 lg:py-40">
+      <SectionHeader title="Page Not Found" />
+      <div className="flex w-screen h-screen items-center justify-center py-10">
       <div className="flex flex-col items-center text-center">
         <p className="bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent font-bold font-roboto_condensedBold text-6xl md:text-9xl">
           404
@@ -33,7 +35,6 @@ export default function NotFound() {
         </Link>
       </div>
     </div>
-      <Footer/>
     </>
   )
 }
