@@ -6,8 +6,7 @@ import { Dropdown } from './Dropdown'
 
 const navigation = [
   { name: 'About', href: '/about' },
-  { name: 'Podcasts', href:'/media/podcasts'},
-  { name: 'News Articles', href:'/media/articles'},
+  { name: 'News Articles', children:'/media/articles'},
   { name: 'Contact', href: '/contact' },
 ]
 
