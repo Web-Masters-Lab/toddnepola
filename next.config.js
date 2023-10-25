@@ -21,7 +21,28 @@ const nextConfig = {
           {
             protocol:'https',
             hostname: 'www.leftfieldinvestors.com'
-          }
+          },
+          {
+            protocol:'https',
+            hostname:'rodkhleif.com'
+          },
+          {
+            protocol:'https',
+            hostname: 'images.podpage.com'
+          },
+          {
+            protocol:'https',
+            hostname:'www.bestevercre.com'
+          },
+          {
+            protocol:'https',
+            hostname:'kevinbupp.com'
+          },
+          {
+            protocol:'https',
+            hostname:'www.costargroup.com'
+          },
+          
         ],
       },
 }

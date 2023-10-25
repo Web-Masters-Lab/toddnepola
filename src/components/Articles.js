@@ -25,6 +25,67 @@ const posts = [
         name: 'Francisco Alvarado & Katherine Kallergis',
       },
     },
+    {
+      id: 3,
+      title: 'Todd Nepola pays $24M for Lauderdale Lakes shopping centers',
+      href: 'https://therealdeal.com/miami/2022/12/21/todd-nepola-pays-24m-for-lauderdale-lakes-shopping-centers/',
+      imageUrl:
+        'https://static.therealdeal.com/wp-content/uploads/2022/12/FT-Thumbnail_Todd-Nepola.jpg',
+      date: 'Feb 10, 2023',
+      datetime: '2023-02-10',
+      author: {
+        name: 'Francisco Alvarado',
+      },
+    },
+    {
+      id: 4,
+      title: 'Investor picks up Margate shopping center for $11M',
+      href: 'https://therealdeal.com/miami/2021/09/23/investor-picks-up-margate-shopping-center-for-11m/',
+      imageUrl:
+        'https://static.therealdeal.com/wp-content/uploads/2021/09/featured-image_MIA_Todd-Nepola-Mall_9.22.21.png',
+      date: 'Feb 10, 2023',
+      datetime: '2023-02-10',
+      author: {
+        name: 'Francisco Alvarado',
+      },
+    },
+    {
+      id: 5,
+      title: 'Parking Lot Owner Sells Retail Center in Lauderhill for $13M',
+      href: 'https://therealdeal.com/miami/2020/06/15/miami-beach-parking-lot-mogul-sells-retail-center-in-lauderhill-for-13m/',
+      imageUrl:
+        'https://static.therealdeal.com/wp-content/uploads/2020/06/retail-center-sale-2.jpg',
+      date: 'Feb 10, 2023',
+      datetime: '2023-02-10',
+      author: {
+        name: 'Francisco Alvarado',
+      },
+    },
+    {
+      id: 6,
+      title: 'Todd Nepola Bets on Aging South Florida Retail Center',
+      href: 'https://product.costar.com/home/news/2139466768',
+      imageUrl:
+        'https://www.costargroup.com/sites/costargroup.com/files/2022-03/brands-costar.png',
+      date: 'Feb 10, 2023',
+      datetime: '2023-02-10',
+      author: {
+        name: 'Francisco Alvarado',
+      },
+    },
+    {
+      id: 7,
+      title: 'Todd Nepola Buys Promenade at Inverrary, Plans Upgrades from ‘Head to Toe’',
+      href: 'https://product.costar.com/home/news/2139466768',
+      imageUrl:
+        'https://www.costargroup.com/sites/costargroup.com/files/2022-03/brands-costar.png',
+      date: 'Feb 10, 2023',
+      datetime: '2023-02-10',
+      author: {
+        name: 'Francisco Alvarado',
+      },
+    },
+    
 
   ]
   

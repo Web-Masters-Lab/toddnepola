@@ -13,17 +13,47 @@ const posts = [
     },
     {
       id: 2,
-      title: 'South Florida commercial deals go cold',
-      href: 'https://therealdeal.com/miami/2023/02/10/south-florida-commercial-deals-go-cold/',
+      title: 'Making Money While You Sleep',
+      href: 'https://rodkhleif.com/podcasts/making-money-while-you-sleep/',
       imageUrl:
-        'https://static.therealdeal.com/wp-content/uploads/2023/02/2023-Starts-Slow-For-South-Florida-Commercial-Deals-1.jpg',
-      date: 'Feb 10, 2023',
-      datetime: '2023-02-10',
+        'https://rodkhleif.com/wp-content/uploads/2022/10/Todd-Thumbnail.jpg',
       author: {
-        name: 'Francisco Alvarado & Katherine Kallergis',
+        name: 'Rod Khleif',
+      },
+    },
+    {
+      id: 3,
+      title: 'Making Money While You Sleep',
+      href: 'https://www.bestevercre.com/podcast/jf2771-10-expert-tips-on-breaking-into-industrial-and-retail-ft-todd-nepola',
+      imageUrl:
+        'https://www.bestevercre.com/hubfs/Compressed/JF2771-10-Expert-Tips-on-Breaking-into-Industrial-and-Retail-ft.jpg#keepProtocol',
+      author: {
+        name: 'Ash Patel',
+      },
+    },
+    {
+      id: 4,
+      title: 'Great Retail Centers Are as Relevant as Ever',
+      href: 'https://www.streetsmartsuccess.com/ToddNepola/',
+      imageUrl:
+        'https://images.podpage.com/https%3A%2F%2Fd3t3ozftmdmh3i.cloudfront.net%2Fproduction%2Fpodcast_uploaded_episode%2F4702096%2F4702096-1654565764339-c42fe20d02883.jpg?auto=format&fill=blur&fit=fill&h=628&w=1200&s=b41c0f962be6b6e66871716f0467729d',
+      author: {
+        name: 'Ash Patel',
+      },
+    },
+    {
+      id: 5,
+      title: 'Finding Retail Opportunities in Today’s Market',
+      href: 'https://kevinbupp.com/podcast/450-finding-retail-opportunities-in-todays-market/',
+      imageUrl:
+        'https://kevinbupp.com/wp-content/uploads/2022/04/Cash-Flow-STACK-300x266.png',
+      author: {
+        name: 'Kevin Bupp',
       },
     },
 
+    
+    
   ]
   
   export const PodcastSection = () => {
