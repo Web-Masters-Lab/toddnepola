@@ -36,7 +36,7 @@ export const Video = () => {
                 </div>
                 { isSSR ? null : 
                     <ReactPlayer
-                        className="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+                        className="absolute z-10 w-full min-w-full min-h-full max-w-none"
                         width={100}
                         height={100}
                         playing={playVideo}
