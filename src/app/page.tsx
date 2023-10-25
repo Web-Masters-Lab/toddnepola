@@ -2,29 +2,32 @@
 import Image from 'next/image'
 import { BookSection } from '@/components/BookSection'
 import { ArticleSection } from '@/components/ArticleSection'
-import { Header } from '@/components/Header'
+import { Navigation } from '@/components/Navigation'
+import { Video } from '@/components/Video'
 
 export default function Home() {
   return (
     <>
-      <Header />
+      <Navigation />
             {/* Hero */}
-      <section className="relative h-[44rem]">
+      <section className="relative h-[32rem]">
         {/* Video */}
-        <video
-          autoPlay
-          muted
-          loop
+        <Video/>
+        {/* <video
+          // autoPlay={false}
+          // controlsList="nofullscreen nodownload"
+          controls
+          // muted={false}
           playsInline
           disablePictureInPicture={true}
           className="absolute top-0 left-0 object-cover w-full h-full"
         >
-          <source src="/videos/pagehero.mp4" type="video/mp4" />
+          <source src="/videos/pagehero1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
 
         {/* Overlay */}
-        <div className="absolute top-0 left-0 w-full h-[44rem] bg-gradient-to-r from-black/60 via-black/20 to-black/60 "/>
+        {/* <div className="absolute top-0 left-0 w-full h-[32rem] bg-gradient-to-r from-black/60 via-black/20 to-black/60 "/> */}
 
 
         {/* Text */}

@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html className="selection:bg-primary/70 selection:text-white scroll-smooth" lang="en">
-      <body className={`${roboto.variable} ${roboto_condensed.variable} ${poppins.variable}`}>
+      <body suppressHydrationWarning={true} className={`${roboto.variable} ${roboto_condensed.variable} ${poppins.variable}`}>
         <RootLayout>{children}</RootLayout>
       </body>
     </html>
