@@ -1,8 +1,13 @@
+'use client'
+import { Footer } from '@/components/Footer'
+import { Navigation } from '@/components/Navigation'
 import Link from 'next/link'
 
 export default function NotFound() {
   return (
-    <div className="flex w-screen h-screen items-center justify-center py-24 sm:py-32 lg:py-40">
+    <>
+      <Navigation/>
+      <div className="flex w-screen h-screen items-center justify-center py-24 sm:py-32 lg:py-40">
       <div className="flex flex-col items-center text-center">
         <p className="bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent font-bold font-roboto_condensedBold text-6xl md:text-9xl">
           404
@@ -28,5 +33,7 @@ export default function NotFound() {
         </Link>
       </div>
     </div>
+      <Footer/>
+    </>
   )
 }

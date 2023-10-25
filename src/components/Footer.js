@@ -2,6 +2,7 @@ import Image from 'next/image'
 
 const navigation = {
   main: [
+    { name: 'Home', href: '/' },
     { name: 'About Todd', href: '/about' },
     { name: 'Book', href: '/book' },
     { name: 'Current Capital Group', href: 'https://www.currentcapitalgroup.com/' },
