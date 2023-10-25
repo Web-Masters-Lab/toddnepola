@@ -5,8 +5,10 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Dropdown } from './Dropdown'
 
 const navigation = [
+  { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'News Articles', children:'/media/articles'},
+  { name: 'News Articles', href:'/media/news'},
+  { name: 'Podcasts', href:'/media/podcasts'},
   { name: 'Contact', href: '/contact' },
 ]
 
