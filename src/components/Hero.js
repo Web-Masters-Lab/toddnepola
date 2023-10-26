@@ -4,7 +4,7 @@ export const Hero = () => {
   return (
     <div className="relative isolate overflow-hidden h-[20rem] bg-center bg-cover bg-no-repeat bg-desktop">
       <div className="mx-auto max-w-7xl self-center flex px-6">
-            <div className='grid mt-16 font-roboto_condensedBold bg-gradient-to-tl from-primary via-blue-400 to-white bg-clip-text text-transparent pl-8 '>
+            <div className='grid mt-16 font-roboto_condensedBold text-white pl-8 '>
                 <span className='text-lg sm:text-4xl uppercase'>About</span>
                 <span className='text-3xl sm:text-6xl uppercase'>Todd</span>
                 <span className='text-4xl sm:text-8xl uppercase'>Nepola</span>

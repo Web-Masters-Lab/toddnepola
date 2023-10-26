@@ -22,14 +22,14 @@ export const Order = () => {
           </p>
           
           <div className="flex flex-wrap items-center justify-center gap-4 mt-auto">
-            <a
+            {/* <a
               href="#"
               className="border-black border font-roboto_condensedBold uppercase  whitespace-nowrap w-56 bg-secondary text-black/80 text-lg text-center hover:bg-black/80 hover:text-white duration-400 py-[12px] rounded"
             >
               Read the Sample
-            </a>
+            </a> */}
             <a
-              href="#orderNow"
+              href="https://store.bookbaby.com/book/keeping-it-real-on-commercial-real-estate"
               className="border-black border font-roboto_condensedBold uppercase  bg-primary whitespace-nowrap w-56 text-white text-lg hover:bg-black/80 duration-400 py-[12px] text-center rounded"
             >
               Order Now

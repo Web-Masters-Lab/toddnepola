@@ -20,7 +20,7 @@ const navigation = {
 
 export const Footer = () => {
   return (
-    <footer className="bg-black" aria-labelledby="footer-heading">
+    <footer className="bg-gray-300" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -28,20 +28,20 @@ export const Footer = () => {
         <div className="md:grid md:grid-cols-5 md:gap-8 flex flex-col items-center">
           <a href="/" className="col-span-2 flex">
             <Image width={80} height={150} src="/images/logo.svg" alt="Todd Nepola Logo" />
-            <div className='grid font-roboto_condensedBold text-white pl-2 my-0'>
+            <div className='grid font-roboto_condensedBold text-primary pl-2 my-0'>
               <span className='text-4xl'>TODD</span>
               <span className='text-6xl '>NEPOLA</span>
             </div>
           </a>
           <div className="grid w-full mt-10 md:mt-0 col-span-3 grid-cols-2 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-sm font-poppinsMedium leading-6 text-white">Main</h3>
+              <h3 className="text-sm font-poppinsMedium leading-6 text-primary">Main</h3>
               <ul className="mt-4 space-y-4">
                 {navigation.main.map((item) => (
                   <li key={item.name}>
                     <a
                       href={item.href}
-                      className="text-sm leading-6 font-robotoRegular text-gray-300 hover:text-white hover:underline underline-offset-4 duration-400"
+                      className="text-sm leading-6 font-robotoRegular text-black hover:text-white hover:underline underline-offset-4 duration-400"
                     >
                       {item.name}
                     </a>
@@ -50,13 +50,13 @@ export const Footer = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-poppinsMedium leading-6 text-white">Media</h3>
+              <h3 className="text-sm font-poppinsMedium leading-6 text-primary">Media</h3>
               <ul className="mt-4 space-y-4">
                 {navigation.media.map((item) => (
                   <li key={item.name}>
                     <a
                       href={item.href}
-                      className="text-sm leading-6 font-robotoRegular text-gray-300 hover:text-white hover:underline underline-offset-4 duration-400"
+                      className="text-sm leading-6 font-robotoRegular text-black hover:text-white hover:underline underline-offset-4 duration-400"
                     >
                       {item.name}
                     </a>
@@ -66,13 +66,13 @@ export const Footer = () => {
             </div>
 
             <div className="mt-10 sm:mt-0 col-span-2 sm:col-span-1">
-              <h3 className="text-sm font-poppinsMedium leading-6 text-white">Get in Touch</h3>
+              <h3 className="text-sm font-poppinsMedium leading-6 text-primary">Get in Touch</h3>
               <ul className="mt-4 space-y-4">
                 {navigation.GIT.map((item) => (
                   <li key={item.name}>
                     <a
                       href={item.href}
-                      className="text-sm leading-6 font-robotoRegular text-gray-300 hover:text-white hover:underline underline-offset-4 duration-400"
+                      className="text-sm leading-6 font-robotoRegular text-black hover:text-white hover:underline underline-offset-4 duration-400"
                     >
                       {item.name}
                     </a>

@@ -12,7 +12,7 @@ export const BookSection = () => {
             Mr. Nepola shares over 25 years of real estate knowledge in this book. He answers the questions you should be asking and explains the different avenues
             of real estate investing. 
           </p>
-          <h4 className="text-2xl uppercase font-bold mb-4 font-poppinsMedium text-white">
+          <h4 className="text-2xl uppercase text-center font-bold mb-4 font-poppinsMedium text-white">
             This book is for you if ...
           </h4>
           <ul className='ml-8 text-white list-disc'>
@@ -21,7 +21,7 @@ export const BookSection = () => {
             <li>You want to learn more about real estate</li>
           </ul>
           <br/>
-          <h4 className="text-2xl text-white uppercase pt-8 font-bold mb-4 font-poppinsMedium">
+          <h4 className="text-2xl text-white text-center uppercase pt-8 font-bold mb-4 font-poppinsMedium">
             This book is <span className='text-red-500'>NOT</span> for you if ...
           </h4>
           <ul className='ml-8 text-white list-disc'>
@@ -30,7 +30,7 @@ export const BookSection = () => {
             <li>You dont have the patience to let your investments flourish</li>
           </ul>
           <a
-            href="http://www.currentcapitalgroup.com/"
+            href="/book"
             className="primaryCTA bg-white text-primary border-2 relative my-10 text-lg font-poppinsMedium hover:bg-black/80 hover:text-white duration-400 py-2 w-full text-center rounded"
           >
             Learn More
@@ -38,7 +38,7 @@ export const BookSection = () => {
         </div>
         <div className="order-1 md:order-2 col-span-1 md:col-span-2 flex justify-center md:justify-end">
           <Image
-            className="object-contain"
+            className="object-contain -ml-5"
             src="/images/book.png"
             alt="Todd Nepola Image"
             width="393"

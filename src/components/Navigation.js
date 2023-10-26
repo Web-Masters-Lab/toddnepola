@@ -16,7 +16,7 @@ export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white ">
+    <header className="bg-gray-300 ">
       <nav className="flex items-center justify-between p-4 mx-2 md:mx-8 md:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="/" className="p-1.5">
@@ -29,7 +29,7 @@ export const Navigation = () => {
                 width={60}
                 alt="Delgado Legal Practicing Attorney"
                 />
-                <div className='grid font-roboto_condensedBold bg-gradient-to-tl from-primary to-black bg-clip-text text-transparent pl-2 my-0'>
+                <div className='grid font-roboto_condensedBold text-primary pl-2 my-0'>
                 <span className='text-2xl md:text-3xl'>TODD</span>
                 <span className='text-4xl md:text-5xl'>NEPOLA</span>
                 </div>
@@ -52,7 +52,7 @@ export const Navigation = () => {
             <a
               key={item.name}
               href={item.href}
-              className="px-4 text-center uppercase text-lg font-roboto_condensedBold group justify-center rounded-md py-2 hover:text-primary font-medium text-black hover:bg-black hover:bg-opacity-30 hover:transition hover:duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+              className="px-4 text-center uppercase text-lg font-roboto_condensedBold group justify-center rounded-md py-2 hover:text-white font-medium text-primary hover:bg-black hover:bg-opacity-30 hover:transition hover:duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
             >
               {item.name}
             </a>
@@ -69,7 +69,7 @@ export const Navigation = () => {
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-50" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-300 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Delgado Legal Practicing Attorney</span>
@@ -81,7 +81,7 @@ export const Navigation = () => {
                   priority
                   alt="Delgado Legal Practicing Attorney"
                 />
-                <div className='grid font-roboto_condensedBold bg-gradient-to-tl from-primary to-black bg-clip-text text-transparent pl-2 my-0'>
+                <div className='grid font-roboto_condensedBold text-primary pl-2 my-0'>
                   <span className='text-2xl md:text-3xl'>TODD</span>
                   <span className='text-4xl md:text-5xl'>NEPOLA</span>
                 </div>
@@ -98,7 +98,7 @@ export const Navigation = () => {
             </button>
           </div>
           <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y-2 divide-[#001eff]">
+            <div className="-my-6 divide-y-2 divide-gray-500">
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
                   <a key={item.name} href={item.href} className="-mx-3 block">
@@ -106,7 +106,7 @@ export const Navigation = () => {
                       className="flex justify-start rounded-lg px-3 py-2 h-full w-full hover:bg-gray-200 active:bg-gray-200"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      <span className="text-base font-roboto_condensedBold uppercase left-0 font-semibold leading-7 text-black">
+                      <span className="text-base font-roboto_condensedBold uppercase left-0 font-semibold leading-7 text-primary">
                         {item.name}
                       </span>
                     </button>
