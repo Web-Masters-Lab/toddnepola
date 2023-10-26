@@ -36,10 +36,7 @@ export const ContactSection = () => {
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
           <div className="px-6 lg:px-8">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-              <h2 className="text-6xl uppercasesm:text-8xl font-bold tracking-tight uppercase font-roboto_condensedBold text-white">Get in Touch</h2>
-              <p className="mt-2 text-lg leading-8 text-white">
-                Proin volutpat consequat porttitor cras nullam gravida at orci molestie a eu arcu sed ut tincidunt magna.
-              </p>
+              <h2 className="text-6xl text-center sm:text-8xl font-bold tracking-tight uppercase whitespace-nowrap font-roboto_condensedBold text-white">Get in Touch</h2>
               <form action="#" method="POST" className="mt-16">
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                   <div>

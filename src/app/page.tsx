@@ -42,19 +42,26 @@ export default function Home() {
         <div className="col-span-1 flex md:col-span-2 md:mr-8">
           <div className="flex flex-col text-center md:text-left justify-center h-full">
             <p className=' py-2'>
-                Todd Nepola is the President and founder of Current Capital Real Estate Group. He is responsible for the over seeing the company&lsquo;s vision and long-term strategic plans.
+            Todd Nepola is a distinguished figure known for his multifaceted accomplishments in the realms of real estate investment, property management, and philanthropy. Residing in the vibrant region of South Florida, Todd has made a significant impact on both the business and charitable communities.
             </p>
             <br/> 
             <p className='py-2'>
-              Mr. Nepola follows three generations of real estate investors and developers of commercial real estate. He decided to follow his family&lsquo;s footsteps, and after a decade of buying, building, leasing, and managing his own properties, Mr.Nepola decided to open up his own firm. 
+              As the owner and founder of Current Capital Group, Todd Nepola has demonstrated an exceptional acumen for real estate investment and property management. His expertise and strategic vision have propelled his company to success, making it a prominent player in the real estate industry.
             </p>
             <br/> 
             <p className='pb-2' >
-              Mr Nepola has been recognized as a winner of CoStars &ldquo;Power Broker&ldquo; award, in addition to being a member of the international coucil of shopping centers (ICSC).
+              Beyond his professional achievements, Todd is a passionate philanthropist who actively engages in various charitable endeavors. Notably, he authored the book "Keeping It Real on Commercial Real Estate," a testament to his commitment to sharing knowledge and insights with others in the industry. What sets Todd apart is that all proceeds from the book go directly to charitable causes, exemplifying his dedication to giving back to the community.
             </p>
-            <br/> 
+            <br/>
+            <p className='pb-2' >
+              In addition to his charitable work through literature, Todd Nepola is involved in various philanthropic areas. His commitment to making a positive impact extends to supporting numerous causes and organizations, showcasing his genuine desire to uplift those in need.
+            </p>
+            <p className='pb-2' >
+              Todd's dedication to physical fitness is equally impressive. He has achieved remarkable feats as a finisher of the Florida Ironman and numerous other marathons and athletic events. His discipline, determination, and passion for athletics serve as an inspiration to others, emphasizing the importance of a healthy and active lifestyle.
+            </p>
+            <br/>  
             <p className='pt-2 pb-8'>
-              Mr. Nepola resides in Miami, FL with his wife Alexia Nepola and is the proud father of two beautiful girls and two stepsons.
+            In summary, Todd Nepola is a remarkable individual whose achievements span the worlds of real estate, philanthropy, and athletics. As the founder of Current Capital Group, he has solidified his position as a leading figure in the real estate industry. Simultaneously, his commitment to charity, demonstrated through his book and active involvement in various philanthropic areas, underscores his genuine desire to make a positive impact on society. Todd's athletic accomplishments serve as a testament to his discipline and determination, inspiring others to lead active and healthy lives. His presence in South Florida and contributions to multiple domains make Todd Nepola an accomplished and respected figure in his community and beyond.
             </p>
           <div className="flex items-center mt-auto">
              
@@ -96,11 +103,15 @@ export default function Home() {
         <div className="col-span-1 sm:mr-8">
           <div className="flex flex-col justify-start">
           <p className='text-center sm:text-left'>
-           <span className='text-xl text-primary font-roboto_condensedBold'>Current Capital Real Estate Group</span> is a boutique real estate investment firm committed to delivering the highest level of service in the <em className='text-primary'>development</em>, <em className='text-primary'>management</em>, and <em className='text-primary'>leasing</em> of income producing commercial and residential real estate. 
+           <span className='text-xl text-primary font-roboto_condensedBold'>Current Capital Real Estate Group</span>, originally founded as TN Property Management in 1998 and rebranded as Current Capital in 2002, is a prominent player in the South Florida real estate market. Specializing in property management, development, and leasing services, the company has earned a stellar reputation for its full-service approach and top-ranked team of experienced professionals.
           </p>
           <br/>
-          <p className='pb-8 pt-2 text-center sm:text-left'>
-          Our focus ranges from new <em className='text-primary'>construction</em>, <em className='text-primary'>existing properties</em>, <em className='text-primary'>rental</em> and <em className='text-primary'>commercial properties</em>. We recognize each property and owner has their individual needs, so we make sure to deliver a unique experience to meet and exceed their standards. 
+          <p className='pt-4 text-center sm:text-left'>
+          With a primary focus on the management and ownership of retail and industrial properties across the state of Florida, Current Capital distinguishes itself through its boutique-style, best-in-class service. The company's commitment to excellence is underscored by its consistent ranking as one of the top real estate firms in the region. They offer a personalized and client-centric approach, ensuring that their services meet the unique needs of their diverse portfolio of properties.
+          </p>
+          <br/>
+          <p className='pb-8 pt-4 text-center sm:text-left'>
+          With over two decades of experience, Current Capital Real Estate Group is a trusted partner in the South Florida real estate landscape, known for its expertise, integrity, and ability to deliver exceptional results in property management, development, leasing, other related real estate ventures.
           </p>
           <br/>
           <div className="flex items-center mt-auto">
