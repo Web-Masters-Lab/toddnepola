@@ -31,8 +31,8 @@ const posts = [
       href: 'https://therealdeal.com/miami/2022/12/21/todd-nepola-pays-24m-for-lauderdale-lakes-shopping-centers/',
       imageUrl:
         'https://static.therealdeal.com/wp-content/uploads/2022/12/FT-Thumbnail_Todd-Nepola.jpg',
-      date: 'Feb 10, 2023',
-      datetime: '2023-02-10',
+      date: 'Dec 21, 2022',
+      datetime: '2022-12-21',
       author: {
         name: 'Francisco Alvarado',
       },
@@ -43,8 +43,8 @@ const posts = [
       href: 'https://therealdeal.com/miami/2021/09/23/investor-picks-up-margate-shopping-center-for-11m/',
       imageUrl:
         'https://static.therealdeal.com/wp-content/uploads/2021/09/featured-image_MIA_Todd-Nepola-Mall_9.22.21.png',
-      date: 'Feb 10, 2023',
-      datetime: '2023-02-10',
+      date: 'Sep 23, 2021',
+      datetime: '2021-09-23',
       author: {
         name: 'Francisco Alvarado',
       },
@@ -55,10 +55,10 @@ const posts = [
       href: 'https://therealdeal.com/miami/2020/06/15/miami-beach-parking-lot-mogul-sells-retail-center-in-lauderhill-for-13m/',
       imageUrl:
         'https://static.therealdeal.com/wp-content/uploads/2020/06/retail-center-sale-2.jpg',
-      date: 'Feb 10, 2023',
-      datetime: '2023-02-10',
+      date: 'Jun 15, 2020',
+      datetime: '2020-06-15',
       author: {
-        name: 'Francisco Alvarado',
+        name: 'Keith Larsen',
       },
     },
     {
@@ -67,10 +67,10 @@ const posts = [
       href: 'https://product.costar.com/home/news/2139466768',
       imageUrl:
         'https://www.costargroup.com/sites/costargroup.com/files/2022-03/brands-costar.png',
-      date: 'Feb 10, 2023',
-      datetime: '2023-02-10',
+      // date: 'Feb 10, 2023',
+      // datetime: '2023-02-10',
       author: {
-        name: 'Francisco Alvarado',
+        name: 'Costar',
       },
     },
     {
@@ -79,10 +79,10 @@ const posts = [
       href: 'https://product.costar.com/home/news/2139466768',
       imageUrl:
         'https://www.costargroup.com/sites/costargroup.com/files/2022-03/brands-costar.png',
-      date: 'Feb 10, 2023',
-      datetime: '2023-02-10',
+      // date: 'Feb 10, 2023',
+      // datetime: '2023-02-10',
       author: {
-        name: 'Francisco Alvarado',
+        name: 'Costar',
       },
     },
     
@@ -104,9 +104,11 @@ const posts = [
                 <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
   
                 <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-                  <time dateTime={post.datetime} className="mr-8">
-                    {post.date}
-                  </time>
+                  {post?.date && (
+                    <time dateTime={post.datetime} className="mr-8">
+                      {post.date}
+                    </time>
+                  )}
                   <div className="-ml-4 flex items-center gap-x-4">
                     <svg viewBox="0 0 2 2" className="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50">
                       <circle cx={1} cy={1} r={1} />

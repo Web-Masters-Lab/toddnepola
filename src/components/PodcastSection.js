@@ -38,7 +38,7 @@ const posts = [
       imageUrl:
         'https://images.podpage.com/https%3A%2F%2Fd3t3ozftmdmh3i.cloudfront.net%2Fproduction%2Fpodcast_uploaded_episode%2F4702096%2F4702096-1654565764339-c42fe20d02883.jpg?auto=format&fill=blur&fit=fill&h=628&w=1200&s=b41c0f962be6b6e66871716f0467729d',
       author: {
-        name: 'Ash Patel',
+        name: 'Street Smart Success',
       },
     },
     {
@@ -51,8 +51,36 @@ const posts = [
         name: 'Kevin Bupp',
       },
     },
-
-    
+    {
+      id: 6,
+      title: 'He Turned $100k Into $25M',
+      href: 'https://www.youtube.com/watch?v=lAOliWexJgo',
+      imageUrl:
+        'https://i.ytimg.com/vi/lAOliWexJgo/hqdefault.jpg',
+      author: {
+        name: 'School of Hard Knocks',
+      },
+    },
+    {
+      id: 7,
+      title: 'How to Start Investing in Commercial Real Estate with Todd Nepola',
+      href: 'https://www.youtube.com/watch?v=ObKMdL-K4Cw',
+      imageUrl:
+        'https://i.ytimg.com/vi/ObKMdL-K4Cw/hqdefault.jpg',
+      author: {
+        name: 'Commercial Real Estate Pro Network',
+      },
+    },
+    {
+      id: 8,
+      title: 'Todd Nepola - Commercial Property Recommendations For Real Estate Investors',
+      href: 'https://www.youtube.com/watch?v=ObKMdL-K4Cw',
+      imageUrl:
+        'https://i.ytimg.com/vi/1NE6zm9hDOE/maxresdefault.jpg',
+      author: {
+        name: 'Dwan Bent-Twyford',
+      },
+    },
     
   ]
   
@@ -71,9 +99,9 @@ const posts = [
                 <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
   
                 <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-                  <time dateTime={post.datetime} className="mr-8">
+                  {/* <time dateTime={post.datetime} className="mr-8">
                     {post.date}
-                  </time>
+                  </time> */}
                   <div className="-ml-4 flex items-center gap-x-4">
                     <svg viewBox="0 0 2 2" className="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50">
                       <circle cx={1} cy={1} r={1} />

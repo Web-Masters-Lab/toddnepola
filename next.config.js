@@ -42,7 +42,10 @@ const nextConfig = {
             protocol:'https',
             hostname:'www.costargroup.com'
           },
-          
+          {
+            protocol:'https',
+            hostname:'i.ytimg.com'
+          },
         ],
       },
 }

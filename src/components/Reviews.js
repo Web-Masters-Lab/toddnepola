@@ -3,16 +3,73 @@ import { StarIcon } from '@heroicons/react/20/solid'
 const reviews = [
   {
     id: 1,
-    title: "Can't say enough good things",
+    title: "Straight forward advice",
     rating: 5,
     content: `
-      <p>I was really pleased with the overall shopping experience. My order even included a little personal, handwritten note, which delighted me!</p>
-      <p>The product quality is amazing, it looks and feel even better than I had anticipated. Brilliant stuff! I would gladly recommend this store to my friends. And, now that I think of it... I actually have, many times!</p>
+      <p>If you are just staring out or are curious about commercial real estate, this book is a great read. Todd puts it down in a plain, easy to follow writing style.</p>
     `,
-    author: 'Risako M',
-    date: 'May 16, 2021',
-    datetime: '2021-01-06',
+    author: 'Glenn Soucy',
+    date: 'March 20, 2023',
+    datetime: '2023-03-20',
   },
+  {
+    id: 2,
+    title: "Absolutely the best book I ever read on Real Estate!!",
+    rating: 5,
+    content: `
+      <p>If you have a passion or interest in Commercial Real Estate this book is a must read! It’s simple to understand and absorb, yet has some much insightful information packed into it! I am certain it will fuel additional success in my real estate career and gave me insight to the right path to take for my personal goals. I actually wish it was longer so if Todd ever decides to write another book, I’ll be the first to buy it!!</p>
+    `,
+    author: 'Maksim T.',
+    date: 'Feb 17, 2023',
+    datetime: '2023-02-17',
+  },
+  {
+    id: 3,
+    title: "Real life advice on how to invest in Commercial Real Estate",
+    rating: 5,
+    content: `
+      <p>I have read countless real estate book and this book has more quality real life information on one page then most have in 100 pages. This is no get rich quick scheme this is real practical advice anyone from a novice first time investor to a seasoned experienced real estate professional can benefit from. After reading Keeping it Real on Commercial Real Estate you will be eggar and well prepared to start your commercial real estate investing.</p>
+    `,
+    author: 'Jace',
+    date: 'January 26, 2023',
+    datetime: '2023-01-26',
+  },
+  {
+    id: 4,
+    title: " Engaging, Fun & Informative!",
+    rating: 5,
+    content: `
+      <p>As a residential specialist, who has dabbled in commercial real estate, I was really looking forward to reading this book. To say it didn't disappoint is an understatement. Mr. Nepola's writing style is very engaging and it's like having a conversation with questions being answered just as you're thinking them.</p>
+      <p>I've always been a fan of "I did this, and you can too" stories, and this one is no exception. Kudos to the author for being so open and willing to answer any followup questions from readers. I love working with agents/brokers who are accessible and willing to actually answer their phone (not as common as you'd think) but Mr. Nepola is leveling up. And donating all proceeds from the book to charity? Well, that is the proverbial Chef's kiss.</p>
+      <p>By the time you're done reading this book you're going to want to get serious about buying, selling or investing in Commercial Real Estate. And you'll be able to, because Todd gives you the blueprint to do it.</p>
+      <p>Invest in yourself, buy the book!</p>
+    `,
+    author: 'Shane A. Broyles',
+    date: 'December 6, 2022',
+    datetime: '2022-12-06',
+  },
+  {
+    id: 5,
+    title: "  A Must Read and Insights to Commercial Deals",
+    rating: 5,
+    content: `
+      <p>Having been in the CRE business now for over 20 year and having been an investor, one would think they know it all. This book is for the beginner and the advance investor who wants to learn the ins and outs of the commercial real estate business without all the fluff of other books. This book is not trying to sell you anything or make you rich overnight. The book is real and personal with insights to the pitfalls and successes from actual experience. This book is perfect to give to your teenage kids to show them that through hard work there will be rewards. I have learned a lot from this book and will surely apply the tips to my deals. This is an easy read which one can finish in a weekend. So STOP the procrastination and hit the buy button. Your life retirement truly depends on it.</p>
+    `,
+    author: 'Jules',
+    date: 'October 31, 2022',
+    datetime: '2022-10-31',
+  },
+  {
+    id: 6,
+    title: "An excellent read and must-buy!",
+    rating: 5,
+    content: `
+      <p>Fantastic book! Such a great read. Todd is an excellent writer and storyteller. Truly inspirational to read how he started with his first property to currently owning and managing a huge portfolio of multimillion dollar properties. He really breaks down how he did it so anyone can easily replicate what he did to become a successful CRE investor. Also, it's great that he is donating all net proceeds of the book to charity. A real class act!</p>
+    `,
+    author: 'Kevin V.',
+    date: 'October 27, 2022',
+    datetime: '2022-10-27',
+  }
   // More reviews...
 ]
 
