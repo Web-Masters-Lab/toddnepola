@@ -2,10 +2,12 @@
 import React from "react";
 import {Navigation} from "@/components/Navigation"
 import { Hero } from "@/components/Hero"
+import { Banner } from '@/components/Banner'
 
 const About = () => {
     return (
         <>
+            <Banner/>
             <Navigation/>
             <Hero/>
             <div className=" bg-white 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">

@@ -15,6 +15,9 @@ const navigation = {
   GIT: [
     { name: 'Contact', href: '/contact' },
     { name: 'Instagram', href: 'https://www.instagram.com/lifeaccordingtotodd/' },
+    { name: 'TikTok', href: 'https://www.tiktok.com/@todd.nepola' },
+    { name: 'Youtube', href: 'https://www.youtube.com/channel/UCBb9T0yL77zmLOQMhg9njNw' },
+
   ],
 }
 

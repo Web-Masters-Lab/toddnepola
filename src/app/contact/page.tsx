@@ -15,10 +15,12 @@
 "use client"
 import { Navigation } from '@/components/Navigation'
 import { ContactSection } from '@/components/ContactSection';
+import { Banner } from '@/components/Banner'
 
 const Contact = () => {
   return (
     <>
+    <Banner/>
     <Navigation/>
     <ContactSection/>
     </>

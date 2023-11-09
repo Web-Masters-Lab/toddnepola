@@ -1,34 +1,58 @@
-import Image from 'next/image'
+import Image from 'next/image';
+import { useState, useEffect } from "react";
+import ReactPlayer from "react-player";
+import classNames from 'classnames';
 
 export const BookSection = () => {
+  const [playVideo, setPlayVideo] = useState(false)
+  const [isSSR, setIsSSR] = useState(true);
+    
+    useEffect(() => {
+        setIsSSR(false);
+    }, []);
+
+  const handleVideo = (event) =>{
+    event.preventDefault()
+    if(playVideo){
+        setPlayVideo(false)
+    } else {
+        setPlayVideo(true)
+    }
+  }
+
+  const buttonClasses = classNames('relative p-5 z-30 rounded-full',{
+    'text-2xl text-white bg-primary bg-opacity-50': !playVideo,
+    'text-transparent': playVideo
+})
+
   return (
     <section className='container'>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
         <div className="order-2 md:order-1 flex flex-col justify-center col-span-1 md:col-span-3">
-          <h3 className="text-4xl text-center text-white font-roboto_condensedBold mb-4">
+          <h3 className="text-4xl text-center items-center justify-center text-white font-roboto_condensedBold mb-4">
             Keeping It Real on Commercial Real Estate
           </h3>
-          <p className="mb-6 text-white">
-            Mr. Nepola shares over 25 years of real estate knowledge in this book. He answers the questions you should be asking and explains the different avenues
-            of real estate investing. 
-          </p>
-          <h4 className="text-2xl uppercase text-center font-bold mb-4 font-poppinsMedium text-white">
-            This book is for you if ...
-          </h4>
-          <ul className='ml-8 text-white list-disc'>
-            <li>You are a long term investor </li>
-            <li className='py-2'>You are looking to begin a career in real estate</li>
-            <li>You want to learn more about real estate</li>
-          </ul>
+          <div className="bg-transparent h-[20rem] ">
+          <button  className="relative flex items-center justify-center h-full w-full overflow-hidden" onClick={handleVideo}>
+              <div className={buttonClasses}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                      <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+                  </svg>
+              </div> 
+            { isSSR ? null : 
+                  <ReactPlayer
+                      className="absolute z-10 w-full min-w-full min-h-full max-w-none"
+                      width={100}
+                      height={100}
+                      playing={playVideo}
+                      muted={false}
+                      autoPlay={false}
+                      url="/videos/pagehero1.mp4"
+                  />
+              }
+            </button>
+          </div>
           <br/>
-          <h4 className="text-2xl text-white text-center uppercase pt-8 font-bold mb-4 font-poppinsMedium">
-            This book is <span className='text-red-500'>NOT</span> for you if ...
-          </h4>
-          <ul className='ml-8 text-white list-disc'>
-            <li>You are trying to get rich quick </li>
-            <li className='py-2' >You dont have the tolerance for risk</li>
-            <li>You dont have the patience to let your investments flourish</li>
-          </ul>
           <a
             href="/book"
             className="primaryCTA bg-white text-primary border-2 relative my-10 text-lg font-poppinsMedium hover:bg-black/80 hover:text-white duration-400 py-2 w-full text-center rounded"
@@ -36,7 +60,7 @@ export const BookSection = () => {
             Learn More
           </a>
         </div>
-        <div className="order-1 md:order-2 col-span-1 md:col-span-2 flex justify-center md:justify-end">
+        <div className="hidden md:order-2 col-span-1 md:col-span-2 md:flex justify-center md:justify-end">
           <Image
             className="object-contain -ml-5"
             src="/images/book.png"

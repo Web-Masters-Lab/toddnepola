@@ -2,10 +2,12 @@
 import { Navigation } from '@/components/Navigation'
 import { SectionHeader } from '@/components/SectionHeader'
 import Link from 'next/link'
+import { Banner } from '@/components/Banner'
 
 export default function NotFound() {
   return (
     <>
+      <Banner/>
       <Navigation/>
       <SectionHeader title="Page Not Found" />
       <div className="flex w-screen h-screen items-center justify-center py-10">

@@ -70,7 +70,6 @@ const reviews = [
     date: 'October 27, 2022',
     datetime: '2022-10-27',
   }
-  // More reviews...
 ]
 
 function classNames(...classes) {

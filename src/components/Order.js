@@ -5,7 +5,7 @@ export const Order = () => {
     <section className='container py-28'>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
         <div className="order-2 md:order-1 flex flex-col justify-center col-span-1 md:col-span-3">
-          <h3 className="text-4xl bg-gradient-to-tl text-center from-primary via-blue-950 to-black bg-clip-text text-transparent font-roboto_condensedBold mb-4">
+          <h3 className="text-4xl text-primary text-center font-roboto_condensedBold mb-4">
             Keeping It Real on Commercial Real Estate
           </h3>
           <p className="my-6 md:mx-24 text-center indent-8">

@@ -4,14 +4,20 @@ import { BookSection } from '@/components/BookSection'
 import { ArticleSection } from '@/components/ArticleSection'
 import { Navigation } from '@/components/Navigation'
 import { Video } from '@/components/Video'
+import { Banner } from '@/components/Banner'
+import { Header } from '@/components/Header';
+import { HeroVideo } from '@/components/HeroVideo'
 
 export default function Home() {
   return (
     <>
-      <Navigation />
-      <section className="relative h-[32rem]">
+      <Banner/>
+      <Navigation/>
+      <HeroVideo/>
+
+      {/* <section className="relative h-[32rem]">
         <Video/>
-      </section>
+      </section> */}
 
 
         {/* About */}
@@ -123,12 +129,10 @@ export default function Home() {
           </a>
 
 
-          </div>
-          
+              </div>
+            </div>
           </div>
         </div>
-
-</div>
       </div>
 
 
