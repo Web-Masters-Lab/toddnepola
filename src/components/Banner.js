@@ -4,14 +4,14 @@ import { useEffect } from "react"
 
 const items = [
     {
-        link:"https://www.instagram.com/lifeaccordingtotodd/?hl=en",
-        text: "@lifeaccordingtotodd",
+        link:"https://www.tiktok.com/@todd.nepola",
+        text: "@todd.nepola",
         icon: <Image src="/images/tiktok.svg" height={100} width={100} alt="TikTok" className="h-6 w-6"/>
     },
     {
-        link:"https://www.tiktok.com/@todd.nepola",
-        text: "@todd.nepola",
-        icon: <Image src="/images/instagram.svg" height={100} width={100} alt="TikTok" className="h-6 w-6"/>
+        link:"https://www.instagram.com/lifeaccordingtotodd/?hl=en",
+        text: "@lifeaccordingtotodd",
+        icon: <Image src="/images/instagram.svg" height={100} width={100} alt="Instagram" className="h-6 w-6"/>
     },
     {
         link:"https://www.youtube.com/channel/UCBb9T0yL77zmLOQMhg9njNw",
@@ -31,15 +31,15 @@ export const Banner = () => {
             <div className="bg-primary flex justify-center">
                 <div className="align-items inline-block lg:flex = text-center self-center md:flex-no-wrap px-6 py-2.5">
                     <div className="text-white flex justify-center my-1.5">
-                        <a className=" hover:text-hover" href="mailto:michael@delgadolegalpa.com">
+                        <a className=" hover:text-hover" href="https://www.tiktok.com/@todd.nepola">
                             <Image src="/images/tiktok.svg" height={100} width={100} alt="TikTok" className="h-6 w-6"/>
                         </a>
                         <span className="text-white mx-12">|</span>
-                        <a className=" hover:text-hover" href="tel:+1 (786) 762-2389">
+                        <a className=" hover:text-hover" href="https://www.instagram.com/lifeaccordingtotodd/?hl=en">
                             <Image src="/images/instagram.svg" height={100} width={100} alt="TikTok" className="h-6 w-6"/>
                         </a>
                         <span className="text-white mx-12">|</span>
-                        <a className=" hover:text-hover" href="https://maps.app.goo.gl/aEVBbRF9mQwFji8x6">
+                        <a className=" hover:text-hover" href="https://www.youtube.com/channel/UCBb9T0yL77zmLOQMhg9njNw">
                             <Image src="/images/youtube.svg" height={100} width={100} alt="TikTok" className="h-6 w-6"/>
                         </a>
                     </div>
