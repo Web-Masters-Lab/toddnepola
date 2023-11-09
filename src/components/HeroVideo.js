@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import classNames from 'classnames';
-import { Header } from "@/components/Header";
 
 export const HeroVideo = () => {
     const [mute, setMute] = useState(true)

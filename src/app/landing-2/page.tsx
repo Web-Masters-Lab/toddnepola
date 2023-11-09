@@ -2,8 +2,6 @@
 import Image from 'next/image'
 import { BookSection } from '@/components/BookSection'
 import { ArticleSection } from '@/components/ArticleSection'
-import { Navigation } from '@/components/Navigation'
-import { Video } from '@/components/Video'
 import { Banner } from '@/components/Banner'
 import { Header } from '@/components/Header';
 import { HeroVideo } from '@/components/HeroVideo'
