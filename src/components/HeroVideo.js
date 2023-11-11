@@ -10,12 +10,12 @@ export const HeroVideo = () => {
     })
 
     const textClasses = classNames('grid font-roboto_condensedBold',{
-        'text-white group-hover:text-gray-300': mute,
+        'text-white md:group-hover:text-gray-300': mute,
         'text-transparent':!mute
     })
 
     const overlayClasses = classNames("transition ease-in-out absolute top-0 left-0 w-full h-[44rem] bg-black",{
-        'opacity-40 peer-hover:opacity-50': mute,
+        'opacity-40 md:peer-hover:opacity-50': mute,
         'opacity-5': !mute
     })
 
