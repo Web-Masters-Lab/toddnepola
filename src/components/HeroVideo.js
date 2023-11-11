@@ -4,7 +4,7 @@ import classNames from 'classnames';
 export const HeroVideo = () => {
     const [mute, setMute] = useState(true)
 
-    const buttonClasses = classNames('absolute peer bottom-12 ease-in-out z-30 flex items-center justify-center text-2xl text-white bg-primary border border-2 border-solid border-white',{
+    const buttonClasses = classNames('absolute bottom-12 ease-in-out z-30 flex items-center justify-center text-2xl text-white bg-primary border border-2 border-solid border-white',{
         'h-16 w-16 animate-bounce rounded-full right-5 md:right-10  ': mute,
         'h-14 scale-75 w-14 rounded-full right-5 md:right-10 ': !mute
     })
@@ -15,7 +15,7 @@ export const HeroVideo = () => {
     })
 
     const overlayClasses = classNames("transition ease-in-out absolute top-0 left-0 w-full h-[44rem] bg-black",{
-        'opacity-40': mute,
+        'opacity-40 peer-hover:opacity-50': mute,
         'opacity-5': !mute
     })
 
@@ -33,7 +33,7 @@ export const HeroVideo = () => {
         <>
             {/* <Header/> */}
             <section className="relative">
-            <button className=" w-full h-[44rem] group relative z-10" onClick={handleVideo}>
+            <button className=" w-full h-[44rem] group peer relative z-10" onClick={handleVideo}>
                 <div className={textClasses}>
                     <span className='text-lg sm:text-4xl uppercase'>Why did I </span>
                     <span className='text-3xl sm:text-6xl uppercase'> write my book?</span>
@@ -91,8 +91,8 @@ export const HeroVideo = () => {
                 
 
                 {/* Overlay */}
-                <div className={overlayClasses}>
-                </div>
+            <div className={overlayClasses}/>
+            
             </section>
         </>
     )
