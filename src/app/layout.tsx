@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Roboto, Roboto_Condensed, Poppins } from 'next/font/google'
 import React from 'react'
+import Script from 'next/script'
 
 const roboto = Roboto({
   weight: '400',
@@ -49,6 +50,16 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html className="selection:bg-primary/70 selection:text-white scroll-smooth" lang="en">
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-R62FZS8CSQ" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-R62FZS8CSQ');
+        `}
+      </Script>
       <body suppressHydrationWarning={true} className={`${roboto.variable} ${roboto_condensed.variable} ${poppins.variable}`}>
         <RootLayout>{children}</RootLayout>
       </body>

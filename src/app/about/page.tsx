@@ -31,13 +31,13 @@ const About = () => {
                                     </div>
                                     <div className="-mt-1 -mr-2">
                                         <svg width="60" height="12" viewBox="0 0 60 12" fill="white" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="54" cy="6" r="5.5" stroke="#4338CA" />
-                                            <circle cx="42" cy="6" r="1.5" stroke="#4338CA" />
-                                            <circle cx="18" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.3" />
-                                            <circle cx="34" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.7" />
-                                            <circle cx="10" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.2" />
-                                            <circle cx="26" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.5" />
-                                            <circle cx="2" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.1" />
+                                            <circle cx="54" cy="6" r="5.5" stroke="#0029FF" />
+                                            <circle cx="42" cy="6" r="1.5" stroke="#0029FF" />
+                                            <circle cx="18" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.3" />
+                                            <circle cx="34" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.7" />
+                                            <circle cx="10" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.2" />
+                                            <circle cx="26" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.5" />
+                                            <circle cx="2" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.1" />
                                         </svg>
                                     </div>
                                 </div>
@@ -48,18 +48,18 @@ const About = () => {
                             <div className="sm:hidden block pb-5 border-r-2 border-gray-200">
                                 <div className="flex justify-between">
                                     <div className="w-auto">
-                                        <h2 className="font-semibold text-xl leading-5 text-gray-800">1980</h2>
+                                        <h2 className="font-semibold text-xl leading-5 text-gray-800">1986</h2>
                                         <p className="font-normal text-base leading-6 text-gray-600 mt-2">Move to Miami, FL</p>
                                     </div>
                                     <div className="mt-1 -mr-2">
                                         <svg width="60" height="12" viewBox="0 0 60 12" fill="white" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="54" cy="6" r="5.5" stroke="#4338CA" />
-                                            <circle cx="42" cy="6" r="1.5" stroke="#4338CA" />
-                                            <circle cx="18" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.3" />
-                                            <circle cx="34" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.7" />
-                                            <circle cx="10" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.2" />
-                                            <circle cx="26" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.5" />
-                                            <circle cx="2" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.1" />
+                                            <circle cx="54" cy="6" r="5.5" stroke="#0029FF" />
+                                            <circle cx="42" cy="6" r="1.5" stroke="#0029FF" />
+                                            <circle cx="18" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.3" />
+                                            <circle cx="34" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.7" />
+                                            <circle cx="10" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.2" />
+                                            <circle cx="26" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.5" />
+                                            <circle cx="2" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.1" />
                                         </svg>
                                     </div>
                                 </div>
@@ -74,17 +74,17 @@ const About = () => {
                                 <div className="flex justify-between">
                                     <div className="-mt-1 -ml-2">
                                         <svg className="" width="60" height="12" viewBox="0 0 60 12" fill="white" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="6" cy="6" r="5.5" transform="rotate(-180 6 6)" stroke="#4338CA" />
-                                            <circle cx="18" cy="6" r="1.5" transform="rotate(-180 18 6)" stroke="#4338CA" />
-                                            <circle cx="42" cy="6" r="1.5" transform="rotate(-180 42 6)" stroke="#4338CA" strokeOpacity="0.3" />
-                                            <circle cx="26" cy="6" r="1.5" transform="rotate(-180 26 6)" stroke="#4338CA" strokeOpacity="0.7" />
-                                            <circle cx="50" cy="6" r="1.5" transform="rotate(-180 50 6)" stroke="#4338CA" strokeOpacity="0.2" />
-                                            <circle cx="34" cy="6" r="1.5" transform="rotate(-180 34 6)" stroke="#4338CA" strokeOpacity="0.5" />
-                                            <circle cx="58" cy="6" r="1.5" transform="rotate(-180 58 6)" stroke="#4338CA" strokeOpacity="0.1" />
+                                            <circle cx="6" cy="6" r="5.5" transform="rotate(-180 6 6)" stroke="#0029FF" />
+                                            <circle cx="18" cy="6" r="1.5" transform="rotate(-180 18 6)" stroke="#0029FF" />
+                                            <circle cx="42" cy="6" r="1.5" transform="rotate(-180 42 6)" stroke="#0029FF" strokeOpacity="0.3" />
+                                            <circle cx="26" cy="6" r="1.5" transform="rotate(-180 26 6)" stroke="#0029FF" strokeOpacity="0.7" />
+                                            <circle cx="50" cy="6" r="1.5" transform="rotate(-180 50 6)" stroke="#0029FF" strokeOpacity="0.2" />
+                                            <circle cx="34" cy="6" r="1.5" transform="rotate(-180 34 6)" stroke="#0029FF" strokeOpacity="0.5" />
+                                            <circle cx="58" cy="6" r="1.5" transform="rotate(-180 58 6)" stroke="#0029FF" strokeOpacity="0.1" />
                                         </svg>
                                     </div>
                                     <div className="ml-auto w-auto">
-                                        <h2 className="-mt-2 font-semibold text-xl leading-5 text-right text-gray-800">1980</h2>
+                                        <h2 className="-mt-2 font-semibold text-xl leading-5 text-right text-gray-800">1986</h2>
                                         <p className="font-normal text-base leading-6 text-right text-gray-600 mt-2">Move to Miami, FL</p>
                                     </div>
                                 </div>
@@ -102,13 +102,13 @@ const About = () => {
                                     </div>
                                     <div className="-mt-1 -mr-2">
                                         <svg width="60" height="12" viewBox="0 0 60 12" fill="white" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="54" cy="6" r="5.5" stroke="#4338CA" />
-                                            <circle cx="42" cy="6" r="1.5" stroke="#4338CA" />
-                                            <circle cx="18" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.3" />
-                                            <circle cx="34" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.7" />
-                                            <circle cx="10" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.2" />
-                                            <circle cx="26" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.5" />
-                                            <circle cx="2" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.1" />
+                                            <circle cx="54" cy="6" r="5.5" stroke="#0029FF" />
+                                            <circle cx="42" cy="6" r="1.5" stroke="#0029FF" />
+                                            <circle cx="18" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.3" />
+                                            <circle cx="34" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.7" />
+                                            <circle cx="10" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.2" />
+                                            <circle cx="26" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.5" />
+                                            <circle cx="2" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.1" />
                                         </svg>
                                     </div>
                                 </div>
@@ -128,13 +128,13 @@ const About = () => {
                                     </div>
                                     <div className="mt-1 -mr-2">
                                         <svg width="60" height="12" viewBox="0 0 60 12" fill="white" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="54" cy="6" r="5.5" stroke="#4338CA" />
-                                            <circle cx="42" cy="6" r="1.5" stroke="#4338CA" />
-                                            <circle cx="18" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.3" />
-                                            <circle cx="34" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.7" />
-                                            <circle cx="10" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.2" />
-                                            <circle cx="26" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.5" />
-                                            <circle cx="2" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.1" />
+                                            <circle cx="54" cy="6" r="5.5" stroke="#0029FF" />
+                                            <circle cx="42" cy="6" r="1.5" stroke="#0029FF" />
+                                            <circle cx="18" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.3" />
+                                            <circle cx="34" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.7" />
+                                            <circle cx="10" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.2" />
+                                            <circle cx="26" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.5" />
+                                            <circle cx="2" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.1" />
                                         </svg>
                                     </div>
                                 </div>
@@ -152,13 +152,13 @@ const About = () => {
                                     </div>
                                     <div className="mt-1 -mr-2">
                                         <svg width="60" height="12" viewBox="0 0 60 12" fill="white" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="54" cy="6" r="5.5" stroke="#4338CA" />
-                                            <circle cx="42" cy="6" r="1.5" stroke="#4338CA" />
-                                            <circle cx="18" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.3" />
-                                            <circle cx="34" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.7" />
-                                            <circle cx="10" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.2" />
-                                            <circle cx="26" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.5" />
-                                            <circle cx="2" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.1" />
+                                            <circle cx="54" cy="6" r="5.5" stroke="#0029FF" />
+                                            <circle cx="42" cy="6" r="1.5" stroke="#0029FF" />
+                                            <circle cx="18" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.3" />
+                                            <circle cx="34" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.7" />
+                                            <circle cx="10" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.2" />
+                                            <circle cx="26" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.5" />
+                                            <circle cx="2" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.1" />
                                         </svg>
                                     </div>
                                 </div>
@@ -175,13 +175,13 @@ const About = () => {
                                 <div className="flex justify-between">
                                     <div className="-mt-1 -ml-2">
                                         <svg className="" width="60" height="12" viewBox="0 0 60 12" fill="white" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="6" cy="6" r="5.5" transform="rotate(-180 6 6)" stroke="#4338CA" />
-                                            <circle cx="18" cy="6" r="1.5" transform="rotate(-180 18 6)" stroke="#4338CA" />
-                                            <circle cx="42" cy="6" r="1.5" transform="rotate(-180 42 6)" stroke="#4338CA" strokeOpacity="0.3" />
-                                            <circle cx="26" cy="6" r="1.5" transform="rotate(-180 26 6)" stroke="#4338CA" strokeOpacity="0.7" />
-                                            <circle cx="50" cy="6" r="1.5" transform="rotate(-180 50 6)" stroke="#4338CA" strokeOpacity="0.2" />
-                                            <circle cx="34" cy="6" r="1.5" transform="rotate(-180 34 6)" stroke="#4338CA" strokeOpacity="0.5" />
-                                            <circle cx="58" cy="6" r="1.5" transform="rotate(-180 58 6)" stroke="#4338CA" strokeOpacity="0.1" />
+                                            <circle cx="6" cy="6" r="5.5" transform="rotate(-180 6 6)" stroke="#0029FF" />
+                                            <circle cx="18" cy="6" r="1.5" transform="rotate(-180 18 6)" stroke="#0029FF" />
+                                            <circle cx="42" cy="6" r="1.5" transform="rotate(-180 42 6)" stroke="#0029FF" strokeOpacity="0.3" />
+                                            <circle cx="26" cy="6" r="1.5" transform="rotate(-180 26 6)" stroke="#0029FF" strokeOpacity="0.7" />
+                                            <circle cx="50" cy="6" r="1.5" transform="rotate(-180 50 6)" stroke="#0029FF" strokeOpacity="0.2" />
+                                            <circle cx="34" cy="6" r="1.5" transform="rotate(-180 34 6)" stroke="#0029FF" strokeOpacity="0.5" />
+                                            <circle cx="58" cy="6" r="1.5" transform="rotate(-180 58 6)" stroke="#0029FF" strokeOpacity="0.1" />
                                         </svg>
                                     </div>
                                     <div className="ml-auto w-auto">
@@ -198,18 +198,18 @@ const About = () => {
                             <div className="sm:hidden block pb-5 border-r-2 border-gray-200">
                                 <div className="flex justify-between">
                                     <div className="w-auto">
-                                        <h2 className="font-semibold text-xl leading-5 text-gray-800">2002</h2>
+                                        <h2 className="font-semibold text-xl leading-5 text-gray-800">1999</h2>
                                         <p className="font-normal text-base leading-6 text-gray-600 mt-2">Founded Current Capital Real Estate Group</p>
                                     </div>
                                     <div className="mt-1 -mr-2">
                                         <svg width="60" height="12" viewBox="0 0 60 12" fill="white" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="54" cy="6" r="5.5" stroke="#4338CA" />
-                                            <circle cx="42" cy="6" r="1.5" stroke="#4338CA" />
-                                            <circle cx="18" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.3" />
-                                            <circle cx="34" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.7" />
-                                            <circle cx="10" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.2" />
-                                            <circle cx="26" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.5" />
-                                            <circle cx="2" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.1" />
+                                            <circle cx="54" cy="6" r="5.5" stroke="#0029FF" />
+                                            <circle cx="42" cy="6" r="1.5" stroke="#0029FF" />
+                                            <circle cx="18" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.3" />
+                                            <circle cx="34" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.7" />
+                                            <circle cx="10" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.2" />
+                                            <circle cx="26" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.5" />
+                                            <circle cx="2" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.1" />
                                         </svg>
                                     </div>
                                 </div>
@@ -221,18 +221,18 @@ const About = () => {
                             <div className="sm:hidden block pb-5  border-gray-200">
                                 <div className="flex justify-between">
                                     <div className="w-auto">
-                                        <h2 className="font-semibold text-xl leading-5 text-gray-800">2022</h2>
+                                        <h2 className="font-semibold text-xl leading-5 text-gray-800">2002</h2>
                                         <p className="font-normal text-base leading-6 text-gray-600 mt-2"> Current Capital Real Estate becomes top leasing firm in Broward County </p>
                                     </div>
                                     <div className=" -mr-1.5">
                                         <svg width="60" height="12" viewBox="0 0 60 12" fill="white" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="54" cy="6" r="5.5" stroke="#4338CA" />
-                                            <circle cx="42" cy="6" r="1.5" stroke="#4338CA" />
-                                            <circle cx="18" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.3" />
-                                            <circle cx="34" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.7" />
-                                            <circle cx="10" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.2" />
-                                            <circle cx="26" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.5" />
-                                            <circle cx="2" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.1" />
+                                            <circle cx="54" cy="6" r="5.5" stroke="#0029FF" />
+                                            <circle cx="42" cy="6" r="1.5" stroke="#0029FF" />
+                                            <circle cx="18" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.3" />
+                                            <circle cx="34" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.7" />
+                                            <circle cx="10" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.2" />
+                                            <circle cx="26" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.5" />
+                                            <circle cx="2" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.1" />
                                         </svg>
                                     </div>
                                 </div>
@@ -243,46 +243,66 @@ const About = () => {
 
 {/* <!-- 200k Users --> */}
 
-<div className="sm:block hidden pb-5 border-r-2 border-gray-200">
-    <div className="flex justify-between">
-        <div className="w-auto">
-            <h2 className="font-semibold text-xl leading-5 text-gray-800">2002</h2>
-            <p className="font-normal text-base leading-6 text-gray-600 mt-2">Founded Current Capital Real Estate Group</p>
-        </div>
-        <div className="mt-1 -mr-2">
-            <svg width="60" height="12" viewBox="0 0 60 12" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="54" cy="6" r="5.5" stroke="#4338CA" />
-                <circle cx="42" cy="6" r="1.5" stroke="#4338CA" />
-                <circle cx="18" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.3" />
-                <circle cx="34" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.7" />
-                <circle cx="10" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.2" />
-                <circle cx="26" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.5" />
-                <circle cx="2" cy="6" r="1.5" stroke="#4338CA" strokeOpacity="0.1" />
-            </svg>
-        </div>
-    </div>
-</div>
-<div></div>
-<div></div>
-<div className="sm:block hidden pb-5">
+                    <div className="sm:block hidden pb-5 border-r-2 border-gray-200">
+                        <div className="flex justify-between">
+                            <div className="w-auto">
+                                <h2 className="font-semibold text-xl leading-5 text-gray-800">1999</h2>
+                                <p className="font-normal text-base leading-6 text-gray-600 mt-2">Founded TN Property Management</p>
+                            </div>
+                            <div className="mt-1 -mr-2">
+                                <svg width="60" height="12" viewBox="0 0 60 12" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="6" r="5.5" stroke="#0029FF" />
+                                    <circle cx="42" cy="6" r="1.5" stroke="#0029FF" />
+                                    <circle cx="18" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.3" />
+                                    <circle cx="34" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.7" />
+                                    <circle cx="10" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.2" />
+                                    <circle cx="26" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.5" />
+                                    <circle cx="2" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.1" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                <div></div>
+                <div className="border-r-2 border-gray-200"></div>
+                        <div className="sm:block hidden pb-5">
                                 <div className="flex justify-between">
                                     <div className="-mt-1 -ml-2">
                                         <svg className="" width="60" height="12" viewBox="0 0 60 12" fill="white" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="6" cy="6" r="5.5" transform="rotate(-180 6 6)" stroke="#4338CA" />
-                                            <circle cx="18" cy="6" r="1.5" transform="rotate(-180 18 6)" stroke="#4338CA" />
-                                            <circle cx="42" cy="6" r="1.5" transform="rotate(-180 42 6)" stroke="#4338CA" strokeOpacity="0.3" />
-                                            <circle cx="26" cy="6" r="1.5" transform="rotate(-180 26 6)" stroke="#4338CA" strokeOpacity="0.7" />
-                                            <circle cx="50" cy="6" r="1.5" transform="rotate(-180 50 6)" stroke="#4338CA" strokeOpacity="0.2" />
-                                            <circle cx="34" cy="6" r="1.5" transform="rotate(-180 34 6)" stroke="#4338CA" strokeOpacity="0.5" />
-                                            <circle cx="58" cy="6" r="1.5" transform="rotate(-180 58 6)" stroke="#4338CA" strokeOpacity="0.1" />
+                                            <circle cx="6" cy="6" r="5.5" transform="rotate(-180 6 6)" stroke="#0029FF" />
+                                            <circle cx="18" cy="6" r="1.5" transform="rotate(-180 18 6)" stroke="#0029FF" />
+                                            <circle cx="42" cy="6" r="1.5" transform="rotate(-180 42 6)" stroke="#0029FF" strokeOpacity="0.3" />
+                                            <circle cx="26" cy="6" r="1.5" transform="rotate(-180 26 6)" stroke="#0029FF" strokeOpacity="0.7" />
+                                            <circle cx="50" cy="6" r="1.5" transform="rotate(-180 50 6)" stroke="#0029FF" strokeOpacity="0.2" />
+                                            <circle cx="34" cy="6" r="1.5" transform="rotate(-180 34 6)" stroke="#0029FF" strokeOpacity="0.5" />
+                                            <circle cx="58" cy="6" r="1.5" transform="rotate(-180 58 6)" stroke="#0029FF" strokeOpacity="0.1" />
                                         </svg>
                                     </div>
                                     <div className="ml-auto w-auto">
-                                        <h2 className="-mt-2 w-auto font-semibold text-xl leading-5 text-right text-gray-800">2022</h2>
-                                        <p className="w-auto font-normal text-base leading-6 text-gray-600 text-right mt-2">Current Capital Real Estate becomes top leasing firm in Broward County </p>
+                                        <h2 className="-mt-2 w-auto font-semibold text-xl leading-5 text-right text-gray-800">2002</h2>
+                                        <p className="w-auto font-normal text-base leading-6 text-gray-600 text-right mt-2"> Rebranded to Current Capital Real Estate Group </p>
                                     </div>
                                 </div>
                             </div>
+                        
+                           <div className="sm:block hidden pb-5 border-gray-200">
+                        <div className="flex justify-between">
+                            <div className="w-auto">
+                                <h2 className="font-semibold text-xl leading-5 text-gray-800">2022</h2>
+                                <p className="font-normal text-base leading-6 text-gray-600 mt-2">Current Capital Real Estate becomes top leasing firm in Broward County</p>
+                            </div>
+                            <div className="-mt-1 -mr-1.5">
+                                <svg width="60" height="12" viewBox="0 0 60 12" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="6" r="5.5" stroke="#0029FF" />
+                                    <circle cx="42" cy="6" r="1.5" stroke="#0029FF" />
+                                    <circle cx="18" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.3" />
+                                    <circle cx="34" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.7" />
+                                    <circle cx="10" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.2" />
+                                    <circle cx="26" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.5" />
+                                    <circle cx="2" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.1" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div> 
 
 
                         </div>

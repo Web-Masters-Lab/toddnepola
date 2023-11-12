@@ -21,14 +21,14 @@ export const ContactSection = () => {
           <Image
             height={1200}
             width={1200}
-            className="hidden h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full"
-            src="/images/contact-desktop.png"
+            className="hidden h-64 w-full bg-gray-50 object-cover md:flex sm:h-80 lg:absolute lg:h-full"
+            src="/images/contact-desktop.jpg"
             alt=""
           />
           <Image
             height={600}
             width={600}
-            className="h-64 w-full bg-gray-50 object-cover sm:h-80 md:h-[28rem] lg:absolute lg:h-full"
+            className="h-64 md:hidden w-full bg-gray-50 object-cover sm:h-80 md:h-[28rem] lg:absolute lg:h-full"
             src="/images/contact-mobile.png"
             alt=""
           />
