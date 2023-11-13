@@ -105,7 +105,7 @@ export const ContactSection = () => {
                   <div className="sm:col-span-2">
                     <div className="flex justify-between text-sm leading-6">
                       <label htmlFor="message" className="block font-roboto_condensedBold uppercase text-sm font-semibold leading-6 text-white">
-                        How can we help you?
+                        Message
                       </label>
                       <p id="message-description" className="text-white font-roboto_condensedBold">
                         Max 500 characters
