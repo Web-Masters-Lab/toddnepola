@@ -199,7 +199,7 @@ const About = () => {
                                 <div className="flex justify-between">
                                     <div className="w-auto">
                                         <h2 className="font-semibold text-xl leading-5 text-gray-800">1999</h2>
-                                        <p className="font-normal text-base leading-6 text-gray-600 mt-2">Founded Current Capital Real Estate Group</p>
+                                        <p className="font-normal text-base leading-6 text-gray-600 mt-2">TN Property Management was founded</p>
                                     </div>
                                     <div className="mt-1 -mr-2">
                                         <svg width="60" height="12" viewBox="0 0 60 12" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -215,13 +215,32 @@ const About = () => {
                                 </div>
                             </div>
 
+                            <div className="sm:hidden block pb-5 border-r-2 border-gray-200">
+                                <div className="flex justify-between">
+                                    <div className="w-auto">
+                                        <h2 className="font-semibold text-xl leading-5 text-gray-800">2002</h2>
+                                        <p className="font-normal text-base leading-6 text-gray-600 mt-2">Rebranded to Current Capital Real Estate Group </p>
+                                    </div>
+                                    <div className="mt-1 -mr-2">
+                                        <svg width="60" height="12" viewBox="0 0 60 12" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="54" cy="6" r="5.5" stroke="#0029FF" />
+                                            <circle cx="42" cy="6" r="1.5" stroke="#0029FF" />
+                                            <circle cx="18" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.3" />
+                                            <circle cx="34" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.7" />
+                                            <circle cx="10" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.2" />
+                                            <circle cx="26" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.5" />
+                                            <circle cx="2" cy="6" r="1.5" stroke="#0029FF" strokeOpacity="0.1" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                             
 
 
                             <div className="sm:hidden block pb-5  border-gray-200">
                                 <div className="flex justify-between">
                                     <div className="w-auto">
-                                        <h2 className="font-semibold text-xl leading-5 text-gray-800">2002</h2>
+                                        <h2 className="font-semibold text-xl leading-5 text-gray-800">2022</h2>
                                         <p className="font-normal text-base leading-6 text-gray-600 mt-2"> Current Capital Real Estate becomes top leasing firm in Broward County </p>
                                     </div>
                                     <div className=" -mr-1.5">
@@ -247,7 +266,7 @@ const About = () => {
                         <div className="flex justify-between">
                             <div className="w-auto">
                                 <h2 className="font-semibold text-xl leading-5 text-gray-800">1999</h2>
-                                <p className="font-normal text-base leading-6 text-gray-600 mt-2">Founded TN Property Management</p>
+                                <p className="font-normal text-base leading-6 text-gray-600 mt-2">TN Property Management was founded</p>
                             </div>
                             <div className="mt-1 -mr-2">
                                 <svg width="60" height="12" viewBox="0 0 60 12" fill="white" xmlns="http://www.w3.org/2000/svg">

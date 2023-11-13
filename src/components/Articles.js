@@ -66,7 +66,7 @@ const posts = [
       title: 'Todd Nepola Bets on Aging South Florida Retail Center',
       href: 'https://product.costar.com/home/news/2139466768',
       imageUrl:
-        'https://www.costargroup.com/sites/costargroup.com/files/2022-03/brands-costar.png',
+        '/images/costar.png',
       // date: 'Feb 10, 2023',
       // datetime: '2023-02-10',
       author: {
@@ -78,7 +78,7 @@ const posts = [
       title: 'Todd Nepola Buys Promenade at Inverrary, Plans Upgrades from ‘Head to Toe’',
       href: 'https://product.costar.com/home/news/2139466768',
       imageUrl:
-        'https://www.costargroup.com/sites/costargroup.com/files/2022-03/brands-costar.png',
+        '/images/costar.png',
       // date: 'Feb 10, 2023',
       // datetime: '2023-02-10',
       author: {
