@@ -37,7 +37,8 @@ export const ContactSection = () => {
           <div className="px-6 lg:px-8">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
               <h2 className="text-6xl text-center sm:text-8xl font-bold tracking-tight uppercase whitespace-nowrap font-roboto_condensedBold text-white">Get in Touch</h2>
-              <form method="POST" netlify="true" className="mt-16">
+              <form method="POST" netlify="true" name="contact" className="mt-16">
+              {/* <input type="hidden" name="form-name" value="the-name-of-the-html-form" /> */}
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                   <div>
                     <label htmlFor="first-name" className="block font-roboto_condensedBold uppercase text-sm font-semibold leading-6 text-white">
