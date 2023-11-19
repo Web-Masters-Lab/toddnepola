@@ -27,8 +27,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ornate-genie-61c836.netlify.app/'),
-  title: 'Home - Todd Nepola',
+  metadataBase: new URL('https://toddnepola.com/'),
+  title: 'Todd Nepola',
   description:
     'Todd Nepola is a leading figure in commercial real estate, is featured in podcasts, news articles, and creates Instagram Reels.',
   openGraph: {
