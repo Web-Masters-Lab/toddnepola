@@ -32,7 +32,7 @@ export const BookSection = () => {
           {/* <h3 className="text-4xl text-center items-center justify-center text-white font-roboto_condensedBold mb-4">
             Keeping It Real on Commercial Real Estate
           </h3> */}
-          <h2 className="text-2xl text-center w-[50rem] items-center justify-center text-white font-roboto_condensedBold mb-4">
+          <h2 className="text-2xl text-center md:w-[50rem] items-center justify-center text-white font-roboto_condensedBold mb-4">
           Todd Nepola&apos;s highly anticipated book, &quot;Keeping it Real on Commercial Real Estate&quot; will answer all the questions investors need answered.
           </h2>
           <Image
