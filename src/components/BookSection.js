@@ -1,38 +1,48 @@
 import Image from 'next/image';
-import { useState, useEffect } from "react";
-import ReactPlayer from "react-player";
-import classNames from 'classnames';
+// import { useState, useEffect } from "react";
+// import ReactPlayer from "react-player";
+// import classNames from 'classnames';
 
 export const BookSection = () => {
-  const [playVideo, setPlayVideo] = useState(false)
-  const [isSSR, setIsSSR] = useState(true);
+  // const [playVideo, setPlayVideo] = useState(false)
+  // const [isSSR, setIsSSR] = useState(true);
     
-    useEffect(() => {
-        setIsSSR(false);
-    }, []);
+  //   useEffect(() => {
+  //       setIsSSR(false);
+  //   }, []);
 
-  const handleVideo = (event) =>{
-    event.preventDefault()
-    if(playVideo){
-        setPlayVideo(false)
-    } else {
-        setPlayVideo(true)
-    }
-  }
+  // const handleVideo = (event) =>{
+  //   event.preventDefault()
+  //   if(playVideo){
+  //       setPlayVideo(false)
+  //   } else {
+  //       setPlayVideo(true)
+  //   }
+  // }
 
-  const buttonClasses = classNames('relative p-5 z-30 rounded-full',{
-    'text-2xl text-white bg-primary bg-opacity-50': !playVideo,
-    'text-transparent': playVideo
-})
+//   const buttonClasses = classNames('relative p-5 z-30 rounded-full',{
+//     'text-2xl text-white bg-primary bg-opacity-50': !playVideo,
+//     'text-transparent': playVideo
+// })
 
   return (
     <section className='container'>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
-        <div className="order-2 md:order-1 flex flex-col justify-center col-span-1 md:col-span-3">
-          <h3 className="text-4xl text-center items-center justify-center text-white font-roboto_condensedBold mb-4">
+      <div className="grid grid-cols-1 gap-8">
+        <div className="flex flex-col justify-center col-span-1">
+          {/* <h3 className="text-4xl text-center items-center justify-center text-white font-roboto_condensedBold mb-4">
             Keeping It Real on Commercial Real Estate
-          </h3>
-          <div className="bg-transparent h-[20rem] ">
+          </h3> */}
+          <h2 className="text-2xl text-center w-[50rem] items-center justify-center text-white font-roboto_condensedBold mb-4">
+          Todd Nepola&apos;s highly anticipated book, &quot;Keeping it Real on Commercial Real Estate&quot; will answer all the questions investors need answered.
+          </h2>
+          <Image
+            className="object-contain w-full justify-center -ml-3 md:-ml-5 md:h-[40rem]"
+            src="/images/book.png"
+            alt="Todd Nepola Image"
+            width="1200"
+            height="1200"
+          />
+          {/* <div className="bg-transparent h-[20rem] ">
           <button  className="relative flex items-center justify-center h-full w-full overflow-hidden" onClick={handleVideo}>
               <div className={buttonClasses}>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -51,7 +61,7 @@ export const BookSection = () => {
                   />
               }
             </button>
-          </div>
+          </div> */}
           <br/>
           <a
             href="/book"
@@ -60,7 +70,7 @@ export const BookSection = () => {
             Learn More
           </a>
         </div>
-        <div className="hidden md:order-2 col-span-1 md:col-span-2 md:flex justify-center md:justify-end">
+        {/* <div className="hidden md:order-2 col-span-1 md:col-span-2 md:flex justify-center md:justify-end">
           <Image
             className="object-contain -ml-5"
             src="/images/book.png"
@@ -68,7 +78,7 @@ export const BookSection = () => {
             width="393"
             height="400"
           />
-        </div>
+        </div> */}
       </div>
     </section>
   )
