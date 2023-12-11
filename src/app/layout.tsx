@@ -56,8 +56,8 @@ const schema = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://toddnepola.com/'),
   title: 'Todd Nepola',
-  description:
-    'Todd Nepola is a leading figure in commercial real estate, is featured in podcasts, news articles, and creates Instagram Reels.',
+  description: 'Todd Nepola is a leading figure in commercial real estate, is featured in podcasts, news articles, and creates Instagram Reels.',
+  "google-site-verification":"SAD9sFVj91sHVKfmVI675i5h6i1tFiB6pUOh5x_kf04",
   openGraph: {
     url: '/',
     title: 'Todd Nepola',
