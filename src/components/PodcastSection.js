@@ -81,6 +81,46 @@ const posts = [
         name: 'Dwan Bent-Twyford',
       },
     },
+    {
+      id: 9,
+      title: 'From $0 to $100+ Million Real Estate Empire - The Story of Todd Nepola',
+      href: 'https://www.youtube.com/watch?v=JfIfLMXz7eU',
+      imageUrl:
+        'https://i.ytimg.com/vi/JfIfLMXz7eU/maxresdefault.jpg',
+      author: {
+        name: 'School of Hard Knocks',
+      },
+    },
+    {
+      id: 10,
+      title: 'Commercial Real Estate Investing With Todd Nepola | The Ideal Hour Podcast EP 11',
+      href: ' https://www.youtube.com/watch?v=dnl9l8TNCIQ',
+      imageUrl:
+        'https://i.ytimg.com/vi/dnl9l8TNCIQ/maxresdefault.jpg',
+      author: {
+        name: 'The Ideal Hour Podcast',
+      },
+    },
+    {
+      id: 11,
+      title: 'Reality TV Star &amp; Real Estate Mogul Todd Nepola from Real Housewives of Miami Shares His Story!',
+      href: ' https://www.youtube.com/watch?v=yrwVrAH-rfA',
+      imageUrl:
+        'https://i.ytimg.com/vi/yrwVrAH-rfA/maxresdefault.jpg',
+      author: {
+        name: 'Stroke of Success',
+      },
+    },
+    {
+      id: 12,
+      title: 'Miami Housewives EXPOSED &amp; Commercial Real Estate Investing with Todd Nepola',
+      href: ' https://www.youtube.com/watch?v=dTTiqOaPaWw',
+      imageUrl:
+        'https://i.ytimg.com/vi/dTTiqOaPaWw/maxresdefault.jpg',
+      author: {
+        name: 'Weston Kirk',
+      },
+    },
     
   ]
   
@@ -92,9 +132,9 @@ const posts = [
             {posts.map((post) => (
               <article
                 key={post.id}
-                className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
+                className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-20"
               >
-                <Image fill src={post.imageUrl} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover" />
+                <Image fill src={post.imageUrl} alt="" className="absolute inset-0 -z-10 h-full center w-full object-contain" />
                 <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
                 <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
   
