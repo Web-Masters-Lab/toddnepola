@@ -5,6 +5,7 @@ import { Reviews } from '@/components/Reviews';
 import { Order } from '@/components/Order';
 import { SectionHeader } from '@/components/SectionHeader';
 import { Banner } from '@/components/Banner'
+import { Footer } from '@/components/Footer'
 
 const Book = () => {
   return (
@@ -14,6 +15,7 @@ const Book = () => {
       <SectionHeader title="Todd's Book"/>
       <Order/>
       <Reviews/>
+      <Footer/>
     </div>
     
   )

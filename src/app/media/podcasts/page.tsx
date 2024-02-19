@@ -4,6 +4,7 @@ import { Navigation } from '@/components/Navigation';
 import { SectionHeader } from '@/components/SectionHeader';
 import { PodcastSection } from '@/components/PodcastSection';
 import { Banner } from '@/components/Banner'
+import { Footer } from '@/components/Footer'
 
 const Podcasts = () => {
   return (
@@ -12,6 +13,7 @@ const Podcasts = () => {
       <Navigation/>
       <SectionHeader title="Podcasts"/>
       <PodcastSection/>
+      <Footer/>
     </>
   )
 }

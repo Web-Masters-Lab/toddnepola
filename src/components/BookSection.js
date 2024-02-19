@@ -1,37 +1,11 @@
 import Image from 'next/image';
-// import { useState, useEffect } from "react";
-// import ReactPlayer from "react-player";
-// import classNames from 'classnames';
 
 export const BookSection = () => {
-  // const [playVideo, setPlayVideo] = useState(false)
-  // const [isSSR, setIsSSR] = useState(true);
-    
-  //   useEffect(() => {
-  //       setIsSSR(false);
-  //   }, []);
-
-  // const handleVideo = (event) =>{
-  //   event.preventDefault()
-  //   if(playVideo){
-  //       setPlayVideo(false)
-  //   } else {
-  //       setPlayVideo(true)
-  //   }
-  // }
-
-//   const buttonClasses = classNames('relative p-5 z-30 rounded-full',{
-//     'text-2xl text-white bg-primary bg-opacity-50': !playVideo,
-//     'text-transparent': playVideo
-// })
-
+ 
   return (
     <section className='container'>
       <div className="grid grid-cols-1 gap-8">
         <div className="flex flex-col justify-center col-span-1">
-          {/* <h3 className="text-4xl text-center items-center justify-center text-white font-roboto_condensedBold mb-4">
-            Keeping It Real on Commercial Real Estate
-          </h3> */}
           <h2 className="text-2xl text-center md:w-[50rem] items-center justify-center text-white font-roboto_condensedBold mb-4">
           Todd Nepola&apos;s highly anticipated book, &quot;Keeping it Real on Commercial Real Estate&quot; will answer all the questions investors need answered.
           </h2>
@@ -42,26 +16,6 @@ export const BookSection = () => {
             width="1200"
             height="1200"
           />
-          {/* <div className="bg-transparent h-[20rem] ">
-          <button  className="relative flex items-center justify-center h-full w-full overflow-hidden" onClick={handleVideo}>
-              <div className={buttonClasses}>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                      <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
-                  </svg>
-              </div> 
-            { isSSR ? null : 
-                  <ReactPlayer
-                      className="absolute z-10 w-full min-w-full min-h-full max-w-none"
-                      width={100}
-                      height={100}
-                      playing={playVideo}
-                      muted={false}
-                      autoPlay={false}
-                      url="/videos/pagehero1.mp4"
-                  />
-              }
-            </button>
-          </div> */}
           <br/>
           <a
             href="/book"

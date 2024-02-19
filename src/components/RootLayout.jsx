@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { Footer } from '@/components/Footer'
+
 
 function RootLayoutInner({ children }) {
   return (
@@ -10,7 +10,6 @@ function RootLayoutInner({ children }) {
         <main className="w-full flex-auto bg-white text-black font-robotoRegular">
           {children}
         </main>
-        <Footer />
       </div>
     </>
   )

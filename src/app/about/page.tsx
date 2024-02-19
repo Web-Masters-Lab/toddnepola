@@ -3,6 +3,7 @@ import React from "react";
 import {Navigation} from "@/components/Navigation"
 import { Hero } from "@/components/Hero"
 import { Banner } from '@/components/Banner'
+import { Footer } from '@/components/Footer'
 
 const About = () => {
     return (
@@ -329,6 +330,7 @@ const About = () => {
                 </div>
             </div>
         </div>
+        <Footer/>
         </>
     );
 };

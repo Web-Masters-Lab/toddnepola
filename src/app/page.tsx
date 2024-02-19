@@ -5,17 +5,23 @@ import { ArticleSection } from '@/components/ArticleSection'
 import { Navigation } from '@/components/Navigation'
 import { Banner } from '@/components/Banner'
 import { HeroVideo } from '@/components/HeroVideo'
+import { Footer } from '@/components/Footer'
+import { SignUpModal } from '@/components/SignUpModal';
+
+import { useSearchParams } from 'next/navigation'
+
 
 export default function Home() {
+  const searchParams = useSearchParams()
+  const cta = searchParams.get('cta')
   return (
     <>
       <Banner/>
       <Navigation/>
       <HeroVideo/>
-
-      {/* <section className="relative h-[32rem]">
-        <Video/>
-      </section> */}
+      {}
+      <SignUpModal cta={cta}/>
+      {/* <ConvertKitForm template="charlotte" formId={MY_FORM_ID} /> */}
 
 
         {/* About */}
@@ -150,6 +156,7 @@ export default function Home() {
   Popular Articles
 </h2>
 <ArticleSection/>
+<Footer/>
     </>
   )
 }
