@@ -83,14 +83,14 @@ export const WorkshopCTA = () => {
                   <form onSubmit={handleSubmit}>
                     <div className="mb-1 sm:mb-2">
                       <label htmlFor="full_name" className="inline-block mb-1 font-medium">Full Name</label>
-                      <input type="text" autoComplete="on" onChange={handleInput} fontFamily="Raleway" placeholder="Full Name" className="flex-grow transition duration-200
+                      <input type="text" autoComplete="given-name" onChange={handleInput} fontFamily="Raleway" placeholder="Full Name" className="flex-grow transition duration-200
                          appearance-none focus:border-blue-700 focus:outline-none focus:shadow-outline text-black
                           bg-white font-normal w-full h-12 text-xs border-2 border-gray-300 rounded-md pt-0 pr-4 pb-0 pl-4
                           mb-2 shadow-sm"/>
                     </div>
                     <div className="mb-1 sm:mb-2">
                       <label htmlFor="email" className="inline-block mb-1 font-medium">Email</label>
-                      <input type="text" autoComplete="on" fontFamily="Raleway" placeholder="Email" className="flex-grow
+                      <input type="text" autoComplete="email" fontFamily="Raleway" placeholder="Email" className="flex-grow
                           transition duration-200 appearance-none focus:border-blue-700 focus:outline-none
                           focus:shadow-outline text-black bg-white font-normal w-full h-12 text-xs border-2
                           border-gray-300 rounded-md pt-0 pr-4 pb-0 pl-4 mb-2 shadow-sm"/>
