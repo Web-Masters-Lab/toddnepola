@@ -28,7 +28,7 @@ export const BookSection = () => {
                         {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
                         <div className="lg:rounded pt-20  xl:pt-20 lg:py-10 bg-white text-primary flex flex-col content-around gap-4 h-auto lg:h-[600px] " >
                           <p className=' text-xl px-10 2xl:px-32 items-center flex'>
-                            Todd Nepola's highly anticipated book, "Keeping it Real on Commercial Real Estate" will answer all the questions investors need answered.
+                            Todd Nepola&apos;s highly anticipated book, &quot;Keeping it Real on Commercial Real Estate&quot; will answer all the questions investors need answered.
                           </p>
                           <p className='text-xl px-10 2xl:px-32 items-center flex'>
                             Nepola is a seasoned veteran with over 25 year of experience as an investor, manager and developer.
