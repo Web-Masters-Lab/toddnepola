@@ -41,7 +41,10 @@ const posts = [
   
   export const ArticleSection = () => {
     return (
-      <div className="bg-white pb-20 pt-1 sm:pb-20 sm:pt-4">
+      <div className="bg-gray-200 pb-20 pt-1 sm:pb-20 sm:pt-4">
+        <h2 className="text-center uppercase font-roboto_condensedBold text-primary pb-10 pt-16 text-5xl ">
+          Popular Articles
+      </h2>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto mt-8 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {posts.map((post) => (
