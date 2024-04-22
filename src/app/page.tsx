@@ -105,7 +105,7 @@ export default function Home() {
                         {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
                         <div className="lg:rounded py-10 grid grid-rows-2 bg-primary text-gray-300 lg:h-[400px] " >
                           <p className='pb-2 px-10 text-xl items-center flex' >
-                            Beyond his professional success, Todd is deeply committed to philanthropy. He wrote a book called "Keeping It Real on Commercial Real Estate," sharing his knowledge with others. What makes Todd stand out is that all the money from the book goes to charity, reflecting his dedication to giving back.
+                            Beyond his professional success, Todd is deeply committed to philanthropy. He wrote a book called &quot;Keeping It Real on Commercial Real Estate,&quot; sharing his knowledge with others. What makes Todd stand out is that all the money from the book goes to charity, reflecting his dedication to giving back.
                           </p>
                           <p className='pb-2 px-10 text-xl items-center flex' >
                             In addition to his charitable work through literature, Todd Nepola is involved in various philanthropic areas. His commitment to making a positive impact extends to supporting numerous causes and organizations, showcasing his genuine desire to uplift those in need.
@@ -121,7 +121,7 @@ export default function Home() {
                         {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
                         <div className="rounded grid grid-rows-2 border-gray-300 bg-primary  text-gray-300 h-[400px]" >
                           <p className='pb-2 px-10 text-xl items-center flex' >
-                          Beyond his professional success, Todd is deeply committed to philanthropy. He wrote a book called "Keeping It Real on Commercial Real Estate," sharing his knowledge with others. What makes Todd stand out is that all the money from the book goes to charity, reflecting his dedication to giving back.
+                          Beyond his professional success, Todd is deeply committed to philanthropy. He wrote a book called &quot;Keeping It Real on Commercial Real Estate,&quot; sharing his knowledge with others. What makes Todd stand out is that all the money from the book goes to charity, reflecting his dedication to giving back.
                           </p>
                           <p className='pb-2 px-10 text-xl items-center flex' >
                             In addition to his charitable work through literature, Todd Nepola is involved in various philanthropic areas. His commitment to making a positive impact extends to supporting numerous causes and organizations, showcasing his genuine desire to uplift those in need.
