@@ -38,13 +38,13 @@ export const Footer = () => {
           </a>
           <div className="grid w-full mt-10 md:mt-0 col-span-3 grid-cols-2 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-sm font-poppinsMedium leading-6 text-primary">Main</h3>
+              <h3 className="text-sm font-roboto_condensedBold leading-6 text-primary">MAIN</h3>
               <ul className="mt-4 space-y-4">
                 {navigation.main.map((item) => (
                   <li key={item.name}>
                     <a
                       href={item.href}
-                      className="text-sm leading-6 font-robotoRegular text-black hover:text-white hover:underline underline-offset-4 duration-400"
+                      className="text-sm leading-6 hover:text-primary font-roboto_condensedBold text-black hover:underline underline-offset-4 duration-400"
                     >
                       {item.name}
                     </a>
@@ -53,13 +53,13 @@ export const Footer = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-poppinsMedium leading-6 text-primary">Media</h3>
+              <h3 className="text-sm  leading-6 font-roboto_condensedBold text-primary">MEDIA</h3>
               <ul className="mt-4 space-y-4">
                 {navigation.media.map((item) => (
                   <li key={item.name}>
                     <a
                       href={item.href}
-                      className="text-sm leading-6 font-robotoRegular text-black hover:text-white hover:underline underline-offset-4 duration-400"
+                      className="text-sm leading-6 text-black hover:text-primary font-roboto_condensedBold hover:underline underline-offset-4 duration-400"
                     >
                       {item.name}
                     </a>
@@ -69,13 +69,13 @@ export const Footer = () => {
             </div>
 
             <div className="mt-10 sm:mt-0 col-span-2 sm:col-span-1">
-              <h3 className="text-sm font-poppinsMedium leading-6 text-primary">Get in Touch</h3>
+              <h3 className="text-sm font-roboto_condensedBold leading-6 text-primary">GET IN TOUCH</h3>
               <ul className="mt-4 space-y-4">
                 {navigation.GIT.map((item) => (
                   <li key={item.name}>
                     <a
                       href={item.href}
-                      className="text-sm leading-6 font-robotoRegular text-black hover:text-white hover:underline underline-offset-4 duration-400"
+                      className="text-sm leading-6 text-black hover:text-primary font-roboto_condensedBold hover:underline underline-offset-4 duration-400"
                     >
                       {item.name}
                     </a>
