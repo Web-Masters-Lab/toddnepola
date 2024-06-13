@@ -44,7 +44,7 @@ export const Footer = () => {
                   <li key={item.name}>
                     <a
                       href={item.href}
-                      className="text-sm leading-6 hover:text-primary font-roboto_condensedBold text-black hover:underline underline-offset-4 duration-400"
+                      className="text-sm leading-6 hover:text-orange-500 font-roboto_condensedBold text-black hover:underline underline-offset-4 duration-400"
                     >
                       {item.name}
                     </a>
@@ -59,7 +59,7 @@ export const Footer = () => {
                   <li key={item.name}>
                     <a
                       href={item.href}
-                      className="text-sm leading-6 text-black hover:text-primary font-roboto_condensedBold hover:underline underline-offset-4 duration-400"
+                      className="text-sm leading-6 text-black hover:text-orange-500 font-roboto_condensedBold hover:underline underline-offset-4 duration-400"
                     >
                       {item.name}
                     </a>
@@ -75,7 +75,7 @@ export const Footer = () => {
                   <li key={item.name}>
                     <a
                       href={item.href}
-                      className="text-sm leading-6 text-black hover:text-primary font-roboto_condensedBold hover:underline underline-offset-4 duration-400"
+                      className="text-sm leading-6 text-black hover:text-orange-500 font-roboto_condensedBold hover:underline underline-offset-4 duration-400"
                     >
                       {item.name}
                     </a>

@@ -42,9 +42,9 @@ export const BookSection = () => {
                           <div className='flex items-center 2xl:my-8 justify-center'>
                             <a
                               href="/book"
-                              className="bg-primary text-white relative mt-4 mb-8 text-lg font-poppinsMedium hover:bg-black/80 hover:text-white duration-400 py-2 px-8 text-center rounded-lg"
+                              className="bg-primary text-white font-roboto_condensedBold relative mt-4 mb-8 text-lg hover:bg-black/80 hover:text-white duration-400 py-2 px-8 text-center rounded-lg"
                             >
-                              Get A Copy
+                              GET A COPY
                             </a>
                           </div>
                           

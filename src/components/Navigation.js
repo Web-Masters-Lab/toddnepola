@@ -16,7 +16,7 @@ export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-gray-300 ">
+    <header className="bg-white ">
       <nav className="flex items-center justify-between p-4 mx-2 md:mx-8 md:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="/" className="p-1.5">

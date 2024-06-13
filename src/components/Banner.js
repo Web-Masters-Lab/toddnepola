@@ -53,9 +53,9 @@ export const Banner = () => {
             <ul className="align-items inline-block lg:flex text-center self-center md:flex-no-wrap px-6 py-2.5">
                 {items.map((item, idx)=>{
                     return(
-                        <li className="text-white flex justify-center hover:text-hover my-1.5" key={idx}>
+                        <li className="text-white flex justify-center  my-1.5" key={idx}>
                             {item?.icon}&nbsp;
-                            <a className="text-ellipsis" href={item?.link}>
+                            <a className="text-ellipsis hover:underline hover:text-orange-500" href={item?.link}>
                                 {item?.text}
                                 {idx !== items.length -1 && (<span className="text-white mx-2">|</span>)}
                             </a>

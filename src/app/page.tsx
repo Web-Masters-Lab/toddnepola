@@ -24,6 +24,15 @@ export default function Home() {
       <SignUpModal cta={cta}/>
       {/* <ConvertKitForm template="charlotte" formId={MY_FORM_ID} /> */}
       <Section/>
+      {/* Book */}
+      <div className="flex flex-col bg-primary items-center justify-center lg:py-16 pt-20">
+          <h2 className="text-center uppercase font-roboto_condensedBold text-white my-2 mb-16 text-5xl ">
+            Keeping it Real on Commerical Real Estate
+          </h2>
+          <div className="lg:px-4">
+            <BookSection />
+          </div>
+        </div>
 
         {/* About */}
         
@@ -57,7 +66,7 @@ export default function Home() {
         {/* Business */}
 
         
-      <div className="flex bg-[url('/images/business_background.jpg')] bg-cover bg-no-repeat bg-center flex-col items-center justify-center lg:py-10 lg:mt-20">
+      <div className="flex bg-[url('/images/business_background.jpg')] bg-cover bg-no-repeat bg-center flex-col items-center justify-center lg:py-10">
         {/* <span className="text-center hidden lg:block font-roboto_condensedBold py-8 lg:rounded-2xl px-8 text-5xl text-white bg-black bg-opacity-60">
          CURRENT CAPITAL REAL ESTATE
         </span> */}
@@ -91,26 +100,14 @@ export default function Home() {
                   <div className="flex items-center mb-8 mt-4 justify-center">
                       <a
                         href="http://www.currentcapitalgroup.com/"
-                        className=" relative bg-white text-lg font-poppinsMedium hover:bg-primary hover:text-white duration-400 py-2 px-8 text-center rounded-lg"
+                        className=" relative bg-white text-lg font-roboto_condensedBold hover:bg-primary hover:text-white duration-400 py-2 px-8 text-center rounded-lg"
                       >
-                        Visit The Website
+                        VISIT THE WEBSITE
                       </a>
                   </div>
                  
                 </div>
         </div>
-        </div>
-
-
-
-        {/* Book */}
-        <div className="flex flex-col bg-primary items-center justify-center lg:py-16 pt-20">
-          <h2 className="text-center uppercase font-roboto_condensedBold text-white my-2 mb-16 text-5xl ">
-            Keeping it Real on Commerical Real Estate
-          </h2>
-          <div className="lg:px-4">
-            <BookSection />
-          </div>
         </div>
 
 
