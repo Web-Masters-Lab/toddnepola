@@ -77,7 +77,7 @@ const portfolio = [{
 const Investments = () => {
     
     return portfolio.map((investment, idx)=>{
-        const contentClass = classNames('lg:col-span-2  lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl  lg:px-8',{
+        const contentClass = classNames('xl:col-span-2  lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl  lg:px-8',{
             'lg:col-start-1': idx % 2 === 0,
             'lg:col-start-2': idx % 2 === 1,
         })
@@ -87,7 +87,7 @@ const Investments = () => {
             'lg:col-start-1': idx % 2 === 1,
         })
         return(
-            <div key={idx} className='grid grid-cols-2'>
+            <div key={idx} className='grid grid-cols-1 lg:grid-cols-2'>
                 <div className={contentClass}>
                     <div className="lg:pr-4">
                         <div className="lg:max-w-lg">
