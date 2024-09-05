@@ -37,42 +37,9 @@ export default function Home() {
         {/* About */}
         
 
-          {/* <section className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pt-6 gap-2"> */}
-            {/* Remove class [ h-24 ] when adding a card block */}
-            {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
-            {/* <div className="rounded  z-10  hover:blur-none flex relative h-60 justify-center">
-              <img src="/images/current_capital_team.jpeg" className=" bg-blue-800 bg-cover bg-no-repeat w-full h-full"></img>
-              <div className="transition ease-in-out absolute top-0 left-0 w-full h-full bg-primary opacity-60"></div>
-            </div> */}
-            {/* Remove class [ h-24 ] when adding a card block */}
-            {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
-            {/* <div className="rounded relative h-60 flex justify-center"> 
-              <img src="/images/current_capital_team.jpeg" className=" bg-blue-800 bg-cover bg-no-repeat w-full h-full"></img>
-              <div className="transition ease-in-out absolute top-0 left-0 w-full h-full bg-primary opacity-60"/>
-              <div className="absolute grid  w-full h-full">
-                <h3 className='text-white flex font-roboto_condensedBold text-4xl justify-center self-center'>Hello world</h3>
-                <div className='w-full justify-centerh-full'>
-                <button className='text-white border-2 px-4 py-2 border-white border-solid rounded-xl'>hello world</button>
-                </div>      
-              </div>
-            </div> */}
-            {/* Remove class [ h-24 ] when adding a card block */}
-            {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
-            {/* <div className="rounded relative h-60 flex justify-center"> 
-              <img src="/images/current_capital_team.jpeg" className=" bg-blue-800 bg-cover bg-no-repeat w-full h-full"></img>
-              <div className="transition ease-in-out absolute top-0 left-0 w-full h-full bg-primary opacity-60"></div>
-            </div>
-          </section> */}
-        {/* Business */}
-
         
-      <div className="flex bg-[url('/images/business_background.jpg')] bg-cover bg-no-repeat bg-center flex-col items-center justify-center lg:py-10">
-        {/* <span className="text-center hidden lg:block font-roboto_condensedBold py-8 lg:rounded-2xl px-8 text-5xl text-white bg-black bg-opacity-60">
-         CURRENT CAPITAL REAL ESTATE
-        </span> */}
+      <div className="flex bg-[url('/images/investment2_1.jpg')] bg-cover bg-no-repeat bg-center flex-col items-center justify-center lg:py-10">
         <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 lg:pt-6 lg:gap-8">
-                {/* Remove class [ h-24 ] when adding a card block */}
-                {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
                 <div className="rounded bg-black content-center bg-opacity-60 bg-cover bg-center justify-center grid" >
                   <div className="md:h-auto justify-start flex flex-col ">
                     <Image

@@ -91,7 +91,7 @@ const posts = [
   
   export const Articles = () => {
     return (
-      <div className="bg-black pb-20 pt-1 sm:py-32">
+      <div className="bg-white pb-20 pt-1 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto mt-8 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {posts.map((post) => (

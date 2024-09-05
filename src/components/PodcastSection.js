@@ -111,16 +111,6 @@ const posts = [
         name: 'Stroke of Success',
       },
     },
-    {
-      id: 12,
-      title: 'Miami Housewives EXPOSED &amp; Commercial Real Estate Investing with Todd Nepola',
-      href: ' https://www.youtube.com/watch?v=dTTiqOaPaWw',
-      imageUrl:
-        'https://i.ytimg.com/vi/dTTiqOaPaWw/maxresdefault.jpg',
-      author: {
-        name: 'Weston Kirk',
-      },
-    },
     
   ]
   
