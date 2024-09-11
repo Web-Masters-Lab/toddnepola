@@ -46,7 +46,8 @@ export const FreeChapterCTA = () => {
                         id="full_name"
                         onChange={handleInput}
                         autoComplete="given-name"
-                        className="block w-full rounded-md border-0 outline-none px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        placeholder='John Doe'
+                        className="block w-full bg-white rounded-md border-0 outline-none px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
                       />
                     </div>
                   </div>
@@ -62,7 +63,8 @@ export const FreeChapterCTA = () => {
                         type="email"
                         autoComplete="email"
                         onChange={handleInput}
-                        className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm outline-none ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        placeholder='johndoe@gmail.com'
+                        className="block w-full bg-white rounded-md border-0 px-3.5 py-2 text-black shadow-sm outline-none ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
                       />
                     </div>
                   </div>
