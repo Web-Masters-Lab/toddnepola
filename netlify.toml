@@ -1,0 +1,8 @@
+[build]
+  command = "next build"
+  publish = "public"
+  functions = "functions"
+  [plugins]
+    [[plugins.nextjs]]
+      [plugins.nextjs.forms]
+        enable = true
