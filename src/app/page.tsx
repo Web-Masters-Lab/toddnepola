@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image'
+import { Suspense } from 'react';
 import { BookSection } from '@/components/BookSection'
 import { ArticleSection } from '@/components/ArticleSection'
 import { Navigation } from '@/components/Navigation'
@@ -13,15 +14,21 @@ import { useSearchParams } from 'next/navigation'
 
 
 export default function Home() {
-  const searchParams = useSearchParams()
-  const cta = searchParams.get('cta')
+  
+
+  const SearchParamsHandler = () => {
+    const searchParams = useSearchParams();
+    const cta = searchParams.get('cta');
+    return <SignUpModal cta={cta} />;
+  }
   return (
     <>
       <Banner/>
       <Navigation/>
       <HeroVideo/>
-      {}
-      <SignUpModal cta={cta}/>
+      <Suspense fallback={<div>Loading...</div>}>
+        <SearchParamsHandler/>
+      </Suspense>
       {/* <ConvertKitForm template="charlotte" formId={MY_FORM_ID} /> */}
       <Section/>
       {/* Book */}
