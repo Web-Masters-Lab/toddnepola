@@ -4,11 +4,11 @@ export const Section = () => {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className=" grid grid-cols-1 gap-0.5 md:grid-cols-3">
               
-              <a href='/workshop' className="z-0 relative h-36 group rounded hover:text-white text-black  bg-cover bg-no-repeat bg-center">
+              <a href='/portfolio' className="z-0 relative h-36 group rounded hover:text-white text-black  bg-cover bg-no-repeat bg-center">
                 <div className="w-full rounded absolute z-0 h-full bg-primary opacity-80 hover:opacity-90 transition-opacity"/>
                 
                 <h3 className='absolute text-base lg:group-hover:transition-all lg:group-hover:text-xl font-roboto_condensedBold z-1 h-full w-full pointer-events-none text-white hover:opacity-100  flex justify-center items-center'>
-                    REAL ESTATE WORKSHOP
+                    PORTFOLIO
                 </h3>
               </a>
               
@@ -16,7 +16,7 @@ export const Section = () => {
                 <div className="w-full rounded absolute z-0 h-full bg-white opacity-80 hover:opacity-90  transition-opacity"/>
                 
                 <h3 className='absolute z-1 text-xl group-hover:transition-all lg:group-hover:text-2xl font-roboto_condensedBold h-full w-full pointer-events-none text-primary hover:opacity-100  flex justify-center items-center'>
-                    GET THE BOOK
+                    ORDER MY BOOK
                 </h3>
               </a>
                 
