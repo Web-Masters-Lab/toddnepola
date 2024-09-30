@@ -5,7 +5,7 @@ export const ContactSection = () => {
       event.preventDefault();
       try{
         const formData = new FormData(event.target);
-        await fetch('/__contact.html', {
+        await fetch('/forms/__contact.html', {
             method: 'POST',
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             body: new URLSearchParams(formData).toString()
