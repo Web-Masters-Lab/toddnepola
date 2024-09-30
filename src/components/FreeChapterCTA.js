@@ -32,8 +32,8 @@ export const FreeChapterCTA = () => {
             <p className="my-6 md:px-24  text-2xl text-left">
             Sign up to get the first chapter of my book, <em className="font-bold text-blue-800">Keeping it Real on Commercial Real Estate </em> . 
             </p>
-          <form method="POST" data-netlify="true" data-netlify-honeypot="bot-field" name="contact" className="mt-4 px-24">
-              <input type="hidden" name="form-name" value="contact"/>
+          <form method="POST"  name="free-chapter" className="mt-4 px-24">
+              <input type="hidden" name="form-name" value="free-chapter"/>
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                   <div className="sm:col-span-2">
                   <label htmlFor="full_name" className="block font-roboto_condensedBold uppercase text-sm font-semibold leading-6 text-primary">

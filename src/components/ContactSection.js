@@ -1,19 +1,20 @@
 import Image from 'next/image'
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+
 export const ContactSection = () => {
+    const handleFormSubmit = async (event) => {
+      event.preventDefault();
+      try{
+        const formData = new FormData(event.target);
+        await fetch('/forms/__contact.html', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: new URLSearchParams(formData).toString()
+        });
+      } catch (e) {
+        console.log('Error: ', e)
+      }
+    };
+
     return (
       <section>
         <div className="relative bg-primary">
@@ -21,14 +22,14 @@ export const ContactSection = () => {
           <Image
             height={1200}
             width={1200}
-            className="hidden h-64 w-full bg-gray-50 object-cover md:flex sm:h-80 lg:absolute lg:h-full"
+            className="hidden h-64 w-auto bg-gray-50 object-cover md:flex sm:h-80 lg:absolute lg:h-full"
             src="/images/contact-desktop.jpg"
             alt=""
           />
           <Image
             height={600}
             width={600}
-            className="h-64 md:hidden w-full bg-gray-50 object-cover sm:h-80 md:h-[28rem] lg:absolute lg:h-full"
+            className="h-64 md:hidden w-auto bg-gray-50 object-cover sm:h-80 md:h-[28rem] lg:absolute lg:h-full"
             src="/images/contact-mobile.png"
             alt=""
           />
@@ -37,8 +38,8 @@ export const ContactSection = () => {
           <div className="px-6 lg:px-8">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
               <h2 className="text-6xl text-center sm:text-8xl font-bold tracking-tight uppercase whitespace-nowrap font-roboto_condensedBold text-white">Get in Touch</h2>
-              <form method="POST" data-netlify="true" data-netlify-honeypot="bot-field" name="contact" className="mt-16">
-              <input type="hidden" name="form-name" value="contact"/>
+              <form method="POST" data-netlify="true" data-netlify-honeypot="bot-field"  onSubmit={handleFormSubmit}  name="contact" className="mt-16">
+                <input type="hidden" name="form-name" value="contact"/>
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                   <div>
                     <label htmlFor="first-name" className="block font-roboto_condensedBold uppercase text-sm font-semibold leading-6 text-white">
@@ -49,7 +50,9 @@ export const ContactSection = () => {
                         type="text"
                         name="first-name"
                         id="first-name"
+                        placeholder='Johnny Appleseed'
                         autoComplete="given-name"
+                        required
                         className="block w-full bg-gray-100 rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       />
                     </div>
@@ -78,6 +81,7 @@ export const ContactSection = () => {
                         name="email"
                         type="email"
                         autoComplete="email"
+                        required
                         className="block w-full bg-gray-100 rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       />
                     </div>
