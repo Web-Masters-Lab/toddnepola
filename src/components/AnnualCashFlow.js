@@ -1,90 +1,145 @@
-// AnnualCashFlow.js
+'use client'
 import React, { useState } from 'react';
+import { IMaskInput } from 'react-imask';
+import { InformationCircleIcon } from '@heroicons/react/24/outline'
+import { PieChart } from './PieChart'
+import classNames from 'classnames';
+// import { useRouter } from 'next/router';
+
+const TAXES = '0.20';
 
 export const AnnualCashFlow = () => {
-  const [rentalIncome, setRentalIncome] = useState("");
+  // const router = useRouter();
+  const [rentalIncome, setRentalIncome] = useState('');
   const [operatingExpenses, setOperatingExpenses] = useState("");
   const [mortgagePayments, setMortgagePayments] = useState("");
-  const [taxes, setTaxes] = useState("");
-//   const [mortgageInterest, setMortgageInterest] = useState("");
-  const [otherExpenses, setOtherExpenses] = useState("");
   const [cashFlow, setCashFlow] = useState("")
+  const [incomeTax, setIncomeTax] = useState("")
+  const [pieChartData, setPieChartData] = useState(null);
 
-  const calculateAnnualCashFlow = () => { 
-    const annualCashFlow = rentalIncome - operatingExpenses - mortgagePayments - taxes - otherExpenses;
-    setCashFlow(annualCashFlow)
+  const calculateAnnualCashFlow = () => {
+    const parsedObject = {
+      rentalIncome: parseFloat(rentalIncome.replace(/[^\d.-]/g, '')) || 0,
+      operatingExpenses: parseFloat(operatingExpenses.replace(/[^\d.-]/g, '')) || 0,
+      mortgagePayments: parseFloat(mortgagePayments.replace(/[^\d.-]/g, '')) || 0,
+    }
+    const profit = parsedObject.rentalIncome - parsedObject.operatingExpenses - parsedObject.mortgagePayments;
+    const afterTaxes = (profit - (profit * TAXES)).toFixed(2);
+    const incomeTaxes = (profit * TAXES).toFixed(2);
+    setIncomeTax(incomeTaxes)
+    setCashFlow(afterTaxes)
+
+    const chartData = [
+      { label: 'Rental Income', value: parsedObject.rentalIncome },
+      { label: 'Operating Expenses', value: parsedObject.operatingExpenses  },
+      { label: 'Mortgage Payments',  value: parsedObject.mortgagePayments },
+      { label: 'Income Taxes', value:  incomeTaxes },
+      { label: 'Income', value: afterTaxes }
+    ];
+    setPieChartData(chartData);
   };
 
-  return (
-    <div>
-      <h2 className='font-roboto_condensedBold text-2xl'>Annual Cash Flow Calculator</h2>
-      
+const pieChartClasses = classNames(
+  'overflow-hidden transition-[max-height] duration-300 ease-in-out',
+  {
+    'max-h-0': !pieChartData,
+    'max-h-[500px]': pieChartData // Adjust this value based on your maximum expected height
+  }
+);
 
-      <div className='flex flex-col gap-2 py-6 w-52'>
-        <label htmlhtmlhtmlFor="rental-income">Rental Income</label>
-        <input
-          type="number"
-          className='bg-white border-solid border-2 '
-          name="rental-income"
-          id="rental-income"
-          placeholder="Rental Income"
-          value={rentalIncome}
-          onChange={(e) => setRentalIncome(parseFloat(e.target.value) || 0)}
-        />
+  const inputClasses = 'bg-gray-100 border-solid border-b-2 rounded p-1 border-black focus:border-primary focus:border-2 focus-visible:outline-none'
+
+  return (
+    <section className='container mx-auto'>
+      <div className='flex flex-col bg-gray-200 lg:grid lg:grid-cols-3 gap-8 py-4 w-full border-y-2 lg:border-x-2 lg:bg-white  border-primary lg:rounded-2xl my-14'>
+        <div className='p-8 mx-8'>
+          <h2 className='font-roboto_condensedBold text-2xl'>Income Calculator</h2>
+          <div className='flex flex-col gap-2 py-4 w-52'>
+            <label htmlFor="rental-income"><span className='flex gap-2 items-center'>Rental Income <a className='tooltip tooltip-right' data-tip="Amount you charge for rent"><InformationCircleIcon className='size-5 btn-ghost' data-tip="Amount you are charging to rent the property"/></a></span></label>
+              <IMaskInput
+                mask="$num" // Static dollar sign followed by a numeric mask
+                lazy={false} // Disable lazy mode for immediate formatting
+                blocks={{
+                  num: {
+                    mask: Number, // Numeric mask
+                    thousandsSeparator: ',', // Optional: Add commas for thousands
+                    radix: '.', // Optional: Decimal separator
+                    scale: 2, // Optional: Allow two decimal places
+                  },
+                }}
+                value={rentalIncome} // Bind value to state
+                onAccept={(value) => setRentalIncome(value)} // Update state with formatted value
+                className={inputClasses}
+                placeholder="Rental Income"
+                autoComplete='off'
+                name="rental-income"
+                id="rental-income"
+              />  
+          </div>
+          
+          <div className='flex flex-col  gap-2 py-6 w-52'>
+            <label htmlFor="operating-expenses"><span className='flex gap-2 items-center'>Operating Expenses <a className='tooltip tooltip-right' data-tip="Operational costs for maintenance of property"><InformationCircleIcon className='size-5 btn-ghost' data-tip="Amount you are charging to rent the property"/></a></span></label>
+            <IMaskInput
+              mask="$num"
+              lazy={false}
+              blocks={{
+                num: {
+                  mask: Number, // Numeric mask
+                  thousandsSeparator: ',', // Optional: Add commas for thousands
+                  radix: '.', // Optional: Decimal separator
+                  scale: 2, // Optional: Allow two decimal places
+                },
+              }}
+              className={inputClasses}
+              name="operating-expenses"
+              id="operating-expenses"
+              placeholder="Operating Expenses"
+              autoComplete='off'
+              value={operatingExpenses}
+              onAccept={(value) => setOperatingExpenses(value || 0)}
+            />
+          </div>
+
+          <div className='flex flex-col gap-2 py-6 w-52'>
+            <label htmlFor="mortgage-payments"><span className='flex gap-2 items-center'>Mortgage Payments<a className='tooltip tooltip-right' data-tip="Payments made to the bank for the mortgage"><InformationCircleIcon className='size-5 btn-ghost'/></a></span></label>
+            <IMaskInput
+              mask="$num"
+              lazy={false}
+              blocks={{
+                num: {
+                  mask: Number, // Numeric mask
+                  thousandsSeparator: ',', // Optional: Add commas for thousands
+                  radix: '.', // Optional: Decimal separator
+                  scale: 2, // Optional: Allow two decimal places
+                },
+              }}
+              className={inputClasses}
+              name="mortgage-payments"
+              id="mortgage-payments"
+              autoComplete='off'
+              placeholder="Mortgage Payments"
+              value={mortgagePayments}
+              onAccept={(value) => setMortgagePayments(value || 0)}
+            />
+          </div>
+          <button className="bg-primary text-gray-100 rounded-lg p-2 mt-4 " onClick={calculateAnnualCashFlow}>Calculate Cash Flow</button>
+          <div className={`hidden lg:block ${pieChartClasses}`}>
+            <div className='w-full justify-center flex'>
+              <PieChart data={pieChartData} />
+            </div>
+           </div>
+        </div>
+        <div className='px-8 lg:p-8 mx-8'>
+          <h2 className='font-roboto_condensedBold text-2xl justify-start flex'>Results</h2>
+          <p className='my-4 font-bold justify-start flex'>Income: ${cashFlow}</p>
+          <p className='my-4 font-bold justify-start flex'>Income Taxes: ${incomeTax}</p>
+        </div>
+        <div id='pie-chart' className={pieChartClasses}>
+          <div className=' mx-2 bg-white justify-center flex'>
+            <PieChart data={pieChartData} />
+          </div>
+        </div>
       </div>
-      
-      <div className='flex flex-col gap-2 py-6 w-52'>
-        <label htmlhtmlhtmlFor="operating-expenses">Operating Expenses</label>
-        <input
-          type="number"
-          className='bg-white border-solid border-2 '
-          name="operating-expenses"
-          id="operating-expenses"
-          placeholder="Operating Expenses"
-          value={operatingExpenses}
-          onChange={(e) => setOperatingExpenses(parseFloat(e.target.value) || 0)}
-        />
-      </div>
-      <div className='flex flex-col gap-2 py-6 w-52'>
-        <label htmlhtmlhtmlFor="mortgage-payments">Mortgage Payments</label>
-        <input
-          type="number"
-          className='bg-white border-solid border-2 '
-          name="mortgage-payments"
-          id="mortgage-payments"
-          placeholder="Mortgage Payments"
-          value={mortgagePayments}
-          onChange={(e) => setMortgagePayments(parseFloat(e.target.value) || 0)}
-        />
-      </div>
-      
-      <div className='flex flex-col gap-2 py-6 w-52'>
-        <label htmlhtmlhtmlFor="taxes">Taxes</label>
-        <input
-          type="number"
-          className='bg-white border-solid border-2 '
-          name="taxes"
-          id="taxes"
-          placeholder="Taxes"
-          value={taxes}
-          onChange={(e) => setTaxes(parseFloat(e.target.value) || 0)}
-        />
-      </div>
-      <div className='flex flex-col gap-2 py-6 w-52'>
-        <label htmlhtmlhtmlFor="other-expenses">Other Expenses</label>
-        <input
-          type="number"
-          placeholder="Other Expenses"
-          value={otherExpenses}
-          onChange={(e) => setOtherExpenses(parseFloat(e.target.value) || 0)}
-          className='bg-white border-solid border-2 '
-          name="other-expenses"
-          id="other-expenses"
-        />
-      </div>
-      
-      <button className="bg-primary text-gray-100 rounded-lg p-2 mt-4 " onClick={calculateAnnualCashFlow}>Calculate Annual Cash Flow</button>
-      <p className='my-10'>Annual Cash Flow: {cashFlow}%</p>
-    </div>
+    </section>
   );
 };
