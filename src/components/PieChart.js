@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 import { useBreakpoint } from '@/hooks/use-breakpoint';
 
@@ -119,7 +119,7 @@ export const PieChart = ({ data, title }) => {
         .style('font-size', '12px')
         .style('alignment-baseline', 'middle');
     }
-  }, [data, title]);
+  }, [data, title, isDesktop]);
 
   return <svg ref={svgRef}></svg>;
 };
