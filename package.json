@@ -19,11 +19,13 @@
     "@kodingdotninja/use-tailwind-breakpoint": "^0.0.5",
     "@netlify/plugin-nextjs": "5",
     "axios": "^1.7.7",
+    "chart.js": "^4.4.8",
     "classnames": "^2.3.2",
     "clsx": "^2.0.0",
     "d3": "^7.9.0",
     "next": "^14.2.9",
     "react": "^18",
+    "react-chartjs-2": "^5.3.0",
     "react-dom": "^18",
     "react-imask": "^7.6.1",
     "react-player": "^2.13.0",
@@ -31,6 +33,7 @@
     "styled-jsx": "^5.1.2"
   },
   "devDependencies": {
+    "@faker-js/faker": "^9.6.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

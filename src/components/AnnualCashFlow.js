@@ -55,7 +55,7 @@ const pieChartClasses = classNames(
         <div className='p-8 mx-8'>
           <h2 className='font-roboto_condensedBold text-2xl'>Income Calculator</h2>
           <div className='flex flex-col gap-2 py-4 w-52'>
-            <label htmlFor="rental-income"><span className='flex gap-2 items-center'>Rental Income <a className='tooltip tooltip-right' data-tip="Amount you charge for rent"><InformationCircleIcon className='size-5 btn-ghost' data-tip="Amount you are charging to rent the property"/></a></span></label>
+            <label htmlFor="rental-income"><span className='flex gap-2 items-center'>Rental Income <a className='tooltip tooltip-bottom lg:tooltip-right' data-tip="Amount you charge for rent"><InformationCircleIcon className='size-5 btn-ghost' data-tip="Amount you are charging to rent the property"/></a></span></label>
               <IMaskInput
                 mask="$num" // Static dollar sign followed by a numeric mask
                 lazy={false} // Disable lazy mode for immediate formatting
@@ -78,7 +78,7 @@ const pieChartClasses = classNames(
           </div>
           
           <div className='flex flex-col  gap-2 py-6 w-52'>
-            <label htmlFor="operating-expenses"><span className='flex gap-2 items-center'>Operating Expenses <a className='tooltip tooltip-right' data-tip="Operational costs for maintenance of property"><InformationCircleIcon className='size-5 btn-ghost' data-tip="Amount you are charging to rent the property"/></a></span></label>
+            <label htmlFor="operating-expenses"><span className='flex gap-2 items-center'>Operating Expenses <a className='tooltip tooltip-bottom lg:tooltip-right' data-tip="Operational costs for maintenance of property"><InformationCircleIcon className='size-5 btn-ghost' data-tip="Amount you are charging to rent the property"/></a></span></label>
             <IMaskInput
               mask="$num"
               lazy={false}
@@ -101,7 +101,7 @@ const pieChartClasses = classNames(
           </div>
 
           <div className='flex flex-col gap-2 py-6 w-52'>
-            <label htmlFor="mortgage-payments"><span className='flex gap-2 items-center'>Mortgage Payments<a className='tooltip tooltip-right' data-tip="Payments made to the bank for the mortgage"><InformationCircleIcon className='size-5 btn-ghost'/></a></span></label>
+            <label htmlFor="mortgage-payments"><span className='flex gap-2 items-center'>Mortgage Payments<a className='tooltip tooltip-bottom lg:tooltip-right' data-tip="Payments made to the bank for the mortgage"><InformationCircleIcon className='size-5 btn-ghost'/></a></span></label>
             <IMaskInput
               mask="$num"
               lazy={false}
