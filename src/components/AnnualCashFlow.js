@@ -40,7 +40,7 @@ export const AnnualCashFlow = () => {
   };
 
 const pieChartClasses = classNames(
-  'overflow-hidden transition-[max-height] duration-300 ease-in-out',
+  'lg:overflow-hidden lg:transition-[max-height] lg:duration-300 lg:ease-in-out',
   {
     'max-h-0': !pieChartData,
     'max-h-[500px]': pieChartData // Adjust this value based on your maximum expected height
@@ -123,11 +123,6 @@ const pieChartClasses = classNames(
             />
           </div>
           <button className="bg-primary text-gray-100 rounded-lg p-2 mt-4 " onClick={calculateAnnualCashFlow}>Calculate Cash Flow</button>
-          <div className={`hidden lg:block ${pieChartClasses}`}>
-            <div className='w-full justify-center flex'>
-              <PieChart data={pieChartData} />
-            </div>
-           </div>
         </div>
         <div className='px-8 lg:p-8 mx-8'>
           <h2 className='font-roboto_condensedBold text-2xl justify-start flex'>Results</h2>

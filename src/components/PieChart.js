@@ -1,21 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
-import { useBreakpoint } from '@/hooks/use-breakpoint';
 
 export const PieChart = ({ data, title }) => {
   const svgRef = useRef();
   
-  const isDesktop = useBreakpoint("lg");
 
   useEffect(() => {
-    window.dispatchEvent(new Event("resize"));
     if (data && svgRef.current) {
       let width = 360;
       let height = 360;
-      if(isDesktop){
-        width = 500;
-        height = 500;
-      }
 
       const radius = Math.min(width, height) / 2;
 
@@ -119,7 +112,7 @@ export const PieChart = ({ data, title }) => {
         .style('font-size', '12px')
         .style('alignment-baseline', 'middle');
     }
-  }, [data, title, isDesktop]);
+  }, [data, title]);
 
   return <svg ref={svgRef}></svg>;
 };
