@@ -33,7 +33,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "build/types/**/*.ts"
+    "build/types/**/*.ts",
+    "src/app/calculators/page.tsx.disabled"  
   ],
   "exclude": [
     "node_modules"
