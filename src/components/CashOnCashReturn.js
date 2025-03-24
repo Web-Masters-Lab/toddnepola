@@ -184,7 +184,7 @@ export const CashOnCashReturn = () => {
           <div className='px-8 lg:p-8 mx-8'>
             <h2 className='font-roboto_condensedBold text-2xl justify-start flex'>Results</h2>
             <p className='my-4 font-bold justify-start flex'>Cash-On-Cash Return: {results?.cashOnCashReturn}%</p>
-            <p className='my-4 font-bold justify-start flex'>Appreciation Gain: ${results?.appreciationGain}</p>
+            <p className='my-4 font-bold justify-start flex'>Appreciation Gain: ${results?.appreciationGain.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
             <p className='my-4 font-bold justify-start flex'>Total Cash Flow: ${results?.totalCashFlow}</p>
             <p className='my-4 font-bold justify-start flex'>Total Gain: ${results?.totalGain}</p>
             <p className='my-4 font-bold justify-start flex'>Future Value: ${results?.futureValue}</p>
