@@ -50,31 +50,35 @@ export function BarChart(props) {
         annualCashFlow,
         growthRate,
         numYears,
-        results
     } = props;
     const [labels, setLabels] = useState([new Date().getFullYear()]);
     const [income, setIncome] = useState([]);
     const [appreciation, setAppreciation] = useState([]);
    
+    // useEffect(() => {
+    //     const parsedYears = parseInt(numYears);
+    //     if(parsedYears > 1){
+    //         const updatedLabels = [...Array(parsedYears).keys()].map((_, idx) => { return new Date().getFullYear() + idx});
+    //         setLabels(updatedLabels)
+    //     }
+    // }, [numYears]);
+
     useEffect(() => {
         const parsedYears = parseInt(numYears);
         if(parsedYears > 1){
-            const updatedLabels = [...Array(parsedYears).keys()].map((_, idx) => { return new Date().getFullYear() + idx});
+            const updatedLabels = [...Array(parsedYears).keys()].map((_, idx) => { return new Date().getFullYear() + 1 + idx});
             setLabels(updatedLabels)
         }
-        const rental = labels?.map((_, idx) =>{
-            const result = annualCashFlow * (idx + 1);
-            return result
-        })
 
+        const rental = labels?.map((_, idx) =>{
+            return annualCashFlow * (idx + 1);
+        })
         const gain = labels?.map((_, idx) =>{
-            const result = (propertyValue * Math.pow(1 + growthRate, idx + 1)) - propertyValue
-            return result
+            return (propertyValue * Math.pow(1 + growthRate, idx + 1)) - propertyValue
         })
         setAppreciation(gain)
         setIncome(rental)
-
-    }, [numYears, propertyValue, growthRate, annualCashFlow, results, labels]);
+    }, [ annualCashFlow, propertyValue, growthRate, numYears])
     
     
 
