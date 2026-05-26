@@ -4,7 +4,7 @@ import { useEffect } from "react"
 
 const items = [
     {
-        link:"https://www.tiktok.com/@todd.nepola",
+        link:"https://www.tiktok.com/@todd.nepola?_r=1&_t=ZT-96h3Rw9JrgL",
         text: "@todd.nepola",
         icon: <Image src="/images/tiktok.svg" height={100} width={100} alt="TikTok" className="h-6 w-6"/>
     },
@@ -36,7 +36,7 @@ export const Banner = () => {
             <div className="bg-primary flex justify-center">
                 <div className="align-items inline-block lg:flex = text-center self-center md:flex-no-wrap px-6 py-2.5">
                     <div className="text-white flex justify-center my-1.5">
-                        <a className=" hover:text-hover" href="https://www.tiktok.com/@todd.nepola">
+                        <a className=" hover:text-hover" href="https://www.tiktok.com/@todd.nepola?_r=1&_t=ZT-96h3Rw9JrgL">
                             <Image src="/images/tiktok.svg" height={100} width={100} alt="TikTok" className="h-6 w-6"/>
                         </a>
                         <span className="text-white mx-8">|</span>
