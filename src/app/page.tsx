@@ -34,7 +34,7 @@ export default function Home() {
       {/* Book */}
       <div className="flex flex-col bg-primary items-center justify-center lg:py-16 pt-20">
           <h2 className="text-center uppercase font-roboto_condensedBold text-white my-2 mb-16 text-5xl ">
-            Keeping it Real on Commerical Real Estate
+            Keeping it Real on Commercial Real Estate
           </h2>
           <div className="lg:px-4">
             <BookSection />

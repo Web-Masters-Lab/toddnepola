@@ -16,8 +16,8 @@ const navigation = {
     { name: 'Contact', href: '/contact' },
     { name: 'Instagram', href: 'https://www.instagram.com/lifeaccordingtotodd/' },
     { name: 'TikTok', href: 'https://www.tiktok.com/@todd.nepola' },
-    { name: 'Youtube', href: 'https://www.youtube.com/channel/UCBb9T0yL77zmLOQMhg9njNw' },
-
+    { name: 'YouTube', href: 'https://www.youtube.com/channel/UCBb9T0yL77zmLOQMhg9njNw' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/todd-nepola-52323441/' },
   ],
 }
 
