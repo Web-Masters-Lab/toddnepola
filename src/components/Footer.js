@@ -1,4 +1,3 @@
-import Image from 'next/image'
 
 const navigation = {
   main: [
@@ -29,8 +28,11 @@ export const Footer = () => {
       </h2>
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
         <div className="md:grid md:grid-cols-5 md:gap-8 flex flex-col items-center">
-          <a href="/" className="col-span-2 flex">
-            <Image width={80} height={150} src="/images/logo.svg" alt="Todd Nepola Logo" />
+          <a href="/" className="col-span-2 flex items-center">
+            <div className="bg-white rounded p-1 flex-shrink-0">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/logo.svg" alt="Todd Nepola Logo" width={80} height={100} />
+            </div>
             <div className='grid font-roboto_condensedBold text-primary pl-2 my-0'>
               <span className='text-4xl'>TODD</span>
               <span className='text-6xl '>NEPOLA</span>
