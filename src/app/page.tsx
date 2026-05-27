@@ -41,10 +41,6 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center py-16 bg-white">
-          <Image src="/images/costar-power-broker-2025.png" alt="CoStar Power Broker 2025 Top Broker Winner" width={250} height={250} />
-        </div>
-
       <div className="flex bg-[url('/images/investment2_1.jpg')] bg-cover bg-no-repeat bg-center flex-col items-center justify-center lg:py-10">
         <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 lg:pt-6 lg:gap-8">
                 <div className="rounded bg-black content-center bg-opacity-60 bg-cover bg-center justify-center grid" >
@@ -84,6 +80,27 @@ export default function Home() {
         </div>
         </div>
 
+      <div className="flex flex-col items-center justify-center py-16 bg-primary">
+        <h2 className="text-center uppercase font-roboto_condensedBold text-white my-2 mb-12 text-5xl">
+          Industry Recognition
+        </h2>
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4">
+          <div className="flex justify-center">
+            <Image src="/images/costar-power-broker-2025.png" alt="CoStar Power Broker 2025 Top Broker Winner" width={280} height={280} />
+          </div>
+          <div className="flex flex-col gap-4">
+            <h3 className="text-white font-roboto_condensedBold text-3xl">
+              CoStar Power Broker Award
+            </h3>
+            <p className="text-gray-300 text-xl">
+              Todd Nepola has been recognized as a multiple-time winner of CoStar&apos;s prestigious Power Broker Award, most recently at CCM in 2025. This annual honor is awarded to the top commercial real estate brokers and firms who closed the highest transaction volumes in their markets.
+            </p>
+            <p className="text-gray-300 text-xl">
+              The recognition is a testament to Current Capital&apos;s consistent performance and Todd&apos;s dedication to delivering exceptional results in commercial real estate across South Florida.
+            </p>
+          </div>
+        </div>
+      </div>
 
         <section>
           <div className="flex flex-col items-center justify-center my-16">
