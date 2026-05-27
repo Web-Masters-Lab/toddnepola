@@ -14,11 +14,11 @@ export const BookSection = () => {
                         <div className="flex lg:rounded h-[400px] lg:h-[600px] overflow-hidden justify-center bg-[url('/images/office_building.png')] bg-cover items-center">
                           <div className="flex justify-center items-center">
                             <Image
-                              className="object-contain translate-y-10"
+                              className="object-contain"
                               src="/images/book.png"
                               alt="Keeping it Real on Commercial Real Estate - Todd Nepola"
-                              width="300"
-                              height="670"
+                              width="280"
+                              height="400"
                             />
                           </div>
                         </div>
