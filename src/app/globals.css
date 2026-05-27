@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  background-color: #d1d5db;
+}
+
 .primaryCTA {
   border-image-source: linear-gradient(to top right, #000000, #0037ff);
   border-image-slice: 1;
