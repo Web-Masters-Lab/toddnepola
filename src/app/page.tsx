@@ -41,10 +41,10 @@ export default function Home() {
           </div>
         </div>
 
-        {/* About */}
-        
+        <div className="flex flex-col items-center justify-center py-16 bg-white">
+          <Image src="/images/costar-power-broker-2025.png" alt="CoStar Power Broker 2025 Top Broker Winner" width={250} height={250} />
+        </div>
 
-        
       <div className="flex bg-[url('/images/investment2_1.jpg')] bg-cover bg-no-repeat bg-center flex-col items-center justify-center lg:py-10">
         <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 lg:pt-6 lg:gap-8">
                 <div className="rounded bg-black content-center bg-opacity-60 bg-cover bg-center justify-center grid" >
