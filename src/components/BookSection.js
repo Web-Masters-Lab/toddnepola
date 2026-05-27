@@ -11,14 +11,14 @@ export const BookSection = () => {
                         {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
 
                         
-                        <div className="flex lg:rounded h-[400px] lg:h-[600px] overflow-hidden justify-center bg-[url('/images/office_building.png')] bg-cover items-center">
+                        <div className="flex lg:rounded h-[400px] lg:h-[600px] justify-center bg-[url('/images/office_building.png')] bg-cover items-center">
                           <div className="flex justify-center items-center">
                             <Image
-                              className="object-contain"
+                              className="object-contain translate-y-16 lg:translate-y-20 drop-shadow-2xl"
                               src="/images/book.png"
                               alt="Keeping it Real on Commercial Real Estate - Todd Nepola"
-                              width="280"
-                              height="400"
+                              width="300"
+                              height="670"
                             />
                           </div>
                         </div>
