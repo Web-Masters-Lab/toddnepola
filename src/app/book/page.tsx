@@ -1,24 +1,12 @@
-"use client";
-import React from 'react';
-import { Navigation } from '@/components/Navigation';
-import { Reviews } from '@/components/Reviews';
-import { Order } from '@/components/Order';
-import { SectionHeader } from '@/components/SectionHeader';
-import { Banner } from '@/components/Banner'
-import { Footer } from '@/components/Footer'
+import type { Metadata } from 'next'
+import { BookPage } from '@/components/site/pages/BookPage'
 
-const Book = () => {
-  return (
-    <div className='bg-white'>
-      <Banner/>
-      <Navigation/>
-      <SectionHeader title="Todd's Book"/>
-      <Order/>
-      <Reviews/>
-      <Footer/>
-    </div>
-    
-  )
+export const metadata: Metadata = {
+  title: 'The Book — Keeping It Real on Commercial Real Estate',
+  description:
+    'Keeping It Real on Commercial Real Estate by Todd Nepola — the right answers to all your real estate questions. Every dollar of net proceeds is donated to charity.',
 }
 
-export default Book
+export default function Page() {
+  return <BookPage />
+}

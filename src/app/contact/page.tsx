@@ -1,18 +1,12 @@
-"use client"
-import { Navigation } from '@/components/Navigation'
-import { ContactSection } from '@/components/ContactSection';
-import { Banner } from '@/components/Banner'
-import { Footer } from '@/components/Footer'
+import type { Metadata } from 'next'
+import { ContactPage } from '@/components/site/pages/ContactPage'
 
-const Contact = () => {
-  return (
-    <>
-    <Banner/>
-    <Navigation/>
-    <ContactSection/>
-    <Footer/>
-    </>
-  )
+export const metadata: Metadata = {
+  title: 'Contact Todd Nepola',
+  description:
+    'Get in touch with Todd Nepola and Current Capital Real Estate Group — questions about a deal, the book, a podcast booking, or working together.',
 }
 
-export default  Contact
+export default function Page() {
+  return <ContactPage />
+}
