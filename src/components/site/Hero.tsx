@@ -1,6 +1,6 @@
 'use client'
 /* Hero.tsx — video-style hero + stat strip (from the design bundle's hero.jsx).
-   The voice player runs on a simulated clock (no audio file bundled). */
+   The voice player streams Todd's recorded message (public/audio/todd-intro.mp3). */
 import { useState, useRef, useEffect, type SVGProps, type SyntheticEvent, type PointerEvent as ReactPointerEvent } from 'react'
 import { Icon, Eyebrow } from './atoms'
 
@@ -27,10 +27,10 @@ const PlayerIcon = {
   ),
 }
 
-/* Configurable audio source — set to a real recording URL to use its true duration.
-   Left null because no recording is bundled yet; the player then runs on a simulated clock. */
-const VOICE_SRC: string | null = null
-const VOICE_FALLBACK_DURATION = 168 // 2:48 — used when no audio file is present
+/* Configurable audio source — a real recording, so the player uses its true duration.
+   Set to null to fall back to a simulated clock (no <audio> element mounted). */
+const VOICE_SRC: string | null = '/audio/todd-intro.mp3'
+const VOICE_FALLBACK_DURATION = 299 // 4:59 — clip length, shown until <audio> metadata loads
 const SPEEDS = [1, 1.25, 1.5, 2]
 
 function fmtTime(s: number) {
@@ -56,6 +56,16 @@ function VoicePlayer() {
   useEffect(() => {
     if (hasAudio && audioRef.current) audioRef.current.playbackRate = speed
   }, [speed, hasAudio])
+
+  // adopt the real audio if its metadata loaded before React attached the
+  // onLoadedMetadata handler (cached/instant loads fire the event very early)
+  useEffect(() => {
+    const a = audioRef.current
+    if (a && a.readyState >= 1 && isFinite(a.duration) && a.duration > 0) {
+      setHasAudio(true)
+      setDur(a.duration)
+    }
+  }, [])
 
   // simulated clock (used when no real audio file is available)
   useEffect(() => {
