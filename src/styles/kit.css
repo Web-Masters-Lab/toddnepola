@@ -5,13 +5,22 @@
    ============================================================ */
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+/* Dark canvas background: paints the rubber-band overscroll area (top & bottom)
+   in the footer's ink so there is no gray bleed — replaces the old
+   .footer::after guard (see globals.css). */
+html{scroll-behavior:smooth;background:var(--ink-900)}
 body{margin:0;background:var(--paper);color:var(--fg1);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit}
 
-.kit-root{overflow-x:hidden}
+/* Sticky footer: the frame is a full-height flex column and the page content
+   (.kit-main) grows to fill, so the footer always sits at the viewport bottom
+   on short pages instead of floating up and exposing the .footer::after guard.
+   overflow-x:clip (not hidden) still clips full-bleed 100vw sections but, unlike
+   hidden, does not establish a scroll container — so the sticky nav keeps working. */
+.kit-root{overflow-x:clip;display:flex;flex-direction:column;min-height:100vh}
+.kit-main{flex:1 0 auto}
 .container{max-width:1180px;margin:0 auto;padding:0 28px}
 
 /* ---------- shared atoms ---------- */

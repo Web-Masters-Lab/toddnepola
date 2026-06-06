@@ -8,13 +8,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* iOS overscroll guard — paints the rubber-band area below the footer in the
-   footer's own dark ink so there is no gray bleed (preserves the fix from the
-   5642b5f / 15907e6 commits, recolored for the new dark footer). */
-.footer::after {
-  content: '';
-  display: block;
-  height: 50vh;
-  margin-bottom: -50vh;
-  background-color: var(--ink-900);
-}
+/* Overscroll color is handled by the dark `html` background in kit.css (the
+   canvas paints the rubber-band area), which replaces the old `.footer::after`
+   50vh guard — that hack created real scrollable height once .kit-root stopped
+   clipping overflow (overflow-x:clip → overflow-y:visible). See 5642b5f. */

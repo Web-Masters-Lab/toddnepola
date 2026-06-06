@@ -18,7 +18,7 @@ export function Shell({ children }: { children: ReactNode }) {
       <div className="kit-root">
         <SocialBar />
         <Nav onOrder={openOrder} />
-        {children}
+        <main className="kit-main">{children}</main>
         <Footer />
         <OrderModal open={open} onClose={() => setOpen(false)} />
       </div>
