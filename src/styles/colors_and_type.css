@@ -5,14 +5,15 @@
    personal brand (commercial real estate investor & author).
    ============================================================ */
 
-/* ---- Webfonts (Google Fonts) ----------------------------------
-   Roboto Condensed (700/900) ... headlines, condensed uppercase
-   Roboto (400/500) ............... body copy
-   Poppins (500/600) .............. UI labels / buttons / eyebrows
-   Cinzel (500/600) ............... engraved wordmark serif
-                                    (substitute for COPPERPLATE — see README)
+/* ---- Webfonts ---------------------------------------------------
+   Loaded (self-hosted) via next/font in src/app/layout.tsx, which sets
+   --font-roboto-condensed / --font-roboto / --font-poppins / --font-cinzel
+   on <html>. The --font-* tokens below consume those variables.
+     Roboto Condensed ... headlines, condensed uppercase
+     Roboto ............. body copy
+     Poppins ............ UI labels / buttons / eyebrows
+     Cinzel ............. engraved wordmark serif (Copperplate substitute)
 ----------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700;900&family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap');
 
 :root {
   /* ============ BRAND COLOR PRIMITIVES ============ */
@@ -102,10 +103,10 @@
   --ring-gold:  0 0 0 1px var(--gold-500), 0 8px 28px -8px rgba(201,162,76,0.45);
 
   /* ============ TYPE FAMILIES ============ */
-  --font-display: 'Roboto Condensed', 'Arial Narrow', sans-serif; /* condensed bold uppercase headlines */
-  --font-body:    'Roboto', system-ui, -apple-system, sans-serif;
-  --font-ui:      'Poppins', system-ui, sans-serif;               /* labels, buttons, eyebrows */
-  --font-wordmark:'Cinzel', 'Copperplate', 'Times New Roman', serif; /* engraved wordmark (Copperplate subst.) */
+  --font-display: var(--font-roboto-condensed), 'Arial Narrow', sans-serif; /* condensed bold uppercase headlines */
+  --font-body:    var(--font-roboto), system-ui, -apple-system, sans-serif;
+  --font-ui:      var(--font-poppins), system-ui, sans-serif;               /* labels, buttons, eyebrows */
+  --font-wordmark:var(--font-cinzel), 'Copperplate', 'Times New Roman', serif; /* engraved wordmark (Copperplate subst.) */
 
   /* ============ TYPE SCALE (desktop) ============ */
   --t-display:  clamp(3rem, 7vw, 6rem);     /* hero — condensed 900 */

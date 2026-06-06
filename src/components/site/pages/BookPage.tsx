@@ -42,7 +42,6 @@ export function BookPage() {
               <p className="tagline">The right answers to all your real estate questions</p>
               <div className="hero-actions">
                 <button className="btn btn-gold" onClick={onOrder}>Order the Book <Icon.arrow /></button>
-                <Link className="btn btn-ghost-light" href="/contact">Request a Free Chapter</Link>
               </div>
               <p className="by">By <b>Todd Nepola</b> · 100% of net proceeds donated to charity</p>
             </div>
@@ -54,7 +53,6 @@ export function BookPage() {
       <section className="section">
         <div className="container">
           <div className="sec-head">
-            <div className="divider-tick center" />
             <Eyebrow center>Why This Book</Eyebrow>
             <h2 className="h-2" style={{ marginTop: 14 }}>The Questions Investors Actually Need Answered</h2>
             <p>
@@ -71,7 +69,6 @@ export function BookPage() {
       <section className="section section-tight" style={{ background: 'var(--paper-2)' }}>
         <div className="container">
           <div className="sec-head">
-            <div className="divider-tick center" />
             <Eyebrow center>Inside</Eyebrow>
             <h2 className="h-2" style={{ marginTop: 14 }}>What You&apos;ll Learn To Ask</h2>
           </div>
@@ -90,7 +87,6 @@ export function BookPage() {
       <section className="section section-navy-deep">
         <div className="container">
           <div className="sec-head">
-            <div className="divider-tick center" />
             <Eyebrow dark center>What Readers Say</Eyebrow>
             <h2 className="h-2 on-dark" style={{ marginTop: 14 }}>Recent Reviews</h2>
           </div>
@@ -129,7 +125,6 @@ export function BookPage() {
       <section className="section section-tight" style={{ background: 'var(--paper-2)' }}>
         <div className="container">
           <div className="sec-head">
-            <div className="divider-tick center" />
             <Eyebrow center>Get A Copy</Eyebrow>
             <h2 className="h-2" style={{ marginTop: 14 }}>Where To Order</h2>
           </div>

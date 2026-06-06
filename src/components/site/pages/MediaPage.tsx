@@ -85,7 +85,6 @@ export function MediaPage() {
       <section className="section" id="podcasts">
         <div className="container">
           <div className="sec-head">
-            <div className="divider-tick center" />
             <Eyebrow center>On The Mic</Eyebrow>
             <h2 className="h-2" style={{ marginTop: 14 }}>Podcasts &amp; Appearances</h2>
           </div>

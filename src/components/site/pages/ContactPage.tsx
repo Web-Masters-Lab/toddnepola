@@ -28,7 +28,6 @@ export function ContactPage() {
         <div className="container">
           <div className="contact-intro">
             <div>
-              <div className="divider-tick" />
               <Eyebrow>How To Reach Us</Eyebrow>
               <p className="lede" style={{ marginTop: 16 }}>
                 Whether you&apos;re an investor with a question, a journalist on deadline, or a reader who

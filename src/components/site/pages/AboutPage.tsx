@@ -80,7 +80,6 @@ export function AboutPage() {
       <section className="section">
         <div className="container">
           <div className="sec-head">
-            <div className="divider-tick center" />
             <Eyebrow center>More Than One Pursuit</Eyebrow>
             <h2 className="h-2" style={{ marginTop: 14 }}>Investor. Author. Ironman.</h2>
             <p>The same discipline that closes nine-figure deals also finishes marathons and gives every book dollar to charity.</p>
@@ -93,7 +92,6 @@ export function AboutPage() {
       <section className="section section-tight" style={{ background: 'var(--paper-2)' }}>
         <div className="container">
           <div className="sec-head">
-            <div className="divider-tick center" />
             <Eyebrow center>What Guides The Work</Eyebrow>
             <h2 className="h-2" style={{ marginTop: 14 }}>Credible. Grounded. Premium.</h2>
           </div>
@@ -113,7 +111,6 @@ export function AboutPage() {
       <section className="section">
         <div className="container">
           <div className="sec-head">
-            <div className="divider-tick center" />
             <Eyebrow center>The Track Record</Eyebrow>
             <h2 className="h-2" style={{ marginTop: 14 }}>Milestones</h2>
           </div>

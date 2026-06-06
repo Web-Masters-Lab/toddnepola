@@ -32,6 +32,13 @@ button{font-family:inherit}
 .h-display{font-family:var(--font-display);font-weight:900;text-transform:uppercase;line-height:.93;letter-spacing:.01em;color:var(--navy-800);margin:0}
 .h-2{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:.98;letter-spacing:.02em;color:var(--navy-800);margin:0;font-size:clamp(2rem,3.6vw,3rem)}
 .h-2.on-dark{color:#fff}
+/* `.h-2` (design heading class) collides with Tailwind's `h-2` height utility
+   (height:.5rem), which `@tailwind utilities` emits AFTER this file — at equal
+   specificity that utility wins the `height` property and collapses every
+   section heading's box to 8px, so its (often two-line) text overflows onto the
+   paragraph below. Re-assert auto height at higher specificity (.kit-root wraps
+   the whole app) so headings size to their text at every breakpoint. */
+.kit-root .h-2{height:auto}
 .lead{font-size:clamp(1.05rem,1.4vw,1.25rem);line-height:1.65;color:var(--ink-500)}
 .lead.on-dark{color:var(--on-navy-2)}
 
@@ -59,7 +66,7 @@ button{font-family:inherit}
 .topbar a{display:inline-flex;align-items:center;gap:8px;color:#fff;opacity:.92;transition:color .3s,opacity .3s}
 .topbar a:hover{color:var(--gold-400);opacity:1}
 .topbar img{height:18px;width:18px;filter:brightness(0) invert(1)}
-@media (max-width:520px){.topbar-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:360px}}
+@media (max-width:520px){.topbar-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:none;justify-items:start;gap:9px 18px}}
 
 /* ---------- nav ---------- */
 .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft);transition:box-shadow .3s}
