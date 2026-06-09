@@ -1,20 +1,14 @@
-"use client"
-import { Navigation } from '@/components/Navigation'
-import { Portfolio } from '@/components/Portfolio';
-import { Banner } from '@/components/Banner'
-import { Footer } from '@/components/Footer'
-import { SectionHeader } from '@/components/SectionHeader';
+import { PortfolioPage } from '@/components/site/pages/PortfolioPage'
+import { pageMetadata } from '@/lib/seo'
 
-const PortfolioPage = () => {
-  return (
-    <>
-    <Banner/>
-    <Navigation/>
-    <SectionHeader title="Portfolio"/>
-    <Portfolio/>
-    <Footer/>
-    </>
-  )
+export const metadata = pageMetadata({
+  shortTitle: 'Portfolio',
+  ogTitle: 'Portfolio — Todd Nepola',
+  description:
+    'Real retail and industrial properties bought, built, leased and managed by Todd Nepola across South Florida — with the numbers behind each deal.',
+  path: '/portfolio',
+})
+
+export default function Page() {
+  return <PortfolioPage />
 }
-
-export default  PortfolioPage
