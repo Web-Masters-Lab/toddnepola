@@ -1,0 +1,62 @@
+import Image from 'next/image';
+
+export const BookSection = () => {
+ 
+  return (
+    <section className='container'>
+      <div className="container lg:pt-6 mx-auto">
+                <div className="flex flex-wrap">
+                    <div className="lg:w-1/2 w-full lg:pr-6">
+                        {/* Remove class [ h-24 ] when adding a card block */}
+                        {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
+
+                        
+                        <div className="flex lg:rounded h-[400px] lg:h-[600px] justify-center bg-[url('/images/office_building.png')] bg-cover items-center">
+                          <div className="flex justify-center items-center">
+                            <Image
+                              className="object-contain translate-y-16 lg:translate-y-20 drop-shadow-2xl"
+                              src="/images/book.png"
+                              alt="Keeping it Real on Commercial Real Estate - Todd Nepola"
+                              width="300"
+                              height="670"
+                            />
+                          </div>
+                        </div>
+                    </div>
+                    <div className="lg:w-1/2 w-full flex flex-col content-around">
+                        {/* Remove class [ h-24 ] when adding a card block */}
+                        {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
+                        <div className="lg:rounded pt-20  xl:pt-20 lg:py-10 bg-white text-primary flex flex-col content-around gap-4 h-auto lg:h-[600px] " >
+                          <p className=' text-xl px-10 2xl:px-32 items-center flex'>
+                            Todd Nepola&apos;s highly anticipated book, &quot;Keeping it Real on Commercial Real Estate&quot; will answer all the questions investors need answered.
+                          </p>
+                          <p className='text-xl px-10 2xl:px-32 items-center flex'>
+                            Nepola is a seasoned veteran with over 25 year of experience as an investor, manager and developer.
+                          </p>
+                          <p className='text-xl px-10 2xl:px-32 items-center flex'>
+                            Over the years people have asked Todd questions about getting started in investing, and he realized that, many times, would-be investors ask the wrong questions, and do not focus in on what should be asked.
+                          </p>
+                          <p className='text-xl px-10 2xl:px-32 items-center flex'>
+                          You will find that Nepola‘s book contains all the questions that should be asked, and then answered!
+                          </p>
+                          <div className='flex items-center 2xl:my-8 justify-center'>
+                            <a
+                              href="/book"
+                              className="bg-primary text-white font-roboto_condensedBold relative mt-4 mb-8 text-lg hover:bg-black/80 hover:text-white duration-400 py-2 px-8 text-center rounded-lg"
+                            >
+                              GET A COPY
+                            </a>
+                          </div>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+      <div className="grid grid-cols-1 gap-8">
+        <div className="flex flex-col justify-center col-span-1">
+          
+        </div>
+      </div>
+    </section>
+  )
+}
