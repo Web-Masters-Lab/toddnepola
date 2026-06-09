@@ -1,16 +1,14 @@
+/* Todd Nepola design system (ported from the Claude Design handoff bundle).
+   Tokens first, then component kit, then inner-page styles. */
+@import '../styles/colors_and_type.css';
+@import '../styles/kit.css';
+@import '../styles/pages.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-footer::after {
-  content: '';
-  display: block;
-  height: 50vh;
-  margin-bottom: -50vh;
-  background-color: #d1d5db;
-}
-
-.primaryCTA {
-  border-image-source: linear-gradient(to top right, #000000, #0037ff);
-  border-image-slice: 1;
-}
+/* Overscroll color is handled by the dark `html` background in kit.css (the
+   canvas paints the rubber-band area), which replaces the old `.footer::after`
+   50vh guard — that hack created real scrollable height once .kit-root stopped
+   clipping overflow (overflow-x:clip → overflow-y:visible). See 5642b5f. */

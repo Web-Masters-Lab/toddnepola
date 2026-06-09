@@ -1,0 +1,91 @@
+name: Netlify Deploy Preview
+
+# Builds the site on GitHub's runners and pushes a per-PR preview deploy to
+# Netlify, then posts the preview URL as a sticky comment on the PR.
+#
+# Requires two repo secrets (Settings → Secrets and variables → Actions):
+#   NETLIFY_AUTH_TOKEN  — a personal access token from Netlify (User settings → Applications → New access token)
+#   NETLIFY_SITE_ID     — the target site's API ID (Netlify → Site configuration → General → Site ID, or `netlify sites:list`)
+# Until BOTH are set, the deploy steps are skipped and the check stays green.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write   # needed to post the preview-URL comment
+
+concurrency:
+  # One preview build per PR; cancel superseded runs on new pushes.
+  group: netlify-preview-${{ github.event.number }}
+  cancel-in-progress: true
+
+jobs:
+  deploy-preview:
+    # Skip fork PRs — they can't read secrets anyway.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Netlify secrets are configured
+        id: guard
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          if [ -n "$NETLIFY_AUTH_TOKEN" ] && [ -n "$NETLIFY_SITE_ID" ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Netlify secrets not set — skipping preview deploy. Add NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID repo secrets to enable previews."
+          fi
+
+      - name: Checkout
+        if: steps.guard.outputs.configured == 'true'
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        if: steps.guard.outputs.configured == 'true'
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        if: steps.guard.outputs.configured == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        if: steps.guard.outputs.configured == 'true'
+        run: pnpm install --frozen-lockfile
+
+      - name: Build & deploy preview to Netlify
+        id: deploy
+        if: steps.guard.outputs.configured == 'true'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          # --build runs the netlify.toml build command + @netlify/plugin-nextjs
+          # on this runner, then uploads the result as a draft (preview) deploy.
+          npx --yes netlify-cli@latest deploy \
+            --build \
+            --alias "deploy-preview-${{ github.event.number }}" \
+            --message "PR #${{ github.event.number }} preview (${{ github.sha }})" \
+            --json > deploy.json
+          echo "url=$(jq -r '.deploy_url' deploy.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Comment preview URL on PR
+        if: steps.guard.outputs.configured == 'true'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: netlify-preview
+          message: |
+            ### 🔍 Netlify Deploy Preview
+
+            | | |
+            |---|---|
+            | **Preview** | ${{ steps.deploy.outputs.url }} |
+            | **Commit** | ${{ github.sha }} |
+
+            _Updates automatically on each push to this PR._
