@@ -1,0 +1,251 @@
+.swiper-button-next::after,
+        .swiper-button-prev::after {
+            content: "";
+        }
+
+        .swiper-wrapper{
+            display: flex;
+            align-items: center;
+        } 
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            height: 30px;
+            width: 30px;
+            margin-top : 40px
+        }
+
+        .swiper {    
+            height: 100%;
+        }
+       
+        @media (min-width: 768px) { 
+        .mainDiv {
+        position: relative;
+        width: 100%
+      } 
+
+      .swiper-button-next,
+        .swiper-button-prev {
+            height: 32px;
+            width: 32px;
+            margin: -40px 30px;
+        }
+      }
+      @media (min-width: 1024px) { 
+        .mainDiv {
+        position: relative;
+        {/* padding: 40px; */}
+        width: 100%
+      } 
+
+      .swiper-button-next,
+        .swiper-button-prev {
+            height: 40px;
+            width: 40px;
+            margin-top: -50px;
+        }
+      }   
+
+        .swiper-slide {
+            
+            text-align: left;
+            font-size: 18px;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        .swiper-slide image {          
+            {/* width: 660px; */}
+            object-fit: cover;
+        }
+    {/* important */}
+    .arr{
+  margin-right: -10px;
+
+}
+.mainDiv {
+position: relative;
+height: 100%;
+padding: 0px;
+width: 100%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+
+
+}
+
+
+
+@media (min-width: 300px) { 
+    .swiper-button-next, .swiper-rtl .swiper-button-prev {
+        right: 0px;
+        left: auto;
+        top:-15px;
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+        right: 60px;
+        top: -15px;
+        left: auto;
+    }
+  
+}
+
+@media (min-width: 343px) { 
+    .swiper-button-next, .swiper-rtl .swiper-button-prev {
+        right: 0px;
+        left: auto;
+        top:-15px;
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+        right: 60px;
+        top: -15px;
+        left: auto;
+    }
+
+
+}
+.swiper-wrapper{
+  display: flex;
+  align-items: center;
+} 
+
+.swiper-button-next,
+.swiper-button-prev {
+  height: 30px;
+  width: 30px;
+
+}
+
+.swiper {    
+  height: 100%;
+}
+
+
+@media (min-width: 768px) { 
+    .mainDiv {
+        position: relative;
+        width: 100%;
+    } 
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        height: 32px;
+        width: 32px;
+    }
+    .arr{
+        right: 290px;
+    }
+    .swiper-button-next, .swiper-rtl .swiper-button-prev {
+        right: 0px;
+        left: auto;
+        top:0px;
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+        right: 60px;
+        top: 0px;
+        left: auto;
+    }
+}
+@media (max-width: 768px) { 
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        height: 32px;
+        width: 32px;
+
+    }
+}
+@media (min-width: 1024px) { 
+    .mainDiv {
+        position: relative;
+        /* padding: 40px; */
+        width: 100%
+
+} 
+
+.swiper-button-next,
+.swiper-button-prev {
+  height: 40px;
+  width: 40px;
+
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+right: 0px;
+left: auto;
+top:45px;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+right: 60px;
+top: 45px;
+left: auto;
+}
+}   
+
+.swiper-slide {
+  
+  text-align: left;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-slide img {          
+  /* width: 660px; */
+  object-fit: cover;
+}
+
+
+
+@media (max-width:1135px) {
+    .gg{
+    width: 335px;
+    height: 548px;
+    }
+    .blacck{
+    width: 280px;
+    height: 332px;
+    }
+    .shirt{
+    width: 280px;
+    height: 332px;
+    }
+    .bt{
+    width: 944px;
+    }
+}
+@media (max-width:768px) {
+    .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 0px;
+    left: auto;
+    top: -85px;
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    right: 60px;
+    top: -85px;
+    left: auto;
+    }
+}

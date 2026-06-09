@@ -1,19 +1,41 @@
+'use client'
+import { Navigation } from '@/components/Navigation'
+import { SectionHeader } from '@/components/SectionHeader'
 import Link from 'next/link'
+import { Banner } from '@/components/Banner'
 
 export default function NotFound() {
   return (
-    <main className="section" style={{ minHeight: '60vh', display: 'flex', alignItems: 'center' }}>
-      <div className="container" style={{ textAlign: 'center' }}>
-        <div className="h-display" style={{ fontSize: 'clamp(5rem,16vw,11rem)', color: 'var(--gold-500)', lineHeight: 0.9 }}>404</div>
-        <h1 className="h-2" style={{ marginTop: 18 }}>Page Not Found</h1>
-        <p className="lead muted" style={{ maxWidth: 520, margin: '16px auto 0' }}>
-          Sorry, we couldn&apos;t find the page you&apos;re looking for.
+    <>
+      <Banner/>
+      <Navigation/>
+      <SectionHeader title="Page Not Found" />
+      <div className="flex w-screen h-screen items-center justify-center py-10">
+      <div className="flex flex-col items-center text-center">
+        <p className="bg-gradient-to-tl from-primary via-blue-950 to-black bg-clip-text text-transparent font-bold font-roboto_condensedBold text-6xl md:text-9xl">
+          404
         </p>
-        <div className="hero-actions" style={{ justifyContent: 'center', marginTop: 30 }}>
-          <Link className="btn btn-primary" href="/">Back to Home</Link>
-          <Link className="btn btn-invert" href="/contact">Contact Us</Link>
-        </div>
+        <h1 className="mt-2 font-display text-2xl font-semibold text-black font-poppinsMedium">
+          Page not found
+        </h1>
+        <p className="mt-2 text-sm text-black/60 font-robotoRegular">
+          Sorry, we couldn’t find the page you’re looking for.
+        </p>
+        <Link
+          href="/"
+          className="p-4 text-lg font-semibold text-primary transition hover:text-black/70 font-poppinsMedium"
+        >
+          Go to the home page
+        </Link>
+        <p className="text-lg font-semibold font-poppinsMedium">Or</p>
+        <Link
+          href="/contact"
+          className="p-4 text-lg font-semibold text-primary transition hover:text-black/70 font-poppinsMedium"
+        >
+          Contact Us
+        </Link>
       </div>
-    </main>
+    </div>
+    </>
   )
 }
