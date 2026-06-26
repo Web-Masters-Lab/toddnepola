@@ -2,11 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-footer::after {
-  content: '';
-  display: block;
-  height: 50vh;
-  margin-bottom: -50vh;
+/* Paint the canvas gray so iOS overscroll/rubber-band (top + bottom)
+   reveals gray instead of white. Replaces the old footer::after 50vh hack. */
+html {
   background-color: #d1d5db;
 }
 

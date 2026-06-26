@@ -1,6 +1,6 @@
 import { RootLayout } from '@/components/RootLayout'
 import './globals.css'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Roboto, Roboto_Condensed, Poppins } from 'next/font/google'
 import React from 'react'
 import Script from 'next/script'
@@ -51,6 +51,12 @@ const schema = {
     "parents": ["Ina Nepola", "Thomas Nepola"],
     "sibling": "Justin Nepola",
 
+}
+
+export const viewport: Viewport = {
+  // Tint the iOS browser chrome / safe-area to match the footer so it stops
+  // sampling the navy banner at the top of the page.
+  themeColor: '#d1d5db',
 }
 
 export const metadata: Metadata = {
