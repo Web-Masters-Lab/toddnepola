@@ -1,30 +1,9 @@
-import { RootLayout } from '@/components/RootLayout'
+import { Shell } from '@/components/site/Shell'
 import './globals.css'
+import '@/styles/design.css'
 import type { Metadata, Viewport } from 'next'
-import { Roboto, Roboto_Condensed, Poppins } from 'next/font/google'
 import React from 'react'
 import Script from 'next/script'
-
-const roboto = Roboto({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-roboto',
-})
-
-const roboto_condensed = Roboto_Condensed({
-  weight: '700',
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-roboto-condensed',
-})
-
-const poppins = Poppins({
-  weight: '600',
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-poppins',
-})
 
 const schema = {
     "@context": "https://schema.org/",
@@ -85,6 +64,14 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html className="selection:bg-primary/70 selection:text-white scroll-smooth" lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@400;700&family=Poppins:wght@600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-R62FZS8CSQ" />
       <Script id="structured-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <Script id="google-analytics">
@@ -92,12 +79,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
- 
+
           gtag('config', 'G-R62FZS8CSQ');
         `}
       </Script>
-      <body suppressHydrationWarning={true} className={`${roboto.variable} ${roboto_condensed.variable} ${poppins.variable}`}>
-        <RootLayout>{children}</RootLayout>
+      <body suppressHydrationWarning={true} style={{ fontFamily: "'Roboto', sans-serif" }} className="flex w-full flex-col overflow-hidden">
+        <Shell>{children}</Shell>
       </body>
     </html>
   )

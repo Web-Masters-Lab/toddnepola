@@ -1,7 +1,5 @@
-import { FreeChapterCTA } from '@/components/FreeChapterCTA';
+import { FreeChapterPage } from '@/components/site/pages/FreeChapterPage'
 
-const FreeChapter = () => {
-    return(<FreeChapterCTA/>)   
+export default function Page() {
+  return <FreeChapterPage />
 }
-
-export default FreeChapter;

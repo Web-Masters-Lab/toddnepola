@@ -33,3 +33,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local-only discovery / facilitation tools (contains private client notes)
+/tools/
+
+# Playwright MCP screenshots/snapshots
+.playwright-mcp/
