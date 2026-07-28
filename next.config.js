@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     distDir: 'build',
+    async redirects() {
+      return [
+        // The standalone free-chapter page was removed (chapter signup now lives
+        // in the book modal). Keep old inbound links alive by sending them home.
+        { source: '/free-chapter', destination: '/', permanent: true },
+      ]
+    },
     images: {
         remotePatterns: [
           {
