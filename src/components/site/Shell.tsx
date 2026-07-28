@@ -11,11 +11,11 @@ import { BookModal } from './BookModal'
 export function Shell({ children }: { children: ReactNode }) {
   const pathname = usePathname()
   return (
-    <>
+    <div className="flex w-full flex-col overflow-x-hidden">
       <main key={pathname} className="w-full flex-auto bg-white text-black">
         {children}
       </main>
       <BookModal />
-    </>
+    </div>
   )
 }

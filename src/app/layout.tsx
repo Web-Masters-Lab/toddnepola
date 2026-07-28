@@ -83,7 +83,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           gtag('config', 'G-R62FZS8CSQ');
         `}
       </Script>
-      <body suppressHydrationWarning={true} style={{ fontFamily: "'Roboto', sans-serif" }} className="flex w-full flex-col overflow-hidden">
+      <body suppressHydrationWarning={true} style={{ fontFamily: "'Roboto', sans-serif" }}>
         <Shell>{children}</Shell>
       </body>
     </html>
