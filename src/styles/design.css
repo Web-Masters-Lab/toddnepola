@@ -40,7 +40,7 @@ a:hover { color: #2E74E0; }
   [data-hero-text] h1 + p { color: #e6ecff !important; }
   [data-hero-text] button, [data-hero-text] a { pointer-events: auto; }
   [data-hero-cap] { display: none !important; }
-  [data-hero-ring] { top: 28% !important; }
+  [data-hero-ring] { display: none !important; }
   [data-hero-media] img, [data-hero-media] video { object-fit: contain !important; object-position: 50% 0% !important; }
   [data-hero-state="playing"] [data-hero-text] { opacity: 0; pointer-events: none; }
 }
