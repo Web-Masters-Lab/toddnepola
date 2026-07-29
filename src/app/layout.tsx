@@ -5,31 +5,60 @@ import type { Metadata, Viewport } from 'next'
 import React from 'react'
 import Script from 'next/script'
 
-const schema = {
-    "@context": "https://schema.org/",
-    "@type": "Person",
-    "name": "Todd Nepola",
-    "url": "https://toddnepola.com",
-    "image": "https://toddnepola.com/images/square.png",
-    "sameAs": [
-      "https://www.facebook.com/todd.nepola/",
-      "https://www.instagram.com/lifeaccordingtotodd",
-      "https://www.youtube.com/channel/UCBb9T0yL77zmLOQMhg9njNw",
-      "https://www.linkedin.com/in/todd-nepola-52323441/",
-      "https://toddnepola.com"
-    ],
-    "jobTitle": "President",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Current Capital Real Estate Group"
-    } ,
-    "alumniOf": "University of South Florida" ,
-    "birthDate": "November 19, 1972",
-    "birthPlace": "Staten Island, New York, NY",
-    "children": ["Gabriella Nepola", "Sophia Nepola"],
-    "parents": ["Ina Nepola", "Thomas Nepola"],
-    "sibling": "Justin Nepola",
+const SITE = 'https://toddnepola.com'
+const BOOKBABY = 'https://store.bookbaby.com/book/keeping-it-real-on-commercial-real-estate'
 
+// Structured data (JSON-LD). A single @graph ties together the three entities
+// the redesigned site is built around: Todd (Person), his firm (Organization),
+// and his book (Book). Cross-references use @id so search engines resolve them
+// as one connected profile rather than three unrelated nodes.
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': `${SITE}/#todd`,
+      name: 'Todd Nepola',
+      url: SITE,
+      image: `${SITE}/images/square.png`,
+      jobTitle: 'President',
+      worksFor: { '@id': `${SITE}/#current-capital` },
+      alumniOf: 'University of South Florida',
+      award: 'CoStar Power Broker Award',
+      knowsAbout: ['Commercial Real Estate', 'Real Estate Investment', 'Property Management'],
+      sameAs: [
+        'https://www.facebook.com/todd.nepola/',
+        'https://www.instagram.com/lifeaccordingtotodd',
+        'https://www.youtube.com/channel/UCBb9T0yL77zmLOQMhg9njNw',
+        'https://www.linkedin.com/in/todd-nepola-52323441/',
+      ],
+    },
+    {
+      '@type': 'Organization',
+      '@id': `${SITE}/#current-capital`,
+      name: 'Current Capital Real Estate Group',
+      url: 'https://www.currentcapitalgroup.com/',
+      logo: `${SITE}/images/current-capital-logo.png`,
+      founder: { '@id': `${SITE}/#todd` },
+    },
+    {
+      '@type': 'Book',
+      '@id': `${SITE}/#book`,
+      name: 'Keeping It Real on Commercial Real Estate',
+      author: { '@id': `${SITE}/#todd` },
+      url: BOOKBABY,
+      image: `${SITE}/images/book.webp`,
+      inLanguage: 'en',
+      description:
+        'Every question investors should be asking about commercial real estate — answered by a 25-year veteran investor, manager and developer. All net proceeds go to charity.',
+      offers: {
+        '@type': 'Offer',
+        url: BOOKBABY,
+        availability: 'https://schema.org/InStock',
+        seller: { '@type': 'Organization', name: 'BookBaby' },
+      },
+    },
+  ],
 }
 
 export const viewport: Viewport = {
@@ -53,7 +82,10 @@ export const metadata: Metadata = {
     siteName: 'Todd Nepola',
     images: [
       {
-        url: 'images/banner.png',
+        url: 'images/hero-books-topdown.webp',
+        width: 2000,
+        height: 859,
+        alt: 'Todd Nepola — Keeping It Real on Commercial Real Estate',
       },
     ],
     locale: 'en_US',
