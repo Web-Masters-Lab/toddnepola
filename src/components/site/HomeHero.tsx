@@ -149,7 +149,7 @@ export function HomeHero() {
             )}
 
             {showPausedOverlay && (
-              <button type="button" onClick={toggle} aria-label="Resume the video" data-hero-play style={css('position:absolute;inset:0;z-index:5;width:100%;height:100%;padding:0;border:0;cursor:pointer;background:linear-gradient(to top,rgba(5,16,43,.78) 0%,rgba(5,16,43,.3) 55%,rgba(5,16,43,.12) 100%);-webkit-tap-highlight-color:transparent;')}>
+              <button type="button" onClick={toggle} aria-label="Resume the video" data-hero-play data-hero-paused style={css('position:absolute;inset:0;z-index:5;width:100%;height:100%;padding:0;border:0;cursor:pointer;background:linear-gradient(to top,rgba(5,16,43,.78) 0%,rgba(5,16,43,.3) 55%,rgba(5,16,43,.12) 100%);-webkit-tap-highlight-color:transparent;')}>
                 <span data-hero-ring style={css(ringStyle)}>
                   <span style={css('width:0;height:0;margin-left:6px;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:22px solid #0A278D;')} />
                 </span>

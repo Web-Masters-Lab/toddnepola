@@ -43,6 +43,10 @@ a:hover { color: #2E74E0; }
   [data-hero-ring] { display: none !important; }
   [data-hero-media] img, [data-hero-media] video { object-fit: contain !important; object-position: 50% 0% !important; }
   [data-hero-state="playing"] [data-hero-text] { opacity: 0; pointer-events: none; }
+  /* Paused overlay is a full-bleed dark gradient whose ring/caption are hidden on
+     mobile (above) — pure darkening with nothing to show. Drop the tint so pausing
+     returns the hero to its clean initial-load weight; the button stays tappable. */
+  [data-hero-paused] { background: none !important; }
 }
 [data-hero-play]:hover [data-hero-ring] { transform: translate(-50%,-50%) scale(1.09); }
 @media (max-width: 1000px) { [data-grid3] { grid-template-columns: minmax(0,1fr) !important; } }
