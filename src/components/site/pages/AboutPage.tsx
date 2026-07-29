@@ -24,7 +24,7 @@ export function AboutPage() {
   return (
     <PageShell>
       {/* HERO */}
-      <div style={css("position:relative;overflow:hidden;min-height:clamp(230px,34vw,320px);background-color:#061650;background-image:linear-gradient(rgba(6,22,80,.75),rgba(6,22,80,.75)),repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0,rgba(255,255,255,.05) 14px,transparent 14px,transparent 28px),url('https://commons.wikimedia.org/wiki/Special:FilePath/USF_Marshall_Center_Running_of_the_Bulls.JPG?width=1600');background-size:cover,auto,cover;background-position:center,center,center 40%;")}>
+      <div data-about-hero style={css("position:relative;overflow:hidden;min-height:clamp(230px,34vw,320px);background-color:#061650;background-image:linear-gradient(rgba(6,22,80,.75),rgba(6,22,80,.75)),repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0,rgba(255,255,255,.05) 14px,transparent 14px,transparent 28px),url('/images/about-usf-bg.webp');background-size:cover,auto,cover;background-position:center,center,center 40%;")}>
         <div style={css('margin:0 auto;max-width:80rem;display:flex;padding:0 clamp(16px,4vw,24px);position:relative;')}>
           <div style={css("display:grid;margin-top:clamp(36px,6vw,64px);padding-bottom:32px;font-family:'Roboto Condensed',sans-serif;font-weight:700;color:#fff;padding-left:clamp(0px,3vw,32px);line-height:1;")}>
             <span style={css('font-size:clamp(20px,5vw,36px);text-transform:uppercase;')}>About</span>
@@ -32,7 +32,7 @@ export function AboutPage() {
             <span style={css('font-size:clamp(46px,12.5vw,96px);text-transform:uppercase;')}>Nepola</span>
           </div>
           <div data-about-hero-img style={css('position:absolute;top:clamp(40px,7vw,80px);right:clamp(16px,6vw,80px);width:clamp(120px,17vw,200px);')}>
-            <img src="/images/todd-spotlight.png" alt="Todd Nepola" style={css('width:100%;')} />
+            <img src="/images/todd-spotlight.webp" alt="Todd Nepola" style={css('width:100%;')} />
           </div>
         </div>
       </div>

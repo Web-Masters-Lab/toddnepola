@@ -97,7 +97,7 @@ export function BookModal() {
 
         <div data-bm-art style={css("display:flex;align-items:center;justify-content:center;padding:40px 28px;background:#0A278D;background-image:linear-gradient(160deg,#2E74E0 0%,#0A278D 55%,#071c66 100%);")}>
           <img
-            src="/images/book.png"
+            src="/images/book.webp"
             alt="Keeping It Real on Commercial Real Estate — Todd Nepola"
             style={css('width:min(230px,46vw);object-fit:contain;filter:drop-shadow(0 26px 40px rgba(0,0,0,.55));')}
           />

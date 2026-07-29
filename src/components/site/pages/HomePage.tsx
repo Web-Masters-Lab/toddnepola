@@ -15,7 +15,7 @@ const bookParas = [
 
 const bio = [
   {
-    bg: "linear-gradient(rgba(8,31,111,.82),rgba(5,18,66,.9)),url('/images/downtown_background.png')",
+    bg: "linear-gradient(rgba(8,31,111,.82),rgba(5,18,66,.9)),url('/images/downtown_background.webp')",
     bgPos: 'center',
     portrait: '/images/square.png',
     rotate: '0deg',
@@ -26,9 +26,9 @@ const bio = [
     flip: false,
   },
   {
-    bg: "linear-gradient(rgba(8,31,111,.82),rgba(5,18,66,.9)),url('https://images.pexels.com/photos/30908359/pexels-photo-30908359.jpeg?auto=compress&cs=tinysrgb&w=1400')",
+    bg: "linear-gradient(rgba(8,31,111,.82),rgba(5,18,66,.9)),url('/images/hero-bg-1.webp')",
     bgPos: 'center',
-    portrait: '/images/contact-desktop.jpg',
+    portrait: '/images/contact-desktop.webp',
     rotate: '45deg',
     paras: [
       'Beyond his professional success, Todd is deeply committed to philanthropy. He wrote a book called "Keeping It Real on Commercial Real Estate," sharing his knowledge with others. What makes Todd stand out is that all the money from the book goes to charity, reflecting his dedication to giving back.',
@@ -37,9 +37,9 @@ const bio = [
     flip: true,
   },
   {
-    bg: "linear-gradient(rgba(8,31,111,.82),rgba(5,18,66,.9)),url('https://images.pexels.com/photos/30698939/pexels-photo-30698939.jpeg?auto=compress&cs=tinysrgb&w=1400')",
+    bg: "linear-gradient(rgba(8,31,111,.82),rgba(5,18,66,.9)),url('/images/hero-bg-2.webp')",
     bgPos: 'center 40%',
-    portrait: '/images/iron_man_todd_nepola.jpeg',
+    portrait: '/images/iron_man_todd_nepola.webp',
     rotate: '90deg',
     paras: [
       'Todd’s dedication to physical fitness is equally impressive. He has achieved remarkable feats as a finisher of the Florida Ironman and numerous other marathons and athletic events. His discipline, determination, and passion for athletics serve as an inspiration to others, emphasizing the importance of a healthy and active lifestyle.',
@@ -50,9 +50,9 @@ const bio = [
 ]
 
 const podcasts = [
-  { href: 'https://www.youtube.com/watch?v=JfIfLMXz7eU', img: '/images/podcasts/yt-JfIfLMXz7eU.jpg', show: 'School of Hard Knocks', title: 'From $0 to $100+ Million Real Estate Empire' },
-  { href: 'https://rodkhleif.com/podcasts/making-money-while-you-sleep/', img: '/images/podcasts/rod-khleif.jpg', show: 'Rod Khleif', title: 'Making Money While You Sleep' },
-  { href: 'https://www.youtube.com/watch?v=ObKMdL-K4Cw', img: '/images/podcasts/yt-ObKMdL-K4Cw.png', show: 'Commercial Real Estate Pro Network', title: 'How to Start Investing in Commercial Real Estate' },
+  { href: 'https://www.youtube.com/watch?v=JfIfLMXz7eU', img: '/images/podcasts/yt-JfIfLMXz7eU.webp', show: 'School of Hard Knocks', title: 'From $0 to $100+ Million Real Estate Empire' },
+  { href: 'https://rodkhleif.com/podcasts/making-money-while-you-sleep/', img: '/images/podcasts/rod-khleif.webp', show: 'Rod Khleif', title: 'Making Money While You Sleep' },
+  { href: 'https://www.youtube.com/watch?v=ObKMdL-K4Cw', img: '/images/podcasts/yt-ObKMdL-K4Cw.webp', show: 'Commercial Real Estate Pro Network', title: 'How to Start Investing in Commercial Real Estate' },
 ]
 
 const articles = [
@@ -77,7 +77,7 @@ export function HomePage() {
           <div data-stack data-join data-book-stack style={css('display:flex;flex-wrap:wrap;border-radius:4px;background:#0A278D;background-image:linear-gradient(160deg,#2E74E0 0%,#0A278D 55%,#071c66 100%);')}>
             <div style={css('width:50%;padding-right:24px;')}>
               <div data-book-panel style={css('display:flex;border-radius:4px;height:600px;justify-content:center;align-items:center;background:transparent;')}>
-                <img src="/images/book.png" alt="Keeping it Real on Commercial Real Estate - Todd Nepola" style={css('object-fit:contain;filter:drop-shadow(0 30px 45px rgba(0,0,0,.55));width:min(300px,68vw);')} />
+                <img src="/images/book.webp" alt="Keeping it Real on Commercial Real Estate - Todd Nepola" style={css('object-fit:contain;filter:drop-shadow(0 30px 45px rgba(0,0,0,.55));width:min(300px,68vw);')} />
               </div>
             </div>
             <div style={css('width:50%;display:flex;flex-direction:column;')}>
@@ -95,7 +95,7 @@ export function HomePage() {
       </div>
 
       {/* CURRENT CAPITAL */}
-      <div style={css("display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 0;background:#0A278D;background-image:linear-gradient(rgba(10,39,141,.72),rgba(10,39,141,.72)),url('/images/todds_building.jpg');background-size:cover;background-position:center 30%;")}>
+      <div data-cc-band style={css("display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 0;background:#0A278D;background-image:linear-gradient(rgba(10,39,141,.72),rgba(10,39,141,.72)),url('/images/todds_building.webp');background-size:cover;background-position:center 30%;")}>
         <div data-grid2 data-cc-grid style={css('margin:0 auto;max-width:1152px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:24px 20px 0;gap:0;width:100%;')}>
           <div style={css('border-radius:4px 0 0 4px;background:rgba(0,0,0,.6);display:grid;align-content:center;justify-items:center;')}>
             <div style={css('display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;padding:48px clamp(24px,3vw,40px);')}>
@@ -121,7 +121,7 @@ export function HomePage() {
         <h2 style={css("text-align:center;text-transform:uppercase;font-family:'Roboto Condensed',sans-serif;font-weight:700;color:#fff;margin:8px 0 40px;font-size:clamp(30px,5vw,48px);padding:0 20px;")}>Industry Recognition</h2>
         <div data-grid2 style={css('margin:0 auto;max-width:1152px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;align-items:center;padding:0 20px;')}>
           <div style={css('display:flex;justify-content:center;')}>
-            <img src="/images/costar-power-broker-2025.png" alt="CoStar Power Broker 2025 Top Broker Winner" width={280} height={280} style={css('width:min(280px,62vw);')} />
+            <img src="/images/costar-power-broker-2025.webp" alt="CoStar Power Broker 2025 Top Broker Winner" width={280} height={280} style={css('width:min(280px,62vw);')} />
           </div>
           <div style={css('display:flex;flex-direction:column;gap:16px;')}>
             <h3 style={css("color:#fff;font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:clamp(22px,3vw,30px);margin:0;")}>CoStar Power Broker Award</h3>

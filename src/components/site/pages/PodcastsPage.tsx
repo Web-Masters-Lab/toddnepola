@@ -3,16 +3,16 @@ import { PageShell } from '../PageShell'
 import { SectionHeader } from '../SectionHeader'
 
 const featured = [
-  { title: "I Spent A Day with Miami's Richest Real Estate Mogul (Todd Nepola)", href: 'https://www.youtube.com/watch?v=hacKnVWLINI', imageUrl: '/images/podcasts/yt-hacKnVWLINI-crop.png', author: 'Hard Knocks Business' },
-  { title: 'How Todd Nepola Built A $500 Million Real Estate Business', href: 'https://www.youtube.com/watch?v=xer52YbAMc0', imageUrl: '/images/podcasts/yt-xer52YbAMc0-crop.png', author: 'Ross Mandell' },
-  { title: 'Making Money While You Sleep', href: 'https://rodkhleif.com/podcasts/making-money-while-you-sleep/', imageUrl: '/images/podcasts/rod-khleif.jpg', author: 'Rod Khleif' },
-  { title: 'Finding Retail Opportunities in Today’s Market', href: 'https://kevinbupp.com/podcast/450-finding-retail-opportunities-in-todays-market/', imageUrl: '/images/podcasts/kevin-bupp-16x9.png', author: 'Kevin Bupp' },
-  { title: 'He Turned $100k Into $25M', href: 'https://www.youtube.com/watch?v=lAOliWexJgo', imageUrl: '/images/podcasts/yt-lAOliWexJgo.png', author: 'School of Hard Knocks' },
-  { title: 'How to Start Investing in Commercial Real Estate with Todd Nepola', href: 'https://www.youtube.com/watch?v=ObKMdL-K4Cw', imageUrl: '/images/podcasts/yt-ObKMdL-K4Cw.png', author: 'Commercial Real Estate Pro Network' },
-  { title: 'Todd Nepola - Commercial Property Recommendations For Real Estate Investors', href: 'https://www.youtube.com/watch?v=1NE6zm9hDOE', imageUrl: '/images/podcasts/yt-1NE6zm9hDOE.jpg', author: 'Dwan Bent-Twyford' },
-  { title: 'From $0 to $100+ Million Real Estate Empire - The Story of Todd Nepola', href: 'https://www.youtube.com/watch?v=JfIfLMXz7eU', imageUrl: '/images/podcasts/yt-JfIfLMXz7eU.jpg', author: 'School of Hard Knocks' },
-  { title: 'Commercial Real Estate Investing With Todd Nepola | The Ideal Hour Podcast EP 11', href: 'https://www.youtube.com/watch?v=dnl9l8TNCIQ', imageUrl: '/images/podcasts/yt-dnl9l8TNCIQ.jpg', author: 'The Ideal Hour Podcast' },
-  { title: 'Reality TV Star & Real Estate Mogul Todd Nepola from Real Housewives of Miami Shares His Story!', href: 'https://www.youtube.com/watch?v=yrwVrAH-rfA', imageUrl: '/images/podcasts/yt-yrwVrAH-rfA.jpg', author: 'Stroke of Success' },
+  { title: "I Spent A Day with Miami's Richest Real Estate Mogul (Todd Nepola)", href: 'https://www.youtube.com/watch?v=hacKnVWLINI', imageUrl: '/images/podcasts/yt-hacKnVWLINI-crop.webp', author: 'Hard Knocks Business' },
+  { title: 'How Todd Nepola Built A $500 Million Real Estate Business', href: 'https://www.youtube.com/watch?v=xer52YbAMc0', imageUrl: '/images/podcasts/yt-xer52YbAMc0-crop.webp', author: 'Ross Mandell' },
+  { title: 'Making Money While You Sleep', href: 'https://rodkhleif.com/podcasts/making-money-while-you-sleep/', imageUrl: '/images/podcasts/rod-khleif.webp', author: 'Rod Khleif' },
+  { title: 'Finding Retail Opportunities in Today’s Market', href: 'https://kevinbupp.com/podcast/450-finding-retail-opportunities-in-todays-market/', imageUrl: '/images/podcasts/kevin-bupp-16x9.webp', author: 'Kevin Bupp' },
+  { title: 'He Turned $100k Into $25M', href: 'https://www.youtube.com/watch?v=lAOliWexJgo', imageUrl: '/images/podcasts/yt-lAOliWexJgo.webp', author: 'School of Hard Knocks' },
+  { title: 'How to Start Investing in Commercial Real Estate with Todd Nepola', href: 'https://www.youtube.com/watch?v=ObKMdL-K4Cw', imageUrl: '/images/podcasts/yt-ObKMdL-K4Cw.webp', author: 'Commercial Real Estate Pro Network' },
+  { title: 'Todd Nepola - Commercial Property Recommendations For Real Estate Investors', href: 'https://www.youtube.com/watch?v=1NE6zm9hDOE', imageUrl: '/images/podcasts/yt-1NE6zm9hDOE.webp', author: 'Dwan Bent-Twyford' },
+  { title: 'From $0 to $100+ Million Real Estate Empire - The Story of Todd Nepola', href: 'https://www.youtube.com/watch?v=JfIfLMXz7eU', imageUrl: '/images/podcasts/yt-JfIfLMXz7eU.webp', author: 'School of Hard Knocks' },
+  { title: 'Commercial Real Estate Investing With Todd Nepola | The Ideal Hour Podcast EP 11', href: 'https://www.youtube.com/watch?v=dnl9l8TNCIQ', imageUrl: '/images/podcasts/yt-dnl9l8TNCIQ.webp', author: 'The Ideal Hour Podcast' },
+  { title: 'Reality TV Star & Real Estate Mogul Todd Nepola from Real Housewives of Miami Shares His Story!', href: 'https://www.youtube.com/watch?v=yrwVrAH-rfA', imageUrl: '/images/podcasts/yt-yrwVrAH-rfA.webp', author: 'Stroke of Success' },
 ]
 
 const audio = [

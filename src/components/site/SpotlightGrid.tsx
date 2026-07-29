@@ -17,7 +17,7 @@ export function SpotlightGrid({ figureOpacity = 0.95 }: { figureOpacity?: number
 
       <div id="spotlight-figure" style={css('position:absolute;top:0;left:50%;transform:translateX(-50%);height:100%;width:min(38vw,520px);display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:1;')}>
         <img
-          src="/images/todd-spotlight.png"
+          src="/images/todd-spotlight.webp"
           alt="Todd Nepola"
           style={{ ...css('height:76%;width:auto;max-width:none;object-fit:contain;object-position:bottom center;-webkit-mask-image:linear-gradient(to top,transparent 0%,rgba(0,0,0,.35) 10%,#000 34%);mask-image:linear-gradient(to top,transparent 0%,rgba(0,0,0,.35) 10%,#000 34%);'), opacity: figureOpacity }}
         />
@@ -28,7 +28,7 @@ export function SpotlightGrid({ figureOpacity = 0.95 }: { figureOpacity?: number
 
           <Link href="/media/podcasts" style={css('position:relative;display:flex;align-items:center;justify-content:flex-end;')}>
             <div style={css(tileWrap)}>
-              <img src="/images/tile-podcast.png" alt="" style={css(tileImg)} />
+              <img src="/images/tile-podcast.webp" alt="" style={css(tileImg)} />
               <div style={css(tileScrim)} />
             </div>
             <h3 style={css(titleBase + 'right:clamp(18px,3vw,28px);text-align:right;')}>
@@ -38,7 +38,7 @@ export function SpotlightGrid({ figureOpacity = 0.95 }: { figureOpacity?: number
 
           <a href={BOOKBABY} data-book-modal style={css('position:relative;display:flex;align-items:center;')}>
             <div style={css(tileWrap)}>
-              <img src="/images/tile-book.png" alt="" style={css(tileImg)} />
+              <img src="/images/tile-book.webp" alt="" style={css(tileImg)} />
               <div style={css(tileScrim)} />
             </div>
             <h3 style={css(titleBase + 'left:clamp(18px,3vw,28px);text-align:left;')}>
@@ -48,7 +48,7 @@ export function SpotlightGrid({ figureOpacity = 0.95 }: { figureOpacity?: number
 
           <a href="https://www.currentcapitalgroup.com/" style={css('position:relative;display:flex;align-items:center;justify-content:flex-end;')}>
             <div style={css(tileWrap)}>
-              <img src="/images/tile-current-capital.png" alt="" style={css(tileImg)} />
+              <img src="/images/tile-current-capital.webp" alt="" style={css(tileImg)} />
               <div style={css(tileScrim)} />
             </div>
             <h3 style={css(titleBase + 'right:clamp(18px,3vw,28px);text-align:right;')}>
@@ -58,7 +58,7 @@ export function SpotlightGrid({ figureOpacity = 0.95 }: { figureOpacity?: number
 
           <Link href="/contact" style={css('position:relative;display:flex;align-items:center;')}>
             <div style={css(tileWrap)}>
-              <img src="/images/tile-contact.png" alt="" style={css(tileImg)} />
+              <img src="/images/tile-contact.webp" alt="" style={css(tileImg)} />
               <div style={css(tileScrim)} />
             </div>
             <h3 style={css(titleBase + 'left:clamp(18px,3vw,28px);text-align:left;')}>

@@ -22,10 +22,6 @@ const config: Config = {
         primary: "#0A278D",
         secondary: "#D5D5D5"
       },
-      backgroundImage:{
-        hero: 'linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/desktop-background.png")',
-        desktop:'linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/desktop-background.png")'
-      },
       animation: {
 				fade: 'fadeIn .5s ease-in-out',
 			},

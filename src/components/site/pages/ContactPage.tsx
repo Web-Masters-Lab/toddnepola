@@ -33,7 +33,7 @@ export function ContactPage() {
       <section>
         <div style={css('position:relative;background:linear-gradient(135deg,#0A278D 0%,#0A278D 40%,#1B57CC 72%,#2E74E0 100%);')}>
           <div data-c-imgwrap style={css('position:absolute;inset:0;left:50%;')}>
-            <img data-c-img src="/images/contact-desktop.jpg" alt="" style={css('position:absolute;height:100%;width:auto;min-width:100%;object-fit:cover;background:#f9fafb;')} />
+            <img data-c-img src="/images/contact-desktop.webp" alt="" style={css('position:absolute;height:100%;width:auto;min-width:100%;object-fit:cover;background:#f9fafb;')} />
           </div>
           <div data-c-grid style={css('padding:128px 0 128px;margin:0 auto;max-width:80rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));')}>
             <div data-c-col style={css('padding:0 32px;position:relative;z-index:1;')}>

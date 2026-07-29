@@ -82,7 +82,7 @@ export function HomeHero() {
   return (
     <section
       data-hero
-      style={css('position:relative;overflow:hidden;background-color:#3b2b23;background-image:linear-gradient(90deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.7) 100%),url("/images/hero-books-topdown.png");background-size:auto,cover;background-position:center,left center;background-repeat:no-repeat,no-repeat;')}
+      style={css('position:relative;overflow:hidden;background-color:#3b2b23;background-image:linear-gradient(90deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.7) 100%),url("/images/hero-books-topdown.webp");background-size:auto,cover;background-position:center,left center;background-repeat:no-repeat,no-repeat;')}
     >
       <div data-hero-inner style={css('max-width:1152px;margin:0 auto;padding:clamp(48px,6vw,84px) 20px;')}>
         <div data-hero-grid data-hero-state={heroState} style={css('display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(32px,4vw,56px);align-items:center;')}>
@@ -122,7 +122,7 @@ export function HomeHero() {
           >
             {showPoster && (
               <button type="button" onClick={play} aria-label="Play the video: why Todd wrote his book" data-hero-play style={css('position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:transparent;cursor:pointer;display:block;-webkit-tap-highlight-color:transparent;')}>
-                <img src="/images/hero-video-poster.png" alt="" style={css('position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block;')} />
+                <img src="/images/hero-video-poster.webp" alt="" style={css('position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block;')} />
                 <span style={css('position:absolute;inset:0;background:linear-gradient(to top,rgba(5,16,43,.78) 0%,rgba(5,16,43,.22) 55%,rgba(5,16,43,.05) 100%);display:block;')} />
                 <span data-hero-ring style={css(ringStyle)}>
                   <span style={css('width:0;height:0;margin-left:6px;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:22px solid #0A278D;')} />
