@@ -217,7 +217,14 @@ a:hover { color: #2E74E0; }
 [data-tl-item]::before { content: ''; position: absolute; left: -7px; top: 3px; width: 12px; height: 12px; border-radius: 9999px; background: #fff; border: 1px solid #0029FF; }
 [data-tl-item]::after { content: ''; position: absolute; left: -2.5px; top: 24px; width: 3px; height: calc(100% - 24px); background: radial-gradient(circle,#0029FF 1.4px,transparent 1.6px) center/3px 8px repeat-y; opacity: .45; }
 @media (max-width: 620px) {
-  [data-about-hero-img] { display: none !important; }
+  /* Keep the figure on mobile, just narrower and pulled in tighter so it clears
+     the "NEPOLA" line. The portrait is 900x2403, so it bleeds past the band's
+     min-height and gets cropped by the hero's overflow:hidden — same as desktop. */
+  [data-about-hero-img] {
+    width: clamp(96px,24vw,130px) !important;
+    top: clamp(28px,6vw,40px) !important;
+    right: clamp(12px,4vw,24px) !important;
+  }
   [data-tl-item] { padding-left: 24px !important; padding-bottom: 24px !important; }
 }
 
@@ -230,6 +237,16 @@ a:hover { color: #2E74E0; }
 #spotlight-grid a, #spotlight-grid a:hover { color: #fff; text-decoration: none; }
 @media (max-width: 767px) { #spotlight-figure { display: none !important; } }
 @media (max-width: 559px) { #spotlight-grid { grid-template-columns: minmax(0,1fr) !important; } }
+/* The tiles slide toward the center figure on hover. Below 767px the figure is
+   gone and a tap leaves the hover state stuck on the tile, so drop the motion at
+   mobile widths. */
+@media (max-width: 767px) {
+  #spotlight-grid > a { transition: none; }
+  #spotlight-grid > a:nth-child(1):hover,
+  #spotlight-grid > a:nth-child(2):hover,
+  #spotlight-grid > a:nth-child(3):hover,
+  #spotlight-grid > a:nth-child(4):hover { transform: none; filter: none; }
+}
 
 /* ---- Accessibility: skip link + focus indicators --------------------------
    Every style in this codebase is an inline object built by css() (see
