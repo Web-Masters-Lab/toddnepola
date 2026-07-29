@@ -237,6 +237,19 @@ a:hover { color: #2E74E0; }
 #spotlight-grid a, #spotlight-grid a:hover { color: #fff; text-decoration: none; }
 @media (max-width: 767px) { #spotlight-figure { display: none !important; } }
 @media (max-width: 559px) { #spotlight-grid { grid-template-columns: minmax(0,1fr) !important; } }
+/* On the single-column mobile layout, right-align every tile's text (the book
+   and contact tiles are left-aligned inline for the desktop alternating look;
+   inline styles beat the stylesheet, so override with !important). */
+@media (max-width: 559px) {
+  #spotlight-grid > a:nth-child(2),
+  #spotlight-grid > a:nth-child(4) { justify-content: flex-end !important; }
+  #spotlight-grid > a:nth-child(2) > h2,
+  #spotlight-grid > a:nth-child(4) > h2 {
+    left: auto !important;
+    right: clamp(18px,3vw,28px) !important;
+    text-align: right !important;
+  }
+}
 /* The tiles slide toward the center figure on hover. Below 767px the figure is
    gone and a tap leaves the hover state stuck on the tile, so drop the motion at
    mobile widths. */
