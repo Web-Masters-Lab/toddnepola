@@ -40,8 +40,13 @@ export function HomeHero() {
     const el = videoRef.current
     if (!el) return
     if (el.paused) {
+      // The paused overlay unmounts the moment playback resumes. If it was the
+      // control the user just activated, focus would fall to <body>; hand it to
+      // the video instead so keyboard users keep their place.
+      const fromOverlay = document.activeElement?.hasAttribute('data-hero-paused')
       const p = el.play()
       if (p && p.catch) p.catch(() => {})
+      if (fromOverlay) el.focus({ preventScroll: true })
     } else {
       el.pause()
     }
@@ -63,6 +68,11 @@ export function HomeHero() {
     if (!el || !isFile) return
     const p = el.play()
     if (p && p.catch) p.catch(() => {})
+    // Activating "watch the video" reveals the player, so focus follows into it
+    // — the standard pattern, and on mobile it is also load-bearing: the hero
+    // text (which holds the play button) hides during playback, so without this
+    // focus would be orphaned on <body>.
+    el.focus({ preventScroll: true })
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -118,6 +128,11 @@ export function HomeHero() {
             data-hero-media
             onMouseEnter={() => setControls(true)}
             onMouseLeave={() => setControls(false)}
+            // onFocus/onBlur bubble from the <video> (focusin/focusout), so
+            // reaching it by keyboard reveals the same native controls a mouse
+            // hover does — previously they were mouse-only.
+            onFocus={() => setControls(true)}
+            onBlur={() => setControls(false)}
             style={css('position:relative;width:100%;max-width:400px;margin-left:auto;aspect-ratio:4/5;border-radius:8px;overflow:hidden;background:#050f2b;border:1px solid rgba(255,255,255,.16);box-shadow:0 40px 80px rgba(0,0,0,.5);')}
           >
             {showPoster && (
@@ -140,12 +155,24 @@ export function HomeHero() {
                 src={VIDEO_SRC}
                 playsInline
                 preload="metadata"
+                // A <video> with no `controls` attribute is not focusable, so
+                // without this the onFocus above could never fire and the
+                // controls stayed unreachable by keyboard.
+                tabIndex={0}
+                aria-label="Todd Nepola on why he wrote Keeping It Real on Commercial Real Estate"
                 onError={() => setFailed(true)}
                 onPlay={() => setPaused(false)}
                 onPause={() => setPaused(true)}
                 onEnded={() => setPaused(true)}
                 style={css('position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#050f2b;display:block;')}
-              />
+              >
+                {/* Captions (WCAG 1.2.2, Level A). `default` turns them on
+                    without the viewer having to find the CC control — the native
+                    controls only surface on hover/focus, and on touch they may
+                    not surface at all, so opt-out is the only workable default
+                    here. Drop the `default` word to ship them off-by-default. */}
+                <track kind="captions" srcLang="en" label="English" src="/videos/pagehero1.en.vtt" default />
+              </video>
             )}
 
             {showPausedOverlay && (

@@ -44,10 +44,12 @@ export function NewsPage() {
                   <div style={css('display:flex;flex-direction:column;gap:8px;')}>
                     <div style={css("display:flex;flex-wrap:nowrap;align-items:center;gap:10px;min-width:0;font-family:'Roboto Condensed',sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;")}>
                       {hasDate && <time style={css('flex:none;')}>{p.date}</time>}
-                      {hasSep && <span style={css('color:#c3c8d4;flex:none;')}>/</span>}
+                      {hasSep && <span style={css('color:#6b7280;flex:none;')} aria-hidden="true">/</span>}
                       <span style={css('min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;')}>{p.author}</span>
                     </div>
-                    <h3 style={css("margin:0;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(19px,1.7vw,23px);line-height:1.14;letter-spacing:-.2px;color:#0A278D;text-wrap:pretty;")}>{p.title}</h3>
+                    {/* h2, not h3: this grid sits directly under the page <h1>
+                        with no intervening section heading. */}
+                    <h2 style={css("margin:0;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(19px,1.7vw,23px);line-height:1.14;letter-spacing:-.2px;color:#0A278D;text-wrap:pretty;")}>{p.title}</h2>
                   </div>
                 </a>
               )

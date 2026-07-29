@@ -10,6 +10,8 @@ const ulStyle = 'margin-top:16px;list-style:none;padding:0;display:flex;flex-dir
 export function SiteFooter() {
   return (
     <footer style={css('background:linear-gradient(180deg,#ffffff 0%,#eceef1 40%,#d1d5db 72%,#bfc5ce 100%);')} aria-labelledby="footer-heading">
+      {/* Target for aria-labelledby above; also the h2 the column <h3>s sit under. */}
+      <h2 id="footer-heading" className="sr-only">Footer</h2>
       <div style={css('margin:0 auto;max-width:80rem;padding:clamp(40px,6vw,64px) clamp(20px,4vw,24px);')}>
         <div data-f-grid style={css('display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(28px,4vw,32px);')}>
           <Link data-f-logo href="/" style={css('grid-column:span 2 / span 2;display:flex;align-items:flex-start;justify-content:center;text-decoration:none;')}>

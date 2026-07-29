@@ -26,11 +26,14 @@ export function AboutPage() {
       {/* HERO */}
       <div data-about-hero style={css("position:relative;overflow:hidden;min-height:clamp(230px,34vw,320px);background-color:#061650;background-image:linear-gradient(rgba(6,22,80,.75),rgba(6,22,80,.75)),repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0,rgba(255,255,255,.05) 14px,transparent 14px,transparent 28px),url('/images/about-usf-bg.webp');background-size:cover,auto,cover;background-position:center,center,center 40%;")}>
         <div style={css('margin:0 auto;max-width:80rem;display:flex;padding:0 clamp(16px,4vw,24px);position:relative;')}>
-          <div style={css("display:grid;margin-top:clamp(36px,6vw,64px);padding-bottom:32px;font-family:'Roboto Condensed',sans-serif;font-weight:700;color:#fff;padding-left:clamp(0px,3vw,32px);line-height:1;")}>
+          {/* The page title was three bare <span>s in a div — visually the h1,
+              semantically nothing, leaving the page with no level-one heading.
+              margin-bottom:0 cancels the UA h1 margin so the layout is unchanged. */}
+          <h1 style={css("display:grid;margin-top:clamp(36px,6vw,64px);margin-bottom:0;padding-bottom:32px;font-family:'Roboto Condensed',sans-serif;font-weight:700;color:#fff;padding-left:clamp(0px,3vw,32px);line-height:1;")}>
             <span style={css('font-size:clamp(20px,5vw,36px);text-transform:uppercase;')}>About</span>
             <span style={css('font-size:clamp(30px,8vw,60px);text-transform:uppercase;')}>Todd</span>
             <span style={css('font-size:clamp(46px,12.5vw,96px);text-transform:uppercase;')}>Nepola</span>
-          </div>
+          </h1>
           <div data-about-hero-img style={css('position:absolute;top:clamp(40px,7vw,80px);right:clamp(16px,6vw,80px);width:clamp(120px,17vw,200px);')}>
             <img src="/images/todd-spotlight.webp" alt="Todd Nepola" style={css('width:100%;')} />
           </div>
@@ -52,7 +55,7 @@ export function AboutPage() {
                 {timeline.map((t) => (
                   <div key={t.year} data-tl-item>
                     <div>
-                      <h2 style={css(tlYear)}>{t.year}</h2>
+                      <p style={css(tlYear)}>{t.year}</p>
                       <p style={css(tlText)}>{t.text}</p>
                     </div>
                   </div>

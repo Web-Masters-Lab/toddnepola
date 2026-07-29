@@ -22,7 +22,9 @@ const audio = [
   { title: 'Great Retail Centers Are as Relevant as Ever', href: 'https://www.streetsmartsuccess.com/ToddNepola/', author: 'Street Smart Success' },
 ]
 
-const eyebrow = "margin:0 0 6px;font-family:'Roboto Condensed',sans-serif;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#2E74E0;"
+// #1B57CC, not #2E74E0: the lighter blue is 4.48:1 on white, a hair under the
+// 4.5:1 floor for text this size.
+const eyebrow = "margin:0 0 6px;font-family:'Roboto Condensed',sans-serif;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#1B57CC;"
 const heading = "margin:0;text-transform:uppercase;font-family:'Roboto Condensed',sans-serif;font-weight:700;color:#0A278D;font-size:clamp(30px,5vw,48px);line-height:1;"
 
 export function PodcastsPage() {

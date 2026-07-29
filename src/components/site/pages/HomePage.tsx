@@ -99,7 +99,11 @@ export function HomePage() {
         <div data-grid2 data-cc-grid style={css('margin:0 auto;max-width:1152px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:24px 20px 0;gap:0;width:100%;')}>
           <div style={css('border-radius:4px 0 0 4px;background:rgba(0,0,0,.6);display:grid;align-content:center;justify-items:center;')}>
             <div style={css('display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;padding:48px clamp(24px,3vw,40px);')}>
-              <img src="/images/CCREG.png" alt="Headquarters Image" width={256} height={256} style={css('object-fit:contain;width:min(224px,55vw);')} />
+              {/* Was alt="Headquarters Image", which describes neither the image
+                  nor its purpose — it is the Current Capital logo mark, and the
+                  two lines directly below already read out the company name, so
+                  the mark is decorative here. */}
+              <img src="/images/CCREG.png" alt="" width={256} height={256} style={css('object-fit:contain;width:min(224px,55vw);')} />
               <div style={css('display:flex;flex-direction:column;align-items:center;gap:6px;')}>
                 <p style={css("font-family:'Copperplate','Copperplate Gothic Light',serif;color:#fff;font-size:clamp(18px,2.2vw,23px);letter-spacing:.06em;line-height:1.15;margin:0;text-align:center;")}>CURRENT CAPITAL</p>
                 <p style={css("font-family:'Copperplate','Copperplate Gothic Light',serif;color:#d1d5db;font-size:clamp(18px,2.2vw,23px);letter-spacing:.06em;line-height:1.15;margin:0;text-align:center;")}>REAL ESTATE GROUP</p>
@@ -134,8 +138,11 @@ export function HomePage() {
       {/* ABOUT TODD */}
       <section style={css('padding-bottom:64px;')}>
         <div style={css('display:flex;flex-direction:column;align-items:center;justify-content:center;margin:64px 0;padding:0 20px;')}>
-          <h2 style={css("text-align:center;font-family:'Roboto Condensed',sans-serif;font-weight:700;margin:8px 0;font-size:clamp(22px,3vw,30px);color:#0A278D;text-transform:uppercase;")}>About</h2>
-          <h1 style={css("text-align:center;text-transform:uppercase;color:#0A278D;font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:clamp(44px,11vw,128px);margin:0;line-height:1;")}>Todd Nepola</h1>
+          {/* "About" is an eyebrow, not a heading level, and "Todd Nepola" is a
+              section heading — the page's <h1> is the hero. Demoting both keeps
+              one h1 per page and removes the h2-then-h1 inversion. */}
+          <p style={css("text-align:center;font-family:'Roboto Condensed',sans-serif;font-weight:700;margin:8px 0;font-size:clamp(22px,3vw,30px);color:#0A278D;text-transform:uppercase;")}>About</p>
+          <h2 style={css("text-align:center;text-transform:uppercase;color:#0A278D;font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:clamp(44px,11vw,128px);margin:0;line-height:1;")}>Todd Nepola</h2>
         </div>
         {bio.map((b, i) => (
           <div key={i} style={css('max-width:1152px;padding:24px 20px 0;margin:0 auto;')}>
@@ -195,7 +202,7 @@ export function HomePage() {
         <div style={css('margin:0 auto;max-width:80rem;padding:0 32px;')}>
           <div style={css('display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;')}>
             <div>
-              <p style={css("margin:0 0 6px;font-family:'Roboto Condensed',sans-serif;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#2E74E0;")}>Read</p>
+              <p style={css("margin:0 0 6px;font-family:'Roboto Condensed',sans-serif;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#1B57CC;")}>Read</p>
               <h2 style={css("margin:0;text-transform:uppercase;font-family:'Roboto Condensed',sans-serif;font-weight:700;color:#0A278D;font-size:clamp(30px,5vw,48px);line-height:1;")}>Popular Articles</h2>
             </div>
             <Link href="/media/news" data-inv-cta-alt style={css("background:#0A278D;color:#fff;font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:18px;padding:8px 32px;border-radius:8px;text-decoration:none;border:2px solid #0A278D;transition:all .25s;white-space:nowrap;-webkit-tap-highlight-color:transparent;")}>ALL ARTICLES</Link>
@@ -210,7 +217,7 @@ export function HomePage() {
                 <div>
                   <div style={css("display:flex;flex-wrap:nowrap;align-items:center;gap:10px;min-width:0;font-family:'Roboto Condensed',sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin-bottom:8px;")}>
                     <time style={css('flex:none;')}>{a.date}</time>
-                    <span style={css('color:#c3c8d4;flex:none;')}>/</span>
+                    <span style={css('color:#6b7280;flex:none;')} aria-hidden="true">/</span>
                     <span style={css('min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;')}>{a.author}</span>
                   </div>
                   <h3 data-clamp2 style={css(cardTitle + 'color:#0A278D;')}><span data-clamp2>{a.title}</span></h3>

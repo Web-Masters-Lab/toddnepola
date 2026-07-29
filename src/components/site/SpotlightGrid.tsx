@@ -31,9 +31,9 @@ export function SpotlightGrid({ figureOpacity = 0.95 }: { figureOpacity?: number
               <img src="/images/tile-podcast.webp" alt="" style={css(tileImg)} />
               <div style={css(tileScrim)} />
             </div>
-            <h3 style={css(titleBase + 'right:clamp(18px,3vw,28px);text-align:right;')}>
+            <h2 style={css(titleBase +'right:clamp(18px,3vw,28px);text-align:right;')}>
               <span style={css(eyebrow)}>Listen</span>To Podcast
-            </h3>
+            </h2>
           </Link>
 
           <a href={BOOKBABY} data-book-modal style={css('position:relative;display:flex;align-items:center;')}>
@@ -41,9 +41,9 @@ export function SpotlightGrid({ figureOpacity = 0.95 }: { figureOpacity?: number
               <img src="/images/tile-book.webp" alt="" style={css(tileImg)} />
               <div style={css(tileScrim)} />
             </div>
-            <h3 style={css(titleBase + 'left:clamp(18px,3vw,28px);text-align:left;')}>
+            <h2 style={css(titleBase +'left:clamp(18px,3vw,28px);text-align:left;')}>
               <span style={css(eyebrow)}>Read</span>The Book
-            </h3>
+            </h2>
           </a>
 
           <a href="https://www.currentcapitalgroup.com/" style={css('position:relative;display:flex;align-items:center;justify-content:flex-end;')}>
@@ -51,9 +51,9 @@ export function SpotlightGrid({ figureOpacity = 0.95 }: { figureOpacity?: number
               <img src="/images/tile-current-capital.webp" alt="" style={css(tileImg)} />
               <div style={css(tileScrim)} />
             </div>
-            <h3 style={css(titleBase + 'right:clamp(18px,3vw,28px);text-align:right;')}>
+            <h2 style={css(titleBase +'right:clamp(18px,3vw,28px);text-align:right;')}>
               <span style={css(eyebrow)}>Invest</span>Current<br />Capital
-            </h3>
+            </h2>
           </a>
 
           <Link href="/contact" style={css('position:relative;display:flex;align-items:center;')}>
@@ -61,9 +61,9 @@ export function SpotlightGrid({ figureOpacity = 0.95 }: { figureOpacity?: number
               <img src="/images/tile-contact.webp" alt="" style={css(tileImg)} />
               <div style={css(tileScrim)} />
             </div>
-            <h3 style={css(titleBase + 'left:clamp(18px,3vw,28px);text-align:left;')}>
+            <h2 style={css(titleBase +'left:clamp(18px,3vw,28px);text-align:left;')}>
               <span style={css(eyebrow)}>Connect</span>Get In Touch
-            </h3>
+            </h2>
           </Link>
 
         </div>

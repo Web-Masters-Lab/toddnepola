@@ -43,14 +43,14 @@ export function SiteNav() {
           <a href={BOOKBABY} data-book-modal data-book-cta style={css("font-size:18px;background:#0A278D;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-transform:uppercase;white-space:nowrap;color:#f3f4f6;border-radius:4px;padding:8px 16px;line-height:1.5;box-shadow:0 1px 2px rgba(0,0,0,.05);text-decoration:none;border:2px solid #0A278D;transition:all .25s;-webkit-tap-highlight-color:transparent;")}>Order The Book</a>
         </div>
 
-        <button data-nav-toggle type="button" onClick={() => setOpen((o) => !o)} aria-label="Toggle menu" aria-expanded={open} style={css('display:none;width:48px;height:48px;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:transparent;border:0;cursor:pointer;padding:0;')}>
+        <button data-nav-toggle type="button" onClick={() => setOpen((o) => !o)} aria-label="Toggle menu" aria-expanded={open} aria-controls="nav-drawer" style={css('display:none;width:48px;height:48px;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:transparent;border:0;cursor:pointer;padding:0;')}>
           <span style={css('display:block;width:30px;height:2px;background:#111;')} />
           <span style={css('display:block;width:30px;height:2px;background:#111;')} />
           <span style={css('display:block;width:30px;height:2px;background:#111;')} />
         </button>
       </nav>
 
-      <div data-nav-drawer data-open={open} style={css('border-top:1px solid rgba(10,39,141,.15);background:#fff;display:flex;flex-direction:column;gap:4px;')}>
+      <div id="nav-drawer" data-nav-drawer data-open={open} style={css('border-top:1px solid rgba(10,39,141,.15);background:#fff;display:flex;flex-direction:column;gap:4px;')}>
         {NAV.map((n) => (
           <Link key={n.href} data-nav-dlink href={n.href} onClick={() => setOpen(false)} style={css("padding:14px 8px;text-transform:uppercase;font-size:20px;font-family:'Roboto Condensed',sans-serif;font-weight:700;color:#0A278D;text-decoration:none;border-radius:6px;")}>{n.label}</Link>
         ))}
