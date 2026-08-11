@@ -52,7 +52,7 @@ const bio = [
 const podcasts = [
   { href: 'https://www.youtube.com/watch?v=JfIfLMXz7eU', img: '/images/podcasts/yt-JfIfLMXz7eU.webp', show: 'School of Hard Knocks', title: 'From $0 to $100+ Million Real Estate Empire' },
   { href: 'https://rodkhleif.com/podcasts/making-money-while-you-sleep/', img: '/images/podcasts/rod-khleif.webp', show: 'Rod Khleif', title: 'Making Money While You Sleep' },
-  { href: 'https://www.youtube.com/watch?v=ObKMdL-K4Cw', img: '/images/podcasts/yt-ObKMdL-K4Cw.webp', show: 'Commercial Real Estate Pro Network', title: 'How to Start Investing in Commercial Real Estate' },
+  { href: 'https://www.youtube.com/watch?v=lAOliWexJgo', img: '/images/podcasts/yt-lAOliWexJgo.webp', show: 'School of Hard Knocks', title: 'He Turned $100k Into $25M' },
 ]
 
 const articles = [
