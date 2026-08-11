@@ -1,0 +1,350 @@
+/* =========================================================================
+   Todd Nepola — Claude Design system port
+   Collected from the `.dc.html` source `<style>` blocks + `style-hover`/
+   `style-active` attributes. Keyed on the same `data-*` hooks the design uses
+   so components can carry their inline styles verbatim (see components/site/dc.tsx).
+   Palette: navy #0A278D, royal-blue #2E74E0, on-navy blue #8fa6ff, white. No gold.
+   ========================================================================= */
+
+/* ---- shared primitives (from Home helmet) ---------------------------------- */
+@keyframes tn-bounce {
+  0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(.8,0,1,1); }
+  50% { transform: translateY(0); animation-timing-function: cubic-bezier(0,0,.2,1); }
+}
+[data-clamp2] { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+
+a { color: #0A278D; }
+a:hover { color: #2E74E0; }
+
+/* invert CTAs */
+[data-inv-cta]:hover, [data-inv-cta]:active { background: #0A278D !important; color: #fff !important; }
+[data-inv-cta-alt]:hover, [data-inv-cta-alt]:active { background: #fff !important; color: #0A278D !important; }
+
+/* card lift (podcast / article tiles) */
+[data-lift] { transition: transform .35s cubic-bezier(.2,.8,.2,1); }
+[data-lift]:hover { transform: translateY(-6px); }
+
+/* ---- HERO (homepage) ------------------------------------------------------- */
+@media (min-width: 901px) {
+  [data-stack][data-flip] { flex-direction: row-reverse; }
+  [data-stack][data-flip] > *:first-child { padding-right: 0 !important; padding-left: 24px; }
+}
+@media (max-width: 900px) {
+  [data-hero-grid] { grid-template-columns: minmax(0,1fr) !important; position: relative; gap: 0 !important; min-height: 150vw; }
+  [data-hero-inner] { padding: 0 !important; }
+  [data-hero-media] { position: absolute !important; inset: 0; max-width: none !important; margin: 0 !important; aspect-ratio: auto !important; height: 100%; border-radius: 0 !important; border: 0 !important; box-shadow: none !important; }
+  [data-hero-text] { position: relative; z-index: 3; align-self: end; padding: 120px 20px 34px !important; background: linear-gradient(to top,rgba(5,16,43,.95) 0%,rgba(5,16,43,.86) 42%,rgba(5,16,43,.3) 80%,rgba(5,16,43,0) 100%); pointer-events: none; transition: opacity .3s ease, visibility .3s ease; }
+  [data-hero-text] > * { position: relative; z-index: 1; }
+  [data-hero-text] h1, [data-hero-text] p { text-shadow: 0 2px 14px rgba(5,16,43,.75); }
+  [data-hero-text] p:first-child { color: #b8c6ff !important; }
+  [data-hero-text] h1 + p { color: #e6ecff !important; }
+  [data-hero-text] button, [data-hero-text] a { pointer-events: auto; }
+  [data-hero-cap] { display: none !important; }
+  [data-hero-ring] { display: none !important; }
+  [data-hero-media] img, [data-hero-media] video { object-fit: contain !important; object-position: 50% 0% !important; }
+  /* visibility, not just opacity: the "PAUSE THE VIDEO" button and "GET A COPY"
+     link live inside [data-hero-text] and line 41 re-enables their pointer
+     events, so at opacity:0 alone they stayed tabbable while invisible (2.4.7).
+     visibility transitions discretely at the end of the fade, so the animation
+     is unchanged. */
+  [data-hero-state="playing"] [data-hero-text] { opacity: 0; visibility: hidden; pointer-events: none; }
+  /* Paused overlay is a full-bleed dark gradient whose ring/caption are hidden on
+     mobile (above) — pure darkening with nothing to show. Drop the tint so pausing
+     returns the hero to its clean initial-load weight; the button stays tappable. */
+  [data-hero-paused] { background: none !important; }
+}
+[data-hero-play]:hover [data-hero-ring] { transform: translate(-50%,-50%) scale(1.09); }
+@media (max-width: 1000px) { [data-grid3] { grid-template-columns: minmax(0,1fr) !important; } }
+@media (max-width: 900px) {
+  [data-stack] { flex-direction: column !important; gap: 24px; }
+  [data-stack] > * { width: 100% !important; padding-right: 0 !important; }
+  [data-stack] > * > div { height: auto !important; min-height: 300px; grid-template-rows: auto !important; padding-top: 32px !important; padding-bottom: 32px !important; }
+  [data-grid2], [data-grid3] { grid-template-columns: minmax(0,1fr) !important; }
+  [data-cc-grid] > *:first-child { border-radius: 4px 4px 0 0 !important; }
+  [data-cc-grid] > *:last-child { border-radius: 0 0 4px 4px !important; }
+  [data-book-stack] { gap: 0 !important; --bw: min(280px,62vw); }
+  [data-stack] > * > [data-book-panel] { height: calc(32px + var(--bw)*1.058) !important; min-height: 0 !important; overflow: visible !important; position: relative; z-index: 2; padding: 0 !important; }
+  [data-stack] > * > [data-book-panel] img { position: absolute; top: 32px; width: var(--bw) !important; }
+  [data-stack] > * > [data-book-text] { padding-top: calc(48px + var(--bw)*0.412) !important; padding-bottom: 40px !important; }
+}
+@media (min-width: 901px) {
+  [data-join] > * { padding-right: 0 !important; padding-left: 0 !important; }
+  [data-join] > *:first-child > div { border-radius: 4px 0 0 4px !important; }
+  [data-join] > *:last-child > div { border-radius: 0 4px 4px 0 !important; }
+  [data-join][data-flip] > *:first-child > div { border-radius: 0 4px 4px 0 !important; }
+  [data-join][data-flip] > *:last-child > div { border-radius: 4px 0 0 4px !important; }
+}
+/* Photo hero: full-bleed books background, fixed height so left column clears it. */
+@media (min-width: 1200px) {
+  [data-hero] { height: 480px; background-color: #3b2b23 !important; background-image: linear-gradient(90deg,rgba(0,0,0,.22) 0%,rgba(0,0,0,.48) 30%,rgba(0,0,0,.62) 52%,rgba(0,0,0,.66) 100%),url("/images/hero-books-topdown.webp"),linear-gradient(180deg,#382921 0%,#4b3d35 45%,#2b201a 100%) !important; background-size: auto,auto 100%,auto !important; background-position: center,max(0px,calc(50% - 780px)) center,center !important; background-repeat: no-repeat,no-repeat,no-repeat !important; }
+  [data-hero-inner] { max-width: 1560px !important; height: 100%; padding: 0 20px !important; display: flex; align-items: center; }
+  [data-hero-grid] { width: 100%; grid-template-columns: 470px minmax(0,1fr) 300px !important; gap: 36px !important; }
+  [data-hero-spacer] { display: block !important; }
+  [data-hero-text] { gap: 16px !important; }
+  [data-hero-text] h1 { font-size: 44px !important; }
+  [data-hero-text] h1 + p { font-size: 17px !important; color: #efe3d6 !important; }
+  [data-hero-text] p:first-child { color: #f2e3d2 !important; }
+  [data-hero-text] h1, [data-hero-text] h1 + p { text-shadow: 0 2px 16px rgba(0,0,0,.55); }
+  [data-hero-media] { max-width: 300px !important; }
+}
+@media (min-width: 901px) and (max-width: 1199px) {
+  [data-hero] { background-size: auto,cover !important; background-position: center,18% center !important; }
+  [data-hero-text] h1, [data-hero-text] p { text-shadow: 0 2px 16px rgba(0,0,0,.85),0 1px 3px rgba(0,0,0,.7); }
+  [data-hero-text] h1 + p { color: #efe3d6 !important; }
+  [data-hero-text] p:first-child { color: #f2e3d2 !important; }
+}
+@media (max-width: 900px) {
+  [data-join]:not([data-book-stack]) { gap: 0 !important; }
+  [data-join] > *:first-child > div { border-radius: 4px 4px 0 0 !important; }
+  [data-join] > *:last-child > div { border-radius: 0 0 4px 4px !important; }
+}
+
+/* ---- Banner (social bar) --------------------------------------------------- */
+@media (max-width: 760px) {
+  [data-b-handle] { display: none !important; }
+  [data-b-list] { gap: 0 !important; width: 100%; flex-wrap: nowrap !important; justify-content: space-evenly !important; padding: clamp(14px,4.7vw,36px) 6px !important; }
+  [data-b-list] li { margin: 0 !important; flex: 1 1 0%; position: relative; justify-content: center; }
+  [data-b-icon] { height: clamp(26px,5.4vw,40px) !important; width: clamp(26px,5.4vw,40px) !important; }
+  [data-b-sep] { display: block !important; position: absolute; right: -1px; top: 50%; transform: translateY(-50%); width: 2px; height: clamp(18px,3.4vw,26px); background: #fff; color: transparent !important; font-size: 0 !important; margin: 0 !important; }
+}
+
+/* ---- SiteNav --------------------------------------------------------------- */
+[data-nav-link]:hover { color: #fff; background: rgba(0,0,0,.3); }
+[data-nav-dlink]:hover { background: rgba(10,39,141,.08); }
+[data-book-cta]:hover, [data-book-cta]:active { background: #fff !important; color: #0A278D !important; }
+@media (max-width: 1180px) {
+  [data-nav-links], [data-nav-cta] { display: none !important; }
+  [data-nav-toggle] { display: flex !important; }
+  [data-nav-bar] { margin: 0 !important; padding: 16px !important; }
+}
+@media (max-width: 760px) {
+  [data-nav-bar] { padding: clamp(16px,4.5vw,34px) clamp(12px,2.5vw,20px) !important; }
+  [data-nav-logo] { height: clamp(90px,20vw,150px) !important; }
+  [data-nav-todd] { font-size: clamp(24px,5.4vw,40px) !important; }
+  [data-nav-nepola] { font-size: clamp(40px,9.4vw,72px) !important; }
+  [data-nav-toggle] { width: auto !important; height: auto !important; gap: clamp(4px,0.9vw,7px) !important; }
+  [data-nav-toggle] span { width: clamp(24px,4.5vw,34px) !important; }
+}
+@media (min-width: 1181px) { [data-nav-drawer] { display: none !important; } }
+[data-nav-toggle] { --bar-shift: 7px; }
+@media (max-width: 760px) { [data-nav-toggle] { --bar-shift: calc(2px + clamp(4px,0.9vw,7px)) !important; } }
+[data-nav-toggle] span { transition: transform .42s cubic-bezier(.22,.61,.36,1), opacity .2s ease .1s; transform-origin: center; }
+[data-nav-toggle][aria-expanded="true"] span:nth-child(1) { transform: translateY(var(--bar-shift)) rotate(-405deg); }
+[data-nav-toggle][aria-expanded="true"] span:nth-child(2) { opacity: 0; transform: scaleX(.2) rotate(-360deg); transition: transform .42s cubic-bezier(.22,.61,.36,1), opacity .15s ease; }
+[data-nav-toggle][aria-expanded="true"] span:nth-child(3) { transform: translateY(calc(var(--bar-shift) * -1)) rotate(-315deg); }
+/* visibility:hidden while collapsed keeps the 5 drawer links + CTA out of the
+   tab order (2.4.7 / 2.4.3) — max-height:0 + opacity:0 alone left them
+   focusable but invisible. display:none would work for focus but is not
+   transitionable and would kill the slide animation; visibility is, and it
+   flips at the end of the collapse / immediately on open. */
+[data-nav-drawer] { overflow: hidden; max-height: 0; opacity: 0; visibility: hidden; padding: 0 16px !important; border-top-width: 0 !important; transform: translateY(-6px); pointer-events: none; transition: max-height .42s cubic-bezier(.22,.61,.36,1), opacity .42s cubic-bezier(.22,.61,.36,1), transform .42s cubic-bezier(.22,.61,.36,1), padding .42s cubic-bezier(.22,.61,.36,1), visibility .42s cubic-bezier(.22,.61,.36,1); }
+[data-nav-drawer][data-open="true"] { max-height: 640px; opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; padding: 12px 16px 24px !important; border-top-width: 1px !important; }
+
+/* ---- SiteFooter ------------------------------------------------------------ */
+/* Was #f97316 — off-palette (see header: "No gold") and 1.90:1 on the footer's
+   #d1d5db band, well under 4.5:1. Navy keeps the hover legible; the underline
+   still carries the state without relying on color alone (1.4.1). */
+[data-f-link]:hover { color: #0A278D; text-decoration: underline; }
+@media (max-width: 900px) {
+  [data-f-grid] { grid-template-columns: minmax(0,1fr) !important; }
+  [data-f-logo], [data-f-cols] { grid-column: auto !important; }
+}
+@media (max-width: 520px) { [data-f-cols] { grid-template-columns: repeat(2,minmax(0,1fr)) !important; } }
+
+/* ---- BookModal ------------------------------------------------------------- */
+@keyframes bm-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes bm-rise { from { opacity: 0; transform: translateY(18px) scale(.98); } to { opacity: 1; transform: none; } }
+[data-bm-close]:hover { background: #0A278D !important; color: #fff !important; }
+[data-bm-purchase]:hover { background: #000 !important; }
+[data-bm-free]:hover { background: rgba(10,39,141,.08) !important; }
+@media (max-width: 780px) {
+  [data-bm-card] { grid-template-columns: minmax(0,1fr) !important; }
+  [data-bm-art] { padding: 32px 24px 0 !important; }
+  [data-bm-art] img { width: min(200px,50vw) !important; }
+  [data-bm-body] { padding: 24px !important; }
+}
+
+/* ---- Podcasts page --------------------------------------------------------- */
+[data-pod-row] { transition: background .25s ease, padding .25s ease; }
+[data-pod-row]:hover { background: #f5f8ff; padding-left: 16px; padding-right: 16px; }
+@media (max-width: 1000px) {
+  [data-pod-body] { padding: 64px 0 !important; }
+  [data-pod-grid] { grid-template-columns: minmax(0,1fr) !important; gap: 24px !important; }
+}
+@media (max-width: 640px) {
+  [data-pod-body] { padding: 40px 0 56px !important; }
+  [data-pod-wrap] { padding: 0 20px !important; }
+  [data-pod-grid] { grid-template-columns: minmax(0,1fr) !important; gap: 20px !important; margin-top: 24px !important; }
+  [data-pod-row] { grid-template-columns: minmax(0,1fr) !important; gap: 10px !important; }
+  [data-pod-listen] { display: none !important; }
+}
+
+/* ---- News page ------------------------------------------------------------- */
+@media (max-width: 1000px) { [data-news-grid] { grid-template-columns: minmax(0,1fr) !important; gap: 24px !important; } }
+@media (max-width: 640px) {
+  [data-news-wrap] { padding: 0 20px !important; }
+  [data-news-body] { padding-bottom: 56px !important; }
+  [data-news-grid] { grid-template-columns: minmax(0,1fr) !important; gap: 20px !important; margin-top: 24px !important; }
+}
+
+/* ---- Contact page ---------------------------------------------------------- */
+[data-c-submit]:hover { color: #fff; background: #000; }
+@media (max-width: 900px) {
+  [data-c-imgwrap] { position: relative !important; inset: auto !important; left: 0 !important; height: 220px !important; }
+  [data-c-img] { position: relative !important; height: 100% !important; width: 100% !important; min-width: 0 !important; object-fit: cover !important; }
+  [data-c-grid] { grid-template-columns: minmax(0,1fr) !important; padding: 56px 0 64px !important; }
+}
+@media (max-width: 560px) {
+  [data-c-col] { padding: 0 20px !important; }
+  [data-c-fields] { grid-template-columns: minmax(0,1fr) !important; gap: 20px !important; }
+  [data-c-fields] > * { grid-column: auto !important; }
+  [data-c-form] { margin-top: 36px !important; }
+  [data-c-actions] { margin-top: 28px !important; padding-top: 24px !important; }
+  [data-c-submit] { width: 100% !important; padding: 14px !important; font-size: 16px !important; }
+}
+
+/* ---- About page (story + timeline) ---------------------------------------- */
+@media (max-width: 860px) {
+  [data-story-stack] { grid-template-columns: minmax(0,1fr) !important; }
+  [data-story-title] { grid-column: 1 !important; grid-row: 1 !important; }
+  [data-story-text] { grid-column: 1 !important; grid-row: 2 !important; padding-bottom: 40px !important; }
+  [data-tl-col] { grid-column: 1 !important; grid-row: 3 !important; }
+}
+[data-tl-grid] { row-gap: 0; }
+[data-tl-item] { position: relative; border-right: 0 !important; border-left: 0; padding: 0 0 28px 28px !important; }
+[data-tl-item]:last-child { padding-bottom: 0 !important; }
+[data-tl-item]:last-child::after { display: none; }
+[data-tl-item]::before { content: ''; position: absolute; left: -7px; top: 3px; width: 12px; height: 12px; border-radius: 9999px; background: #fff; border: 1px solid #0029FF; }
+[data-tl-item]::after { content: ''; position: absolute; left: -2.5px; top: 24px; width: 3px; height: calc(100% - 24px); background: radial-gradient(circle,#0029FF 1.4px,transparent 1.6px) center/3px 8px repeat-y; opacity: .45; }
+@media (max-width: 620px) {
+  /* Keep the figure on mobile, just narrower and pulled in tighter so it clears
+     the "NEPOLA" line. The portrait is 900x2403, so it bleeds past the band's
+     min-height and gets cropped by the hero's overflow:hidden — same as desktop. */
+  [data-about-hero-img] {
+    width: clamp(96px,24vw,130px) !important;
+    top: clamp(28px,6vw,40px) !important;
+    right: clamp(12px,4vw,24px) !important;
+  }
+  [data-tl-item] { padding-left: 24px !important; padding-bottom: 24px !important; }
+}
+
+/* ---- SpotlightGrid --------------------------------------------------------- */
+#spotlight-grid > a { transition: transform .35s cubic-bezier(.2,.8,.2,1), filter .35s ease; }
+#spotlight-grid > a:nth-child(1):hover { transform: translate(18px,14px); filter: drop-shadow(0 34px 44px rgba(0,0,0,.6)); }
+#spotlight-grid > a:nth-child(2):hover { transform: translate(-18px,14px); filter: drop-shadow(0 34px 44px rgba(0,0,0,.6)); }
+#spotlight-grid > a:nth-child(3):hover { transform: translate(18px,-14px); filter: drop-shadow(0 34px 44px rgba(0,0,0,.6)); }
+#spotlight-grid > a:nth-child(4):hover { transform: translate(-18px,-14px); filter: drop-shadow(0 34px 44px rgba(0,0,0,.6)); }
+#spotlight-grid a, #spotlight-grid a:hover { color: #fff; text-decoration: none; }
+@media (max-width: 767px) { #spotlight-figure { display: none !important; } }
+@media (max-width: 559px) { #spotlight-grid { grid-template-columns: minmax(0,1fr) !important; } }
+/* On the single-column mobile layout, right-align every tile's text (the book
+   and contact tiles are left-aligned inline for the desktop alternating look;
+   inline styles beat the stylesheet, so override with !important). */
+@media (max-width: 559px) {
+  #spotlight-grid > a:nth-child(2),
+  #spotlight-grid > a:nth-child(4) { justify-content: flex-end !important; }
+  #spotlight-grid > a:nth-child(2) > h2,
+  #spotlight-grid > a:nth-child(4) > h2 {
+    left: auto !important;
+    right: clamp(18px,3vw,28px) !important;
+    text-align: right !important;
+  }
+}
+/* The tiles slide toward the center figure on hover. Below 767px the figure is
+   gone and a tap leaves the hover state stuck on the tile, so drop the motion at
+   mobile widths. */
+@media (max-width: 767px) {
+  #spotlight-grid > a { transition: none; }
+  #spotlight-grid > a:nth-child(1):hover,
+  #spotlight-grid > a:nth-child(2):hover,
+  #spotlight-grid > a:nth-child(3):hover,
+  #spotlight-grid > a:nth-child(4):hover { transform: none; filter: none; }
+}
+
+/* ---- Accessibility: skip link + focus indicators --------------------------
+   Every style in this codebase is an inline object built by css() (see
+   components/site/dc.tsx), and inline styles beat stylesheet rules regardless
+   of selector specificity — so the focus ring has to be !important, same as
+   the hover rules above. */
+
+/* Skip link (2.4.1): the social banner + nav put ~15 links ahead of content on
+   every page. Off-screen until focused, then pinned top-left. */
+[data-skip-link] {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 10000;
+  background: #0A278D;
+  color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 0 0 6px 0;
+  text-decoration: none;
+}
+[data-skip-link]:focus {
+  left: 0;
+  outline: 3px solid #fff;
+  outline-offset: -6px;
+}
+
+/* Focus ring (2.4.7 / 1.4.11). Dual-ring — white outline sandwiched in a navy
+   halo — so one of the two always contrasts, whether the control sits on the
+   white page, the navy bands, or a photographic hero. :focus-visible keeps it
+   off mouse clicks. */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible,
+summary:focus-visible {
+  outline: 3px solid #fff !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 6px #0A278D !important;
+  border-radius: 4px;
+}
+
+/* Fields keep their inset border, so the halo is appended rather than replacing
+   the box-shadow that draws it. */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #fff !important;
+  outline-offset: 2px !important;
+}
+[data-c-form] input:focus-visible,
+[data-c-form] textarea:focus-visible {
+  box-shadow: inset 0 0 0 1px #d1d5db, 0 0 0 6px #0A278D !important;
+}
+[data-bm-body] input:focus-visible {
+  box-shadow: inset 0 0 0 1px #6b7280, 0 0 0 6px #0A278D !important;
+}
+
+/* Programmatic focus targets (<main>, the contact confirmation) should not
+   paint a ring — they receive focus to move the reading position, not to
+   advertise an interactive control. */
+main:focus,
+main:focus-visible,
+[data-bm-title]:focus,
+[data-bm-title]:focus-visible,
+[role="status"]:focus,
+[role="status"]:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ---- Responsive backgrounds: smaller mobile crops for full-bleed images ----
+   Desktop images stay in the inline styles / desktop @media rules above; these
+   max-width overrides swap to lighter -mobile variants (browser fetches only the
+   image its media query matches). !important is required to beat inline styles. */
+@media (max-width: 900px) {
+  [data-hero] {
+    background-image: linear-gradient(90deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.7) 100%),url("/images/hero-books-topdown-mobile.webp") !important;
+  }
+  [data-about-hero] {
+    background-image: linear-gradient(rgba(6,22,80,.75),rgba(6,22,80,.75)),repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0,rgba(255,255,255,.05) 14px,transparent 14px,transparent 28px),url("/images/about-usf-bg-mobile.webp") !important;
+  }
+  [data-cc-band] {
+    background-image: linear-gradient(rgba(10,39,141,.72),rgba(10,39,141,.72)),url("/images/todds_building-mobile.webp") !important;
+  }
+}
